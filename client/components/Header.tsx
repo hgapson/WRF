@@ -4,7 +4,7 @@ import Logo from './Logo' // Adjust the path as per your project structure
 
 function Header() {
   return (
-    <header className="bg-gray-100 p-4">
+    <header className="p-4">
       <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
         {/* Logo */}
         <Logo />

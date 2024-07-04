@@ -4,7 +4,7 @@ import SocialMediaLinks from './Social' // Assuming you have this component as w
 
 function Footer() {
   return (
-    <footer className="bg-gray-100 p-6">
+    <footer className="bg-blue-100 p-6">
       <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
         {/* First Section with SubscriptionForm */}
         <SubscriptionForm />

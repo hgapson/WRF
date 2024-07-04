@@ -3,7 +3,7 @@
 function Logo() {
   return (
     <div className="flex items-center space-x-2">
-      <img src="/images/logo.png" alt="Logo" className="h-8" />
+      <img src="./public/logo.png" alt="Logo" className="h-8" />
     </div>
   )
 }
