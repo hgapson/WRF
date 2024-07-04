@@ -12,8 +12,8 @@ const Background = () => {
       >
         {/* Empty div to apply the egg shape */}
       </div>
-      <div className="animated-text text-center text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
-        Welcome to Our Website
+      <div className="animated-text text-center text-2xl font-bold decoration-fuchsia-50 sm:text-3xl md:text-4xl lg:text-5xl">
+        Welcome to Waikato Refugee Forum
       </div>
     </div>
   )
