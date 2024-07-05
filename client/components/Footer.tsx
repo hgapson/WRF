@@ -1,6 +1,7 @@
 //import React from 'react'
 import SubscriptionForm from './Subscribe' // Adjust the path as per your project structure
 import SocialMediaLinks from './Social' // Assuming you have this component as well
+import '../styles/main.scss'
 
 function Footer() {
   return (

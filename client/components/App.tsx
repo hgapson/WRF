@@ -5,14 +5,19 @@ import Background from './Background' // Adjust the path as per your project str
 
 const App = () => {
   return (
-    <div className="flex min-h-screen flex-col bg-indigo-950">
-      <Header />
-      <main className="flex-1 pb-16 pt-0">
+    <div className="app">
+      <div className="heading">
+        <Header />
+      </div>
+      <div className="background">
         <Background />
-        {/* Your main content here */}
-        <div className="container mx-auto mt-8"></div>
-      </main>
-      <Footer />
+      </div>
+
+      {/* Your main content here */}
+
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   )
 }

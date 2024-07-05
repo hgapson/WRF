@@ -1,5 +1,6 @@
 //import React from 'react'
 import logo from '../public/logo.jpg'
+import '../styles/main.scss'
 
 function Logo() {
   return (
