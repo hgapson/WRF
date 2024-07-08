@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../styles/main.scss'
+//import '../styles/main.scss'
 
 function NavLinks() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

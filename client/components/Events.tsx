@@ -1,30 +1,34 @@
 import React, { useState } from 'react'
+import wrd from '../public/wrd.jpg'
+import volunteering from '../public/volunteering.jpg'
+import workshop from '../public/workshop.jpg'
 
 // Example event data (replace with actual data or fetch from API)
 const eventsData = [
   {
     id: 1,
-    title: 'Event 1',
-    subtitle: 'Subtitle for Event 1',
-    image: 'https://via.placeholder.com/150', // Example image URL
+    title: 'WORLD"S REFUGEE DAY',
+    subtitle: 'Celebrating World Refugee Day with former refugee 2024 ',
+    image: wrd, // Use the imported image directly
     description:
       'Description for Event 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     link: '#', // Example link for "Read More" button
   },
   {
     id: 2,
-    title: 'Event 2',
-    subtitle: 'Subtitle for Event 2',
-    image: 'https://via.placeholder.com/150', // Example image URL
+    title: 'VOLUNTEERING',
+    subtitle:
+      'Giving honor our volunteers for their incredible work in our organization',
+    image: volunteering, // Use the imported image directly
     description:
       'Description for Event 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     link: '#', // Example link for "Read More" button
   },
   {
     id: 3,
-    title: 'Event 3',
+    title: 'WORKSHOP',
     subtitle: 'Subtitle for Event 3',
-    image: 'https://via.placeholder.com/150', // Example image URL
+    image: workshop, // Use the imported image directly
     description:
       'Description for Event 3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     link: '#', // Example link for "Read More" button
