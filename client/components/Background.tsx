@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import cover from '../public/cover.jpg'
 import '../styles/main.scss' // Make sure the path is correct
 
