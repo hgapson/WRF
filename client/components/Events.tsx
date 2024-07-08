@@ -100,17 +100,24 @@ const EventsSection = () => {
         {eventsData.map((event, index) => (
           <div
             key={event.id}
-            className={`event-thumbnail mx-2 overflow-hidden rounded-lg ${index === currentEventIndex ? '' : 'opacity-50'}`}
+            className={`event-thumbnail mx-2 overflow-hidden rounded-lg ${
+              index === currentEventIndex ? '' : 'opacity-50'
+            }`}
             style={{ flex: '0 0 auto', width: '150px', height: '150px' }}
           >
             <img
               src={event.image}
               alt={event.title}
-              className="h-full w-full object-cover"
+              className="h-full w-full rounded-t-lg object-cover"
             />
-            <h3 className="mb-6 text-center text-lg font-medium">
-              {eventsData[currentEventIndex].subtitle}
-            </h3>
+            <div className="rounded-b-lg bg-white p-2">
+              <h3 className="mb-2 text-center text-lg font-medium">
+                {event.title}
+              </h3>
+              <p className="text-center text-sm text-gray-500">
+                {event.subtitle}
+              </p>
+            </div>
           </div>
         ))}
       </div>
