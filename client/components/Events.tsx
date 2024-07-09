@@ -27,7 +27,7 @@ const eventsData = [
   {
     id: 3,
     title: 'WORKSHOP',
-    subtitle: 'Subtitle for Event 3',
+    subtitle: 'Giving former refugees opportunit',
     image: workshop, // Use the imported image directly
     description:
       'Description for Event 3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',

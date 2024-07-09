@@ -1,5 +1,4 @@
 import { useState } from 'react'
-//import '../styles/main.scss'
 
 function NavLinks() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -9,8 +8,9 @@ function NavLinks() {
   }
 
   return (
-    <header className="flex flex-col items-center justify-between bg-gray-100 p-4 shadow-md md:flex-row">
-      <nav className="mt-4 hidden space-x-6 md:mt-0 md:flex">
+    <nav className="bg-gray-100 p-4 shadow-md md:flex md:items-center md:justify-between">
+      {/* Desktop Menu */}
+      <div className="space-x-6 md:flex">
         <a
           href="#home"
           className="font-semibold text-gray-800 hover:text-blue-500"
@@ -47,7 +47,9 @@ function NavLinks() {
         >
           Contact Us
         </a>
-      </nav>
+      </div>
+
+      {/* Mobile Menu Toggle */}
       <div className="md:hidden">
         <button
           onClick={toggleMenu}
@@ -69,61 +71,61 @@ function NavLinks() {
           </svg>
         </button>
       </div>
-      {isMenuOpen && (
-        <div className="mt-4 md:hidden">
-          <ul className="flex flex-col items-center space-y-4">
-            <li>
-              <a
-                href="#home"
-                className="font-semibold text-gray-800 hover:text-blue-500"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about-us"
-                className="font-semibold text-gray-800 hover:text-blue-500"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="#our-programs"
-                className="font-semibold text-gray-800 hover:text-blue-500"
-              >
-                Our Programs
-              </a>
-            </li>
-            <li>
-              <a
-                href="#our-partners"
-                className="font-semibold text-gray-800 hover:text-blue-500"
-              >
-                Our Partners
-              </a>
-            </li>
-            <li>
-              <a
-                href="#get-involved"
-                className="font-semibold text-gray-800 hover:text-blue-500"
-              >
-                Get Involved
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact-us"
-                className="font-semibold text-gray-800 hover:text-blue-500"
-              >
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
-    </header>
+
+      {/* Mobile Menu */}
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} mt-4 md:hidden`}>
+        <ul className="flex flex-col items-center space-y-4">
+          <li>
+            <a
+              href="#home"
+              className="font-semibold text-gray-800 hover:text-blue-500"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about-us"
+              className="font-semibold text-gray-800 hover:text-blue-500"
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="#our-programs"
+              className="font-semibold text-gray-800 hover:text-blue-500"
+            >
+              Our Programs
+            </a>
+          </li>
+          <li>
+            <a
+              href="#our-partners"
+              className="font-semibold text-gray-800 hover:text-blue-500"
+            >
+              Our Partners
+            </a>
+          </li>
+          <li>
+            <a
+              href="#get-involved"
+              className="font-semibold text-gray-800 hover:text-blue-500"
+            >
+              Get Involved
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact-us"
+              className="font-semibold text-gray-800 hover:text-blue-500"
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   )
 }
 
