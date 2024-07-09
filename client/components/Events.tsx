@@ -7,30 +7,28 @@ import workshop from '../public/workshop.jpg'
 const eventsData = [
   {
     id: 1,
-    title: 'WORLD"S REFUGEE DAY',
-    subtitle: 'Celebrating World Refugee Day with former refugee 2024 ',
+    title: 'UPCOMING EVENTS',
+    subtitle: 'WORLD"S REFUGEE DAY ',
     image: wrd, // Use the imported image directly
-    description:
-      'Description for Event 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Celebrating World Refugee Day with former refugee 2024.',
     link: '#', // Example link for "Read More" button
   },
   {
     id: 2,
-    title: 'VOLUNTEERING',
-    subtitle:
-      'Giving honor our volunteers for their incredible work in our organization',
+    title: 'UPCOMING EVENTS',
+    subtitle: 'VOLUNTEERING',
     image: volunteering, // Use the imported image directly
     description:
-      'Description for Event 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'Giving honor our volunteers for their incredible work in our organization.',
     link: '#', // Example link for "Read More" button
   },
   {
     id: 3,
-    title: 'WORKSHOP',
-    subtitle: 'Giving former refugees opportunit',
+    title: 'UPCOMING EVENTS',
+    subtitle: 'WORKSHOP',
     image: workshop, // Use the imported image directly
     description:
-      'Description for Event 3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      'Giving former refugees opportunity to show their origin traditional culture tresors.',
     link: '#', // Example link for "Read More" button
   },
 ]
