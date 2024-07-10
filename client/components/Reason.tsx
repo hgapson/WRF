@@ -1,10 +1,10 @@
 import React from 'react'
-import { FaSpinner } from 'react-icons/fa'
+import { FaTint, FaUsers } from 'react-icons/fa'
 
 const Reason = () => {
   return (
-    <section className="bg-gray-100 p-8">
-      <div className="container mx-auto">
+    <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-4xl">
         <div className="grid gap-8 md:grid-cols-3">
           {/* First Card */}
           <div className="rounded-lg  p-6">
@@ -20,7 +20,10 @@ const Reason = () => {
           {/* Second Card */}
           <div className="flex items-center rounded-lg bg-red-700 p-6 shadow-md">
             <div className="relative mr-4 flex w-3/5 items-center justify-center">
-              <FaSpinner className="w-3/4 animate-spin text-9xl text-gray-500 opacity-50" />
+              <FaTint
+                className="text-9xl text-gray-900 opacity-50"
+                style={{ width: '200px', height: '200px' }}
+              />
               <h2 className="absolute text-6xl font-semibold text-white">
                 80%
               </h2>
@@ -33,7 +36,10 @@ const Reason = () => {
           {/* Third Card */}
           <div className="flex items-center rounded-lg bg-red-700 p-6 shadow-md">
             <div className="relative mr-4 flex w-3/5 items-center justify-center">
-              <FaSpinner className="w-3/4 animate-spin text-9xl text-gray-500 opacity-50" />
+              <FaUsers
+                className="text-9xl text-gray-900 opacity-50"
+                style={{ width: '200px', height: '200px' }}
+              />
               <h2 className="absolute text-6xl font-semibold text-white">
                 92%
               </h2>

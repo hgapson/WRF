@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import wrd from '../public/wrd.jpg'
 import volunteering from '../public/volunteering.jpg'
 import workshop from '../public/workshop.jpg'
+import '../styles/main.scss'
 
 // Example event data (replace with actual data or fetch from API)
 const eventsData = [
   {
     id: 1,
     title: 'UPCOMING EVENTS',
-    subtitle: 'WORLD"S REFUGEE DAY ',
+    subtitle: "WORLD'S REFUGEE DAY",
     image: wrd, // Use the imported image directly
     description: 'Celebrating World Refugee Day with former refugee 2024.',
     link: '#', // Example link for "Read More" button
@@ -19,7 +20,7 @@ const eventsData = [
     subtitle: 'VOLUNTEERING',
     image: volunteering, // Use the imported image directly
     description:
-      'Giving honor our volunteers for their incredible work in our organization.',
+      'Honoring our volunteers for their incredible work in our organization.',
     link: '#', // Example link for "Read More" button
   },
   {
@@ -28,12 +29,12 @@ const eventsData = [
     subtitle: 'WORKSHOP',
     image: workshop, // Use the imported image directly
     description:
-      'Giving former refugees opportunity to show their origin traditional culture tresors.',
+      'Giving former refugees opportunity to showcase their traditional cultural treasures.',
     link: '#', // Example link for "Read More" button
   },
 ]
 
-const EventsSection = () => {
+const Event = () => {
   const [currentEventIndex, setCurrentEventIndex] = useState(0)
 
   const navigateToPreviousEvent = () => {
@@ -49,7 +50,7 @@ const EventsSection = () => {
   }
 
   return (
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
       {/* Title and Subtitle */}
       <h2 className="mb-4 text-center text-3xl font-bold">
         {eventsData[currentEventIndex].title}
@@ -59,72 +60,55 @@ const EventsSection = () => {
       </h3>
 
       {/* Event Content */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-center gap-4">
         {/* Previous Event Navigation */}
         <button
-          className="prev-event-btn mr-4 cursor-pointer text-blue-500"
+          className="prev-event-btn text-black-500 mr-4 cursor-pointer text-4xl transition-transform duration-300 hover:scale-125"
           onClick={navigateToPreviousEvent}
         >
-          &lt; Previous
+          &lt;
         </button>
 
-        {/* Event Details */}
-        <div className="flex flex-col items-center">
-          {/* Event Image */}
-          <img
-            src={eventsData[currentEventIndex].image}
-            alt={eventsData[currentEventIndex].title}
-            className="mb-4 rounded-lg"
-          />
-
-          {/* Event Description */}
-          <p className="mb-4 text-center text-gray-700">
-            {eventsData[currentEventIndex].description}
-          </p>
-
-          {/* Read More Button */}
-          <a href={eventsData[currentEventIndex].link} className="btn">
-            Read More
-          </a>
-        </div>
-
-        {/* Next Event Navigation */}
-        <button
-          className="next-event-btn ml-4 cursor-pointer text-blue-500"
-          onClick={navigateToNextEvent}
-        >
-          Next &gt;
-        </button>
-      </div>
-
-      {/* Event Thumbnails */}
-      <div className="mt-8 flex justify-center">
+        {/* Event Thumbnails */}
         {eventsData.map((event, index) => (
           <div
             key={event.id}
-            className={`event-thumbnail mx-2 overflow-hidden rounded-lg ${
-              index === currentEventIndex ? '' : 'opacity-50'
+            className={`event-thumbnail overflow-hidden rounded-lg ${
+              index === currentEventIndex ? 'current-event' : 'opacity-50'
             }`}
-            style={{ flex: '0 0 auto', width: '150px', height: '150px' }}
+            style={{
+              flex: '0 0 auto',
+              width: '250px', // Adjust width as needed
+              height: '250px', // Adjust height as needed
+              margin: '0 auto', // Center align thumbnails
+              maxWidth: '100%', // Ensure thumbnails don't exceed container width
+            }}
           >
             <img
               src={event.image}
-              alt={event.title}
+              alt=""
               className="h-full w-full rounded-t-lg object-cover"
             />
-            <div className="rounded-b-lg bg-white p-2">
-              <h3 className="mb-2 text-center text-lg font-medium">
-                {event.title}
-              </h3>
-              <p className="text-center text-sm text-gray-500">
-                {event.subtitle}
-              </p>
-            </div>
           </div>
         ))}
+
+        {/* Next Event Navigation */}
+        <button
+          className="next-event-btn text-black-500 ml-4 cursor-pointer text-4xl transition-transform duration-300 hover:scale-125"
+          onClick={navigateToNextEvent}
+        >
+          &gt;
+        </button>
+      </div>
+
+      {/* Read More Button */}
+      <div className="mt-4 flex justify-center">
+        <a href={eventsData[currentEventIndex].link} className="btn">
+          Read More
+        </a>
       </div>
     </div>
   )
 }
 
-export default EventsSection
+export default Event

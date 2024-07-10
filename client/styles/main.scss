@@ -165,6 +165,18 @@ h3.my-profession {
   object-fit: cover; /* Ensures the image covers the entire shape */
 }
 
+.event-thumbnail {
+  // Styles for event thumbnail
+  // ...
+
+  &.current-event {
+    width: 180px; /* Example larger width */
+    height: 180px; /* Example larger height */
+    
+  }
+}
+
+
 
 
 
