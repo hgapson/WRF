@@ -4,22 +4,22 @@ import Footer from './Footer'
 import Background from './Background' // Adjust the path as per your project structure
 import Event from './Events'
 import Reason from './Reason'
-//import '../styles/main.scss'
+import '../styles/main.scss'
 
 const App = () => {
   return (
     <div className="app">
-      <main className="main-contener">
+      <main className="main-container">
         <div className="heading">
           <Header />
         </div>
-        <div className="background">
+        <div className="background ">
           <Background />
         </div>
-        <div className="background">
+        <div className="event bg-blue-950">
           <Event />
         </div>
-        <div className="reason">
+        <div className="reason bg-blue-950">
           <Reason />
         </div>
 

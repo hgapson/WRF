@@ -4,8 +4,8 @@ import '../styles/main.scss' // Make sure the path is correct
 
 const Background = () => {
   return (
-    <div className="main-content flex min-h-screen items-center justify-center bg-blue-100">
-      <section className="home section w-full px-4">
+    <div className="main-content flex min-h-screen items-center justify-center bg-blue-950">
+      <section className="home section w-full px-4 ">
         <div className="container mx-auto">
           <div className="row flex flex-col-reverse items-center justify-between lg:flex-row">
             <div className="home-info flex-1 p-4 text-center lg:order-1 lg:mr-8 lg:text-left">

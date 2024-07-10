@@ -7,6 +7,7 @@
   --skin-color: #ec1818;
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
+  --big-black-950: #172554
 }
 
 body {
@@ -34,6 +35,7 @@ body {
 
 .main-content {
   padding-left: 00px;
+  background: var(--big-black-950);
 }
 
 .padd-15 {

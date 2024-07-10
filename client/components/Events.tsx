@@ -50,12 +50,12 @@ const Event = () => {
   }
 
   return (
-    <div className="container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto mt-8 px-4 sm:px-6 lg:px-8 ">
       {/* Title and Subtitle */}
-      <h2 className="mb-4 text-center text-3xl font-bold">
+      <h2 className="mb-4 text-center text-3xl font-bold text-white">
         {eventsData[currentEventIndex].title}
       </h2>
-      <h3 className="mb-6 text-center text-lg font-medium">
+      <h3 className="mb-6 text-center text-lg font-medium text-white">
         {eventsData[currentEventIndex].subtitle}
       </h3>
 
@@ -63,7 +63,7 @@ const Event = () => {
       <div className="flex flex-wrap items-center justify-center gap-4">
         {/* Previous Event Navigation */}
         <button
-          className="prev-event-btn text-black-500 mr-4 cursor-pointer text-4xl transition-transform duration-300 hover:scale-125"
+          className="prev-event-btn text-white-500 mr-4 cursor-pointer text-4xl transition-transform duration-300 hover:scale-125"
           onClick={navigateToPreviousEvent}
         >
           &lt;
@@ -94,7 +94,7 @@ const Event = () => {
 
         {/* Next Event Navigation */}
         <button
-          className="next-event-btn text-black-500 ml-4 cursor-pointer text-4xl transition-transform duration-300 hover:scale-125"
+          className="next-event-btn text-white-500 ml-4 cursor-pointer text-4xl transition-transform duration-300 hover:scale-125"
           onClick={navigateToNextEvent}
         >
           &gt;

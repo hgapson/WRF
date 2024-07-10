@@ -3,13 +3,15 @@ import { FaTint, FaUsers } from 'react-icons/fa'
 
 const Reason = () => {
   return (
-    <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-4xl">
+    <section className=" px-4 py-12 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-4xl text-white ">
         <div className="grid gap-8 md:grid-cols-3">
           {/* First Card */}
           <div className="rounded-lg  p-6">
-            <h2 className="mb-4 text-4xl font-semibold">Why refugees</h2>
-            <p className="text-gray-700">
+            <h2 className="mb-4 text-4xl font-semibold text-white">
+              Why refugees
+            </h2>
+            <p className="text-white">
               We focus on finding lasting solutions for at-risk refugees. We
               believe that everyone benefits when refugees are given a chance to
               use their talents and skills to contribute to their host countries
