@@ -5,6 +5,7 @@ import Background from './Background' // Adjust the path as per your project str
 import Event from './Events'
 import Reason from './Reason'
 import '../styles/main.scss'
+import GetInvolved from './GetInvolved'
 
 const App = () => {
   return (
@@ -16,11 +17,14 @@ const App = () => {
         <div className="background ">
           <Background />
         </div>
-        <div className="event bg-blue-950">
+        <div className="event ">
           <Event />
         </div>
         <div className="reason bg-blue-950">
           <Reason />
+        </div>
+        <div className="involved">
+          <GetInvolved />
         </div>
 
         {/* Your main content here */}
