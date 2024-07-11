@@ -52,10 +52,10 @@ const Event = () => {
   return (
     <div className="container mx-auto mt-8 px-4 sm:px-6 lg:px-8 ">
       {/* Title and Subtitle */}
-      <h2 className="mb-4 text-center text-3xl font-bold text-white">
+      <h2 className="mb-4 text-center text-3xl font-bold text-black">
         {eventsData[currentEventIndex].title}
       </h2>
-      <h3 className="mb-6 text-center text-lg font-medium text-white">
+      <h3 className="mb-6 text-center text-lg font-medium text-black">
         {eventsData[currentEventIndex].subtitle}
       </h3>
 
