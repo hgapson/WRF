@@ -3,11 +3,11 @@ import { FaTint, FaUsers } from 'react-icons/fa'
 
 const Reason = () => {
   return (
-    <section className=" px-4 py-12 sm:px-6 lg:px-8">
+    <section className="px-4 py-12 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-4xl text-white ">
         <div className="grid gap-8 md:grid-cols-3">
           {/* First Card */}
-          <div className="rounded-lg  p-6">
+          <div className="rounded-lg p-6">
             <h2 className="mb-4 text-4xl font-semibold text-white">
               Why refugees
             </h2>
@@ -17,6 +17,14 @@ const Reason = () => {
               use their talents and skills to contribute to their host countries
               and to the world.
             </p>
+            <div className="mt-4 flex justify-center">
+              <button
+                className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
+                onClick={() => (window.location.href = '/getInvolved')}
+              >
+                Learn More
+              </button>
+            </div>
           </div>
 
           {/* Second Card */}
