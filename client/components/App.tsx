@@ -6,6 +6,7 @@ import Event from './Events'
 import Reason from './Reason'
 import '../styles/main.scss'
 import GetInvolved from './GetInvolved'
+import ImageCardSection from './Partners'
 
 const App = () => {
   return (
@@ -25,6 +26,9 @@ const App = () => {
         </div>
         <div className="involved">
           <GetInvolved />
+        </div>
+        <div>
+          <ImageCardSection />
         </div>
 
         {/* Your main content here */}

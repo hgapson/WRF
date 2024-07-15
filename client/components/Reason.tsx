@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import { FaTint, FaUsers } from 'react-icons/fa'
 
 const Reason = () => {
