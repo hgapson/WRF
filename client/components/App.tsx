@@ -18,16 +18,16 @@ const App = () => {
         <div className="background ">
           <Background />
         </div>
-        <div className="event ">
+        <div className="event bg-blue-950">
           <Event />
         </div>
         <div className="reason bg-blue-950">
           <Reason />
         </div>
-        <div className="involved">
+        <div className="involved bg-blue-950">
           <GetInvolved />
         </div>
-        <div>
+        <div className="partners bg-blue-950">
           <ImageCardSection />
         </div>
 

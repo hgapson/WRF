@@ -6,10 +6,12 @@ import '../styles/main.scss'
 
 const SectionWithCards = () => {
   return (
-    <div className="container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto mt-8 bg-blue-950 px-4 sm:px-6 lg:px-8">
       {/* Title and Subtitle */}
-      <h2 className="mb-4 text-center text-3xl font-bold">Get Involved</h2>
-      <h3 className="mb-6 text-center text-lg italic">
+      <h2 className="mb-4 text-center text-3xl font-bold text-white">
+        Get Involved
+      </h2>
+      <h3 className="mb-6 text-center text-lg italic text-white">
         Join Us in Making a Difference
       </h3>
 

@@ -2,6 +2,28 @@ import React from 'react'
 import police from '../public/Police.png'
 import winz from '../public/winz.png'
 import settlement from '../public/settlement.png'
+import '../styles/main.scss'
+
+const cardsData = [
+  {
+    title: 'National Police',
+    image: police,
+    description:
+      'Brief description of the Police project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    title: 'Ministry of Social Development',
+    image: winz,
+    description:
+      'Brief description of the Ministry of Social Development project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    title: 'Settlement Center',
+    image: settlement,
+    description:
+      'Brief description of the Settlement project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+]
 
 const ImageCardSection = () => {
   return (
@@ -10,29 +32,29 @@ const ImageCardSection = () => {
         {/* Title and Subtitle */}
         <h2 className="mb-4 text-3xl font-bold text-white">Our Partners</h2>
         <h3 className="mb-6 text-lg italic text-white">
-          Thank you for contribution on former refugees awareness
+          Thank you for your contribution to former refugee awareness.
         </h3>
 
         {/* Image Cards */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {[police, winz, settlement].map((image, index) => (
+          {cardsData.map((card, index) => (
             <div
               key={index}
               className="card mx-auto max-w-xs overflow-hidden rounded-lg bg-white shadow-lg"
-              style={{ maxWidth: '200px', maxHeight: '300px' }} // Adjusted size
+              style={{
+                width: '300px', // Increased width for larger cards
+                backgroundColor: '#f3f4f6', // Gray background color
+              }}
             >
               <img
-                src={image}
+                src={card.image}
                 alt={`Card ${index + 1}`}
-                className="h-36 w-full object-cover" // Adjusted image size
+                className="h-48 w-full object-cover"
               />
               <div className="p-4">
                 <h3 className="mb-2 text-center text-xl font-medium">
-                  Project Title {index + 1}
+                  {card.title}
                 </h3>
-                <p className="mb-4 text-center text-gray-700">
-                  Brief description of project {index + 1}.
-                </p>
               </div>
             </div>
           ))}
