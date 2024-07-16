@@ -7,6 +7,7 @@ import Reason from './Reason'
 import '../styles/main.scss'
 import GetInvolved from './GetInvolved'
 import ImageCardSection from './Partners'
+import TestimonialsSection from './Testimonial'
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
         <div className="background ">
           <Background />
         </div>
-        <div className="event bg-blue-950">
+        <div className="event ">
           <Event />
         </div>
         <div className="reason bg-blue-950">
@@ -29,6 +30,9 @@ const App = () => {
         </div>
         <div className="partners bg-blue-950">
           <ImageCardSection />
+        </div>
+        <div className="testimonial">
+          <TestimonialsSection />
         </div>
 
         {/* Your main content here */}
