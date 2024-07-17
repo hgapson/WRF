@@ -50,9 +50,9 @@ const Event = () => {
   }
 
   return (
-    <div className="container mx-auto mt-8 px-4 sm:px-6 lg:px-8 ">
+    <div className="container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
       {/* Title and Subtitle */}
-      <h2 className="mb-4 text-center text-3xl font-bold text-black">
+      <h2 className="mb-6 text-center text-3xl font-bold text-black ">
         {eventsData[currentEventIndex].title}
       </h2>
       <h3 className="mb-6 text-center text-lg font-medium text-black">
@@ -102,8 +102,8 @@ const Event = () => {
       </div>
 
       {/* Read More Button */}
-      <div className="mt-4 flex justify-center">
-        <a href={eventsData[currentEventIndex].link} className="btn">
+      <div className="mb-6 mt-4 flex justify-center">
+        <a href={eventsData[currentEventIndex].link} className="btn ">
           Read More
         </a>
       </div>

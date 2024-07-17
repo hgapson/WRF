@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { FaQuoteLeft } from 'react-icons/fa'
 import testimonial from '../public/testimonial.jpg'
 import '../styles/main.scss'
@@ -39,10 +39,11 @@ const TestimonialsSection = () => {
       <h2 className="mb-8 text-center text-3xl font-bold md:w-full">
         Testimonials
       </h2>
+
       <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
         {/* Fixed Image */}
         <div className="relative mb-8 h-full w-full md:mb-0 md:w-1/2">
-          <div className="parallelogram-container">
+          <div className="parallelogram-container transition-transform duration-300 ease-in-out hover:scale-105">
             <img
               src={testimonial}
               alt="Testimonial"

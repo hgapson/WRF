@@ -16,7 +16,7 @@ const App = () => {
         <div className="heading">
           <Header />
         </div>
-        <div className="background ">
+        <div className="background mb-6">
           <Background />
         </div>
         <div className="event ">

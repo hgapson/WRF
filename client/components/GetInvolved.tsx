@@ -16,7 +16,7 @@ const SectionWithCards = () => {
       </h3>
 
       {/* Paragraph with Gray Background */}
-      <p className="mb-8 bg-gray-200 p-4 text-center">
+      <p className="mb-8 rounded-full bg-gray-200 p-4 text-center ">
         Your support is crucial to helping refugees rebuild their lives. <br />
         Here’s how you can get involved:
       </p>
