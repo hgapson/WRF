@@ -2,7 +2,7 @@ import React from 'react'
 import volunteering from '../public/volunteering.jpg'
 import awareness from '../public/awareness.jpg'
 import partnership from '../public/partnership.jpeg'
-import '../styles/main.scss'
+import '../main.scss'
 
 const SectionWithCards = () => {
   return (

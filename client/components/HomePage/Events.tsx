@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import wrd from '../public/wrd.jpg'
 import volunteering from '../public/volunteering.jpg'
 import workshop from '../public/workshop.jpg'
-import '../styles/main.scss'
+import '../main.scss'
 
 // Example event data (replace with actual data or fetch from API)
 const eventsData = [

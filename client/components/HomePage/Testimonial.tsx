@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaQuoteLeft } from 'react-icons/fa'
 import testimonial from '../public/testimonial.jpg'
-import '../styles/main.scss'
+import '../main.scss'
 
 const testimonialsData = [
   {

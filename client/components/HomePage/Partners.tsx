@@ -2,7 +2,7 @@ import React from 'react'
 import police from '../public/Police.png'
 import winz from '../public/winz.png'
 import settlement from '../public/settlement.png'
-import '../styles/main.scss'
+import '../main.scss'
 
 const cardsData = [
   {

@@ -1,5 +1,5 @@
 import logo from '../public/logo.jpg'
-import '../styles/main.scss'
+import '../main.scss'
 
 function Logo() {
   return (
