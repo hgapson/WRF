@@ -1,15 +1,49 @@
 import React, { useState } from 'react'
+import '../main.scss'
 
 const Contact: React.FC = () => {
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
-  const [phone, setPhone] = useState<number | string>('') // Can accept number or string to handle input field correctly
+  const [phone, setPhone] = useState<string | number>('') // Can accept number or string to handle input field correctly
   const [message, setMessage] = useState<string>('')
+  const [status, setStatus] = useState<string>('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Add form submission logic here
-    console.log('Form submitted:', { name, email, phone, message })
+
+    const contactData = {
+      name,
+      email,
+      phone,
+      message,
+    }
+
+    try {
+      const response = await fetch('http://localhost:3000/api/v1/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactData),
+      })
+
+      if (response.ok) {
+        setStatus('Message sent successfully!')
+        setName('')
+        setEmail('')
+        setPhone('')
+        setMessage('')
+      } else {
+        setStatus('Error sending message. Please try again.')
+        setName('')
+        setEmail('')
+        setPhone('')
+        setMessage('')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      setStatus('Error sending message. Please try again.')
+    }
   }
 
   return (
@@ -72,6 +106,7 @@ const Contact: React.FC = () => {
         >
           Send Message
         </button>
+        {status && <p className="mt-4 text-red-500">{status}</p>}
       </form>
     </div>
   )
