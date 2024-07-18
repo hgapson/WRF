@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function NavLinks() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,42 +12,47 @@ function NavLinks() {
     <nav className="bg-gray-100 p-4 shadow-md md:flex md:items-center md:justify-between">
       {/* Desktop Menu */}
       <div className="space-x-6 md:flex">
-        <a
-          href="#home"
+        <Link
+          to="/"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Home
-        </a>
-        <a
-          href="#about-us"
+        </Link>
+
+        <Link
+          to="/"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           About Us
-        </a>
-        <a
-          href="#our-programs"
+        </Link>
+
+        <Link
+          to="/"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Our Programs
-        </a>
-        <a
-          href="#our-partners"
+        </Link>
+
+        <Link
+          to="/"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Our Partners
-        </a>
-        <a
-          href="#get-involved"
+        </Link>
+
+        <Link
+          to="/"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Get Involved
-        </a>
-        <a
-          href="#contact-us"
+        </Link>
+
+        <Link
+          to="Contact"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Contact Us
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu Toggle */}
