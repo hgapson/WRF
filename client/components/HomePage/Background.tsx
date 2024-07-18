@@ -1,8 +1,9 @@
-// import React from 'react'
+import React from 'react'
 import cover from '../public/cover.jpg'
+import { Link } from 'react-router-dom'
 import '../main.scss' // Make sure the path is correct
 
-const Background = () => {
+const Background: React.FC = () => {
   return (
     <div className="main-content flex min-h-screen items-center justify-center ">
       <section className="home section w-full  px-4">
@@ -19,12 +20,12 @@ const Background = () => {
                 Bring together the voice of all refugee communities settled in
                 the Waikato Region
               </p>
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="btn hire-me mt-4 inline-block rounded bg-blue-500 px-4 py-2 text-white"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
             <div className="home-image flex flex-1 justify-center p-4 lg:justify-end">
               <img
