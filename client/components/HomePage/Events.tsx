@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import wrd from '../public/wrd.jpg'
 import volunteering from '../public/volunteering.jpg'
 import workshop from '../public/workshop.jpg'
@@ -102,11 +103,13 @@ const Event = () => {
       </div>
 
       {/* Read More Button */}
-      <div className="mb-6 mt-4 flex justify-center">
-        <a href={eventsData[currentEventIndex].link} className="btn ">
-          Read More
-        </a>
-      </div>
+      <Link to="/Events">
+        <div className="mb-6 mt-4 flex justify-center">
+          <a href={eventsData[currentEventIndex].link} className="btn ">
+            Read More
+          </a>
+        </div>
+      </Link>
     </div>
   )
 }
