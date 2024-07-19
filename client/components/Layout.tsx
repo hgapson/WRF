@@ -1,14 +1,18 @@
+// src/components/Layout.tsx
+
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './HomePage/Header'
 import Footer from './HomePage/Footer'
-// Adjust the path as per your project structure
+//import './Layout.css'; // Ensure this path is correct
 
 const Layout = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow pb-16 pt-16">
+        {' '}
+        {/* Adjust padding to accommodate header/footer */}
         <Outlet />
       </main>
       <Footer />

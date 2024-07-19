@@ -25,6 +25,30 @@ body {
   text-decoration: none;
   box-sizing: border-box;
 }
+/* src/components/HomePage/Header.css */
+
+/* src/components/HomePage/Header.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: #1e3a8a; /* Match the header background color */
+  transition: transform 0.3s ease; /* Smooth transition for hide/show */
+}
+
+.header.hide {
+  transform: translateY(-100%); /* Move header up to hide it */
+}
+
+.header.show {
+  transform: translateY(0); /* Move header back into view */
+}
+
+
+
 .section {
   background: var(--bg-black-900);
   min-height: 100vh;
