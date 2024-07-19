@@ -1,7 +1,7 @@
 import React from 'react'
 import police from '../public/Police.png'
 import winz from '../public/winz.png'
-import settlement from '../public/settlement.png'
+import sms from '../public/hms.png'
 import '../main.scss'
 
 const cardsData = [
@@ -19,7 +19,7 @@ const cardsData = [
   },
   {
     title: 'Settlement Center',
-    image: settlement,
+    image: sms,
     description:
       'Brief description of the Settlement project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
