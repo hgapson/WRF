@@ -1,3 +1,5 @@
+// src/components/EventPage/EventsPage.tsx
+
 import React, { useState } from 'react'
 import Modal from './Modal'
 import RegisterForm from './RegisterForm'
@@ -27,14 +29,7 @@ const eventsData = [
     link: '/event1',
     registerLink: '/register1',
   },
-  {
-    title: 'Food Stamp Training',
-    image: 'path_to_image_or_video_2',
-    date: '2023-09-15',
-    description: 'This is a brief description of Event 2.',
-    link: '/event2',
-    registerLink: '/register2',
-  },
+
   // Add more events as needed
 ]
 
@@ -54,7 +49,9 @@ const EventsPage: React.FC = () => {
 
   return (
     <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-[64px]">
+        {' '}
+        {/* Add padding-top here */}
         <h2 className="mb-6 text-center text-3xl font-bold">Upcoming Events</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {eventsData.map((event, index) => (

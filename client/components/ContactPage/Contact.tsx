@@ -1,3 +1,5 @@
+// src/components/ContactPage/Contact.tsx
+
 import React, { useState } from 'react'
 import '../main.scss'
 
@@ -47,7 +49,9 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 pt-[80px]">
+      {' '}
+      {/* Add top padding */}
       <h2 className="mb-4 text-3xl font-bold">Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
