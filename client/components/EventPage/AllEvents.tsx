@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from './Modal'
+import RegisterForm from './RegisterForm'
 
 const eventsData = [
   {
@@ -17,42 +19,23 @@ const eventsData = [
     link: '/event2',
     registerLink: '/register2',
   },
-  {
-    title: 'Event 3',
-    image: 'path_to_image_or_video_1',
-    date: '2023-08-01',
-    description: 'This is a brief description of Event 1.',
-    link: '/event1',
-    registerLink: '/register1',
-  },
-  {
-    title: 'Event 4',
-    image: 'path_to_image_or_video_2',
-    date: '2023-09-15',
-    description: 'This is a brief description of Event 2.',
-    link: '/event2',
-    registerLink: '/register2',
-  },
-  {
-    title: 'Event 5',
-    image: 'path_to_image_or_video_1',
-    date: '2023-08-01',
-    description: 'This is a brief description of Event 1.',
-    link: '/event1',
-    registerLink: '/register1',
-  },
-  {
-    title: 'Event 6',
-    image: 'path_to_image_or_video_2',
-    date: '2023-09-15',
-    description: 'This is a brief description of Event 2.',
-    link: '/event2',
-    registerLink: '/register2',
-  },
   // Add more events as needed
 ]
 
-const EventsPage = () => {
+const EventsPage: React.FC = () => {
+  const [showModal, setShowModal] = useState(false)
+  const [selectedEvent, setSelectedEvent] = useState<any>(null)
+
+  const handleOpenModal = (event: any) => {
+    setSelectedEvent(event)
+    setShowModal(true)
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false)
+    setSelectedEvent(null)
+  }
+
   return (
     <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8">
       <div className="container mx-auto">
@@ -88,18 +71,21 @@ const EventsPage = () => {
                   >
                     Read More
                   </a>
-                  <a
-                    href={event.registerLink}
+                  <button
+                    onClick={() => handleOpenModal(event)}
                     className="rounded bg-green-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-green-600"
                   >
                     Register
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+      <Modal showModal={showModal} handleClose={handleCloseModal}>
+        {selectedEvent && <RegisterForm event={selectedEvent} />}
+      </Modal>
     </section>
   )
 }
