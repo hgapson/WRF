@@ -18,7 +18,7 @@ const cardsData = [
       'Brief description of the Ministry of Social Development project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
-    title: 'Settlement Center',
+    title: 'HMS Trust',
     image: sms,
     description:
       'Brief description of the Settlement project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
