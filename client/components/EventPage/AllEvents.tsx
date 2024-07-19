@@ -4,7 +4,7 @@ import RegisterForm from './RegisterForm'
 
 const eventsData = [
   {
-    title: 'Event 1',
+    title: 'Youth competition',
     image: 'path_to_image_or_video_1',
     date: '2023-08-01',
     description: 'This is a brief description of Event 1.',
@@ -12,7 +12,23 @@ const eventsData = [
     registerLink: '/register1',
   },
   {
-    title: 'Event 2',
+    title: 'World Refugee Day',
+    image: 'path_to_image_or_video_2',
+    date: '2023-09-15',
+    description: 'This is a brief description of Event 2.',
+    link: '/event2',
+    registerLink: '/register2',
+  },
+  {
+    title: 'WRF Workshop',
+    image: 'path_to_image_or_video_1',
+    date: '2023-08-01',
+    description: 'This is a brief description of Event 1.',
+    link: '/event1',
+    registerLink: '/register1',
+  },
+  {
+    title: 'Food Stamp Training',
     image: 'path_to_image_or_video_2',
     date: '2023-09-15',
     description: 'This is a brief description of Event 2.',

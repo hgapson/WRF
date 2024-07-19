@@ -1,5 +1,3 @@
-import Header from './Header'
-import Footer from './Footer'
 import Background from './Background' // Adjust the path as per your project structure
 import Event from './Events'
 import Reason from './Reason'
@@ -11,9 +9,6 @@ import TestimonialsSection from './Testimonial'
 const Home = () => {
   return (
     <main className="main-container">
-      <div className="heading">
-        <Header />
-      </div>
       <div className="background mb-6">
         <Background />
       </div>
@@ -34,9 +29,6 @@ const Home = () => {
       </div>
 
       {/* Your main content here */}
-      <div className="footer">
-        <Footer />
-      </div>
     </main>
   )
 }

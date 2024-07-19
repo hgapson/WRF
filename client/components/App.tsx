@@ -1,15 +1,11 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import './main.scss'
+// src/App.tsx
 
-const App: React.FC = () => {
-  return (
-    <div className="app">
-      <main className="main-container">
-        <Outlet />
-      </main>
-    </div>
-  )
+import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import router from './routes' // Ensure the path is correct
+
+const App = () => {
+  return <RouterProvider router={router} />
 }
 
 export default App
