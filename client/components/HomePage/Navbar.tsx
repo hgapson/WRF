@@ -27,7 +27,7 @@ function NavLinks() {
         </Link>
 
         <Link
-          to="our programs"
+          to="our-programs"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Our Programs
