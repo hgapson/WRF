@@ -1,24 +1,27 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import AnnualReportModal from './AnnualReportModal' // Adjust the path as needed
+import hms from '../public/hms.png'
+import ministry from '../public/ministry of ed.jpg'
+import aa from '../public/AA.png'
 
 const partners = [
   {
-    name: 'Partner 1',
+    name: 'HMS Trust',
     description: 'Description for Partner 1',
-    logo: 'path-to-logo1.jpg',
+    logo: hms,
     website: 'https://partner1.com',
   },
   {
-    name: 'Partner 2',
+    name: 'AA',
     description: 'Description for Partner 2',
-    logo: 'path-to-logo2.jpg',
+    logo: aa,
     website: 'https://partner2.com',
   },
   {
-    name: 'Partner 3',
+    name: 'Migration',
     description: 'Description for Partner 3',
-    logo: 'path-to-logo3.jpg',
+    logo: ministry,
     website: 'https://partner3.com',
   },
 ]
@@ -49,7 +52,7 @@ const Partners: React.FC = () => {
               onClick={() => setIsModalOpen(true)}
               className="rounded-lg bg-green-500 px-6 py-3 text-white transition duration-300 hover:bg-green-600"
             >
-              View Reports
+              Annual Reports
             </button>
           </div>
         </div>
