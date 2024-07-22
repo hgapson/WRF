@@ -20,28 +20,28 @@ function NavLinks() {
         </Link>
 
         <Link
-          to="/"
+          to="about-us"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           About Us
         </Link>
 
         <Link
-          to="/"
+          to="our programs"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Our Programs
         </Link>
 
         <Link
-          to="/"
+          to="our partners"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Our Partners
         </Link>
 
         <Link
-          to="/"
+          to="get involved"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Get Involved

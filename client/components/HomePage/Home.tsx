@@ -5,6 +5,7 @@ import '../main.scss'
 import GetInvolved from './GetInvolved'
 import ImageCardSection from './Partners'
 import TestimonialsSection from './Testimonial'
+//import News from './News'
 
 const Home = () => {
   return (
