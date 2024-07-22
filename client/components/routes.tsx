@@ -7,6 +7,7 @@ import Contact from './ContactPage/Contact' // Adjust the path as needed
 import EventsPage from './EventPage/AllEvents' // Adjust the path as needed
 import About from './About-us/About'
 import OurPrograms from './Our-programs/OurPrograms'
+import Partners from './Our-Partners/Partners'
 
 const routes: RouteObject[] = [
   {
@@ -18,6 +19,7 @@ const routes: RouteObject[] = [
       { path: 'events', element: <EventsPage /> },
       { path: 'about-us', element: <About /> },
       { path: 'our-programs', element: <OurPrograms /> },
+      { path: 'our-partners', element: <Partners /> },
     ],
   },
 ]

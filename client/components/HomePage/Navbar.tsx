@@ -34,7 +34,7 @@ function NavLinks() {
         </Link>
 
         <Link
-          to="our partners"
+          to="our-partners"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Our Partners
