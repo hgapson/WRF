@@ -66,7 +66,7 @@ const GetInvolved: React.FC = () => {
             community.
           </p>
           <button className="rounded-lg bg-green-500 px-6 py-3 text-white transition duration-300 hover:bg-green-600">
-            Get Involved
+            Take Action
           </button>
         </div>
       </section>
