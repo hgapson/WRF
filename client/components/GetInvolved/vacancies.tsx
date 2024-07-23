@@ -1,34 +1,12 @@
 import React, { useState } from 'react'
 import { FaRegBookmark, FaBookmark } from 'react-icons/fa'
-import { Job } from '../models' // Import the Job type
-
-const jobList: Job[] = [
-  // Example job data
-  {
-    id: '1',
-    title: 'Software Engineer',
-    location: 'New York',
-    description: 'Develop and maintain software applications.',
-  },
-  {
-    id: '2',
-    title: 'Product Manager',
-    location: 'San Francisco',
-    description: 'Manage product development lifecycle.',
-  },
-  {
-    id: '3',
-    title: 'Designer',
-    location: 'Los Angeles',
-    description: 'Design user interfaces and experiences.',
-  },
-  // Add more job objects as needed
-]
+import { Job, jobList } from '../models' // Import Job type and jobList
 
 const Vacancies: React.FC = () => {
   const [savedJobs, setSavedJobs] = useState<string[]>([])
   const [selectedJob, setSelectedJob] = useState<string | null>(null)
 
+  // Function to toggle save status of a job
   const toggleSaveJob = (jobId: string) => {
     setSavedJobs((prev) =>
       prev.includes(jobId)
@@ -37,10 +15,12 @@ const Vacancies: React.FC = () => {
     )
   }
 
+  // Function to handle apply button click
   const handleApplyClick = (jobId: string) => {
     setSelectedJob(jobId)
   }
 
+  // Determine which job to display if a job is selected
   const jobToDisplay = selectedJob
     ? jobList.find((job) => job.id === selectedJob)
     : null

@@ -58,6 +58,53 @@ const GetInvolved: React.FC = () => {
       </section>
 
       {/* Other sections remain unchanged */}
+      <section className="bg-blue-100 py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-4 text-3xl font-bold">Awareness and Advocacy</h2>
+          <p className="mb-8 text-lg">
+            Raise awareness about our cause and advocate for change in your
+            community.
+          </p>
+          <button className="rounded-lg bg-green-500 px-6 py-3 text-white transition duration-300 hover:bg-green-600">
+            Get Involved
+          </button>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-4 text-3xl font-bold">Partnership Opportunities</h2>
+          <p className="mb-8 text-lg">
+            Partner with us and support our initiatives through corporate or
+            community partnerships.
+          </p>
+          <button className="rounded-lg bg-purple-500 px-6 py-3 text-white transition duration-300 hover:bg-purple-600">
+            Become a Partner
+          </button>
+        </div>
+      </section>
+      <section className="py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-4 text-3xl font-bold">Stay Informed</h2>
+          <p className="mb-8 text-lg">
+            Sign up for our newsletter to stay updated on our latest news and
+            events.
+          </p>
+          <form className="flex flex-col items-center">
+            <input
+              type="email"
+              placeholder="Your email"
+              className="mb-4 w-1/2 rounded border p-2"
+            />
+            <button
+              type="submit"
+              className="rounded-lg bg-yellow-500 px-6 py-3 text-white transition duration-300 hover:bg-yellow-600"
+            >
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </section>
     </div>
   )
 }

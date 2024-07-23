@@ -38,5 +38,23 @@ export const jobList: Job[] = [
     location: 'Los Angeles',
     description: 'Design user interfaces and experiences.',
   },
+  {
+    id: '4',
+    title: 'ccountant coordinator',
+    location: 'Hamilton',
+    description: 'Develop and maintain software applications.',
+  },
+  {
+    id: '5',
+    title: 'community coordinator',
+    location: 'Tauranga',
+    description: 'Manage product development lifecycle.',
+  },
+  {
+    id: '6',
+    title: 'Human Resource',
+    location: 'Taupo',
+    description: 'Design user interfaces and experiences.',
+  },
   // Add more job objects as needed
 ]
