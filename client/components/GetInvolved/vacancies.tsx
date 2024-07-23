@@ -1,31 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaRegBookmark, FaBookmark } from 'react-icons/fa'
+import { Job } from '../models' // Import the Job type
 
-export const jobList = [
+const jobList: Job[] = [
+  // Example job data
   {
     id: '1',
-    title: 'Volunteer Coordinator',
-    location: 'Hamilton, NZ',
-    description:
-      'We are looking for a dedicated volunteer coordinator to join our team and help manage our volunteer program.',
+    title: 'Software Engineer',
+    location: 'New York',
+    description: 'Develop and maintain software applications.',
   },
   {
     id: '2',
-    title: 'Community Outreach Specialist',
-    location: 'Hamilton, NZ',
-    description:
-      'Join us in our efforts to reach out to the community and spread awareness about our programs.',
+    title: 'Product Manager',
+    location: 'San Francisco',
+    description: 'Manage product development lifecycle.',
   },
   {
     id: '3',
-    title: 'Fundraising Manager',
-    location: 'Hamilton, NZ',
-    description:
-      'Help us raise the necessary funds to support our programs and initiatives.',
+    title: 'Designer',
+    location: 'Los Angeles',
+    description: 'Design user interfaces and experiences.',
   },
-  // Add more job listings as needed
+  // Add more job objects as needed
 ]
 
 const Vacancies: React.FC = () => {
+  const [savedJobs, setSavedJobs] = useState<string[]>([])
+  const [selectedJob, setSelectedJob] = useState<string | null>(null)
+
+  const toggleSaveJob = (jobId: string) => {
+    setSavedJobs((prev) =>
+      prev.includes(jobId)
+        ? prev.filter((id) => id !== jobId)
+        : [...prev, jobId],
+    )
+  }
+
+  const handleApplyClick = (jobId: string) => {
+    setSelectedJob(jobId)
+  }
+
+  const jobToDisplay = selectedJob
+    ? jobList.find((job) => job.id === selectedJob)
+    : null
+
   return (
     <div className="min-h-screen bg-gray-100 py-12">
       <div className="container mx-auto px-4 text-center">
@@ -35,19 +54,62 @@ const Vacancies: React.FC = () => {
           vacancies below.
         </p>
 
-        {jobList.map((job) => (
-          <div
-            key={job.id}
-            className="mb-8 rounded-lg bg-white p-6 text-left shadow-lg"
-          >
-            <h2 className="mb-4 text-2xl font-bold">{job.title}</h2>
-            <p className="mb-2 text-gray-600">Location: {job.location}</p>
-            <p className="mb-4 text-gray-700">{job.description}</p>
-            <button className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600">
-              Apply Now
-            </button>
+        {jobToDisplay ? (
+          <div className="mb-8 rounded-lg bg-white p-6 text-left shadow-lg">
+            <h2 className="mb-4 text-2xl font-bold">{jobToDisplay.title}</h2>
+            <p className="mb-2 text-gray-600">
+              Location: {jobToDisplay.location}
+            </p>
+            <p className="mb-4 text-gray-700">{jobToDisplay.description}</p>
+            <div className="flex items-center justify-between">
+              <a
+                href="/apply"
+                className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
+              >
+                Apply Now
+              </a>
+              <button
+                onClick={() => setSelectedJob(null)}
+                className="mt-4 rounded-lg bg-gray-500 px-6 py-3 text-white transition duration-300 hover:bg-gray-600"
+              >
+                Back to Vacancies
+              </button>
+            </div>
           </div>
-        ))}
+        ) : (
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {jobList.map((job: Job) => (
+              <div
+                key={job.id}
+                className="overflow-hidden rounded-lg bg-white shadow-lg"
+              >
+                <div className="p-6">
+                  <div className="mb-4 flex items-center justify-between">
+                    <h2 className="text-xl font-bold">{job.title}</h2>
+                    <button
+                      onClick={() => toggleSaveJob(job.id)}
+                      className="text-gray-500 hover:text-gray-700"
+                    >
+                      {savedJobs.includes(job.id) ? (
+                        <FaBookmark />
+                      ) : (
+                        <FaRegBookmark />
+                      )}
+                    </button>
+                  </div>
+                  <p className="mb-2 text-gray-600">Location: {job.location}</p>
+                  <p className="mb-4 text-gray-700">{job.description}</p>
+                  <button
+                    onClick={() => handleApplyClick(job.id)}
+                    className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
