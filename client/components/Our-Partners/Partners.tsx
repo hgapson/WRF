@@ -10,19 +10,19 @@ const partners = [
     name: 'HMS Trust',
     description: 'Description for Partner 1',
     logo: hms,
-    website: 'https://partner1.com',
+    website: 'https://www.hmstrust.org.nz/',
   },
   {
     name: 'AA',
     description: 'Description for Partner 2',
     logo: aa,
-    website: 'https://partner2.com',
+    website: 'https://www.aa.co.nz/',
   },
   {
     name: 'Migration',
     description: 'Description for Partner 3',
     logo: ministry,
-    website: 'https://partner3.com',
+    website: 'https://www.education.govt.nz/',
   },
 ]
 

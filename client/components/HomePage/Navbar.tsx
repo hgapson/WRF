@@ -41,7 +41,7 @@ function NavLinks() {
         </Link>
 
         <Link
-          to="get involved"
+          to="get-involved"
           className="font-semibold text-gray-800 hover:text-blue-500"
         >
           Get Involved
