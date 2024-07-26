@@ -164,16 +164,20 @@ const WhyWeHelp = () => {
               alt="Impact Statistics"
               className="mb-4 w-full rounded-lg shadow-lg md:mb-0 md:mr-4 md:w-1/2"
             />
-            <p>
-              We have helped thousands of refugees find new beginnings and build
-              successful lives. Here are some of our impact statistics:
-            </p>
-            {/* Replace with actual statistics or infographics */}
-            <ul className="ml-4 list-inside list-disc">
-              <li>500+ refugees integrated into new communities</li>
-              <li>300+ job placements secured</li>
-              <li>200+ legal cases resolved</li>
-            </ul>
+            <div>
+              <div className="mb-4">
+                <h3 className="text-2xl font-semibold text-blue-500">500+</h3>
+                <p>refugees integrated into new communities</p>
+              </div>
+              <div className="mb-4">
+                <h3 className="text-2xl font-semibold text-blue-500">300+</h3>
+                <p>job placements secured</p>
+              </div>
+              <div className="mb-4">
+                <h3 className="text-2xl font-semibold text-blue-500">200+</h3>
+                <p>legal cases resolved</p>
+              </div>
+            </div>
           </div>
         </div>
 
