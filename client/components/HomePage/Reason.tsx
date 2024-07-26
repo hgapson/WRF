@@ -1,4 +1,5 @@
 //import React from 'react'
+import { Link } from 'react-router-dom'
 import { FaTint, FaUsers } from 'react-icons/fa'
 
 const Reason = () => {
@@ -17,14 +18,13 @@ const Reason = () => {
               use their talents and skills to contribute to their host countries
               and to the world.
             </p>
-            <div className="mt-4 flex justify-center">
-              <button
-                className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
-                onClick={() => (window.location.href = '/getInvolved')}
-              >
-                Learn More
-              </button>
-            </div>
+            <Link to="/why-we-help">
+              <div className="mt-4 flex justify-center">
+                <button className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600">
+                  Learn More
+                </button>
+              </div>
+            </Link>
           </div>
 
           {/* Second Card */}

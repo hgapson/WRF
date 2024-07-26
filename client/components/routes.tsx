@@ -11,6 +11,7 @@ import Partners from './Our-Partners/Partners'
 import GetInvolved from './GetInvolved/GetInvolved'
 import Vacancies from './GetInvolved/vacancies'
 import JobDetail from './GetInvolved/JobDetail'
+import WhyWeHelp from './Why/WhyWeHelp'
 
 const routes: RouteObject[] = [
   {
@@ -26,6 +27,7 @@ const routes: RouteObject[] = [
       { path: 'get-involved', element: <GetInvolved /> },
       { path: 'vacancies', element: <Vacancies /> },
       { path: 'vacancies/:id', element: <JobDetail /> },
+      { path: 'why-we-help', element: <WhyWeHelp /> },
     ],
   },
 ]
