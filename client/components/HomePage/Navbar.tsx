@@ -120,19 +120,19 @@ function NavLinks() {
             to="/about-us"
             className="font-semibold text-white hover:text-blue-500"
           >
-            About Us
+            About
           </Link>
           <Link
             to="/our-programs"
             className="font-semibold text-white hover:text-blue-500"
           >
-            Our Programs
+            Programs
           </Link>
           <Link
             to="/our-partners"
             className="font-semibold text-white hover:text-blue-500"
           >
-            Our Partners
+            Partners
           </Link>
           <Link
             to="/get-involved"
@@ -144,7 +144,7 @@ function NavLinks() {
             to="/contact"
             className="font-semibold text-white hover:text-blue-500"
           >
-            Contact Us
+            Contact
           </Link>
         </div>
       )}
