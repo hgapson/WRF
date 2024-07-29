@@ -63,7 +63,7 @@ const WhyWeHelp = () => {
                 className="mb-4 w-full rounded-lg shadow-lg"
               />
               <p className="text-lg">
-                John, a talented engineer, found a new home and a promising
+                Sarah, a talented engineer, found a new home and a promising
                 career through our programs.
               </p>
             </div>
@@ -74,7 +74,7 @@ const WhyWeHelp = () => {
                 className="mb-4 w-full rounded-lg shadow-lg"
               />
               <p className="text-lg">
-                Sarah, a gifted artist, now shares her art with the world,
+                Rwema, a gifted artist, now shares her art with the world,
                 thanks to the support she received.
               </p>
             </div>

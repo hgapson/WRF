@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import volunteering from '../public/volunteering.jpg'
 import awareness from '../public/awareness.jpg'
 import partnership from '../public/partnership.jpeg'
@@ -39,14 +40,11 @@ const SectionWithCards = () => {
               <br />
               Event Volunteering: Assist in organizing and running our events
             </p>
-            <div className="flex justify-center">
-              <button
-                className="btn"
-                onClick={() => (window.location.href = '/apply')}
-              >
-                Apply
-              </button>
-            </div>
+            <Link to="/vacancies">
+              <div className="flex justify-center">
+                <button className="btn">Apply</button>
+              </div>
+            </Link>
           </div>
         </div>
 
@@ -66,14 +64,11 @@ const SectionWithCards = () => {
               <br />
               on social media or sign our petitions.
             </p>
-            <div className="flex justify-center">
-              <button
-                className="btn"
-                onClick={() => (window.location.href = '/take-action')}
-              >
-                Take Action
-              </button>
-            </div>
+            <Link to="/contact">
+              <div className="flex justify-center">
+                <button className="btn">Take Action</button>
+              </div>
+            </Link>
           </div>
         </div>
 
@@ -93,14 +88,11 @@ const SectionWithCards = () => {
               <br />
               Learn more about our partnership programs.
             </p>
-            <div className="flex justify-center">
-              <button
-                className="btn"
-                onClick={() => (window.location.href = '/become-partner')}
-              >
-                Become a Partner
-              </button>
-            </div>
+            <Link to="/contact">
+              <div className="flex justify-center">
+                <button className="btn">Become a Partner</button>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

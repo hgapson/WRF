@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import police from '../public/Police.png'
 import winz from '../public/winz.png'
 import sms from '../public/hms.png'
@@ -61,19 +62,16 @@ const ImageCardSection = () => {
         </div>
 
         {/* Buttons */}
+
         <div className="mt-8 flex justify-center space-x-4">
-          <button
-            className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
-            onClick={() => (window.location.href = '/readMore')}
-          >
-            Read More
-          </button>
-          <button
-            className="rounded bg-green-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-green-600"
-            onClick={() => (window.location.href = '/annualReport')}
-          >
-            Annual Report
-          </button>
+          <Link to="/our-partners">
+            <button
+              className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
+              //onClick={() => (window.location.href = '/readMore')}
+            >
+              Read More
+            </button>
+          </Link>
         </div>
       </div>
     </section>

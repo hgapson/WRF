@@ -83,7 +83,7 @@ function NavLinks() {
         <ul className="flex flex-col items-center space-y-4">
           <li>
             <a
-              href="#home"
+              href="/"
               className="font-semibold text-gray-800 hover:text-blue-500"
             >
               Home
@@ -91,7 +91,7 @@ function NavLinks() {
           </li>
           <li>
             <a
-              href="#about-us"
+              href="about-us"
               className="font-semibold text-gray-800 hover:text-blue-500"
             >
               About Us
@@ -99,7 +99,7 @@ function NavLinks() {
           </li>
           <li>
             <a
-              href="#our-programs"
+              href="our-programs"
               className="font-semibold text-gray-800 hover:text-blue-500"
             >
               Our Programs
@@ -107,7 +107,7 @@ function NavLinks() {
           </li>
           <li>
             <a
-              href="#our-partners"
+              href="our-partners"
               className="font-semibold text-gray-800 hover:text-blue-500"
             >
               Our Partners
@@ -115,7 +115,7 @@ function NavLinks() {
           </li>
           <li>
             <a
-              href="#get-involved"
+              href="get-involved"
               className="font-semibold text-gray-800 hover:text-blue-500"
             >
               Get Involved
@@ -123,7 +123,7 @@ function NavLinks() {
           </li>
           <li>
             <a
-              href="#contact-us"
+              href="contact"
               className="font-semibold text-gray-800 hover:text-blue-500"
             >
               Contact Us
