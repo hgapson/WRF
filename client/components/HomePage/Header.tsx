@@ -30,7 +30,7 @@ function Header() {
 
   return (
     <header
-      className={`header ${showHeader ? 'show' : 'hide'} bg-blue-950 p-4 shadow-md`}
+      className={`header ${showHeader ? 'show' : 'hide'} bg-blue-950 p-2 shadow-md`}
     >
       <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
         {/* Logo */}

@@ -1,65 +1,35 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 function NavLinks() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768)
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false) // Close the menu on large screens
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    handleResize() // Initial check
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
-    <nav className="bg-gray-100 p-4 shadow-md md:flex md:items-center md:justify-between">
-      {/* Desktop Menu */}
-      <div className="space-x-6 md:flex">
-        <Link
-          to="/"
-          className="font-semibold text-gray-800 hover:text-blue-500"
-        >
-          Home
-        </Link>
-
-        <Link
-          to="about-us"
-          className="font-semibold text-gray-800 hover:text-blue-500"
-        >
-          About Us
-        </Link>
-
-        <Link
-          to="our-programs"
-          className="font-semibold text-gray-800 hover:text-blue-500"
-        >
-          Our Programs
-        </Link>
-
-        <Link
-          to="our-partners"
-          className="font-semibold text-gray-800 hover:text-blue-500"
-        >
-          Our Partners
-        </Link>
-
-        <Link
-          to="get-involved"
-          className="font-semibold text-gray-800 hover:text-blue-500"
-        >
-          Get Involved
-        </Link>
-
-        <Link
-          to="Contact"
-          className="font-semibold text-gray-800 hover:text-blue-500"
-        >
-          Contact Us
-        </Link>
-      </div>
-
-      {/* Mobile Menu Toggle */}
-      <div className="md:hidden">
+    <nav className="relative flex items-center">
+      {/* Toggle Button for Mobile */}
+      {!isDesktop && (
         <button
           onClick={toggleMenu}
-          className="text-gray-800 focus:outline-none"
+          className="mr-4 text-white focus:outline-none md:hidden"
         >
           <svg
             className="h-6 w-6"
@@ -76,61 +46,108 @@ function NavLinks() {
             ></path>
           </svg>
         </button>
-      </div>
+      )}
 
       {/* Mobile Menu */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} mt-4 md:hidden`}>
-        <ul className="flex flex-col items-center space-y-4">
-          <li>
-            <a
-              href="/"
-              className="font-semibold text-gray-800 hover:text-blue-500"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="about-us"
-              className="font-semibold text-gray-800 hover:text-blue-500"
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href="our-programs"
-              className="font-semibold text-gray-800 hover:text-blue-500"
-            >
-              Our Programs
-            </a>
-          </li>
-          <li>
-            <a
-              href="our-partners"
-              className="font-semibold text-gray-800 hover:text-blue-500"
-            >
-              Our Partners
-            </a>
-          </li>
-          <li>
-            <a
-              href="get-involved"
-              className="font-semibold text-gray-800 hover:text-blue-500"
-            >
-              Get Involved
-            </a>
-          </li>
-          <li>
-            <a
-              href="contact"
-              className="font-semibold text-gray-800 hover:text-blue-500"
-            >
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </div>
+      {!isDesktop && isMenuOpen && (
+        <div className="absolute right-0 top-12 z-50 w-48 rounded-lg bg-blue-950 shadow-lg">
+          <ul className="flex flex-col items-start space-y-2 px-2 py-4 text-sm">
+            <li>
+              <Link
+                to="/"
+                className="font-semibold text-white hover:text-blue-500"
+                onClick={toggleMenu}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about-us"
+                className="font-semibold text-white hover:text-blue-500"
+                onClick={toggleMenu}
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/our-programs"
+                className="font-semibold text-white hover:text-blue-500"
+                onClick={toggleMenu}
+              >
+                Our Programs
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/our-partners"
+                className="font-semibold text-white hover:text-blue-500"
+                onClick={toggleMenu}
+              >
+                Our Partners
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/get-involved"
+                className="font-semibold text-white hover:text-blue-500"
+                onClick={toggleMenu}
+              >
+                Get Involved
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="font-semibold text-white hover:text-blue-500"
+                onClick={toggleMenu}
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+
+      {/* Desktop Menu */}
+      {isDesktop && (
+        <div className="ml-auto flex space-x-6 text-base">
+          <Link to="/" className="font-semibold text-white hover:text-blue-500">
+            Home
+          </Link>
+          <Link
+            to="/about-us"
+            className="font-semibold text-white hover:text-blue-500"
+          >
+            About Us
+          </Link>
+          <Link
+            to="/our-programs"
+            className="font-semibold text-white hover:text-blue-500"
+          >
+            Our Programs
+          </Link>
+          <Link
+            to="/our-partners"
+            className="font-semibold text-white hover:text-blue-500"
+          >
+            Our Partners
+          </Link>
+          <Link
+            to="/get-involved"
+            className="font-semibold text-white hover:text-blue-500"
+          >
+            Get Involved
+          </Link>
+          <Link
+            to="/contact"
+            className="font-semibold text-white hover:text-blue-500"
+          >
+            Contact Us
+          </Link>
+        </div>
+      )}
     </nav>
   )
 }
