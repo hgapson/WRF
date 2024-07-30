@@ -5,14 +5,14 @@ import VisionMissionValues from './Vision'
 
 const About = () => {
   return (
-    <main className="main-container">
+    <main className="main-container bg-gray-100">
       <div className="about-image">
         <BackgroundSection />
       </div>
-      <div className="about-image">
+      <div className="paragraph">
         <Paragraphs />
       </div>
-      <div className="about-image">
+      <div className="vision">
         <VisionMissionValues />
       </div>
 
