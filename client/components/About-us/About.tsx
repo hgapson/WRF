@@ -1,6 +1,7 @@
 //import React from 'react'
 import BackgroundSection from './Image'
 import Paragraphs from './Paragraphs'
+import ValuesSection from './ValuesSection'
 import VisionMissionValues from './Vision'
 
 const About = () => {
@@ -14,6 +15,9 @@ const About = () => {
       </div>
       <div className="vision">
         <VisionMissionValues />
+      </div>
+      <div className="values">
+        <ValuesSection />
       </div>
 
       {/* Your main content here */}
