@@ -13,7 +13,7 @@ function Footer() {
           <SocialMediaLinks />
         </div>
       </div>
-      <div className="mt-4 flex justify-center">
+      <div className="links">
         <Links />
       </div>
     </section>
