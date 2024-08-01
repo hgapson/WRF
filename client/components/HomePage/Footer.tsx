@@ -1,25 +1,22 @@
-// src/components/HomePage/Footer.tsx
-
-import React from 'react'
-import SubscriptionForm from './Subscribe' // Adjust the path as per your project structure
-import SocialMediaLinks from './Social' // Adjust the path as per your project structure
+//import React, { useState } from 'react'
+import SubscriptionForm from '../footer/Subscribe'
+import SocialMediaLinks from '../footer/Social'
 import '../main.scss'
-// Ensure this path is correct
+import Links from '../footer/Links'
 
 function Footer() {
   return (
-    <footer className="footer bg-blue-100 p-6">
-      <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
-        {/* First Section with SubscriptionForm */}
+    <section>
+      <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
         <SubscriptionForm />
-
-        {/* Second Section with SocialMediaLinks */}
         <div className="mt-4 flex justify-center">
           <SocialMediaLinks />
         </div>
       </div>
-    </footer>
+      <div className="mt-4 flex justify-center">
+        <Links />
+      </div>
+    </section>
   )
 }
-
 export default Footer

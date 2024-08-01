@@ -58,3 +58,38 @@ export const jobList: Job[] = [
   },
   // Add more job objects as needed
 ]
+export const sections = [
+  {
+    title: 'Our Work',
+    links: [
+      { href: '/job-training', label: 'Job Training' },
+      { href: '/placement-services', label: 'Placement Services' },
+      { href: '/community-events', label: 'Community Events' },
+      { href: '/cultural-exchange', label: 'Cultural Exchange' },
+    ],
+  },
+  {
+    title: 'Education',
+    links: [
+      { href: '/educational-resources', label: 'Educational Resources' },
+      { href: '/support-programs', label: 'Support Programs' },
+      { href: '/quality-education', label: 'Quality Education Access' },
+    ],
+  },
+  {
+    title: 'Healthcare',
+    links: [
+      { href: '/medical-services', label: 'Medical Services' },
+      { href: '/mental-health-support', label: 'Mental Health Support' },
+      { href: '/health-programs', label: 'Health Programs' },
+    ],
+  },
+  {
+    title: 'Advocacy',
+    links: [
+      { href: '/community-support', label: 'Community Support' },
+      { href: '/policy-advocacy', label: 'Policy Advocacy' },
+      { href: '/awareness-campaigns', label: 'Awareness Campaigns' },
+    ],
+  },
+]

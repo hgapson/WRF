@@ -225,3 +225,97 @@ h3.my-profession {
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.footer {
+  background-color: #ebf8ff;
+  padding: 1.5rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  .grid {
+    margin-top: 2rem;
+    gap: 2rem;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      cursor: default;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+
+    &.block {
+      display: block;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: #000;
+      }
+
+      a {
+        text-decoration: underline;
+        color: #000;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .block {
+    display: block;
+  }
+}
+
