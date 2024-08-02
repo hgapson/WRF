@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cover from '../public/cover.jpg'
 import { Link } from 'react-router-dom'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import '../main.scss' // Make sure the path is correct
 
 const Background: React.FC = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
   return (
     <div className="main-content flex min-h-screen items-center justify-center ">
       <section className="home section w-full  px-4">
@@ -11,12 +16,20 @@ const Background: React.FC = () => {
           <div className="row flex flex-col-reverse items-center justify-between lg:flex-row">
             <div className="home-info flex-1 p-4 text-center lg:order-1 lg:mr-8 lg:text-left">
               <h3 className="hello text-xl font-bold  lg:text-2xl xl:text-3xl">
-                Welcome to <span className="name ">WRF</span>
+                Welcome to{' '}
+                <span data-aos="fade-up" className="name ">
+                  WRF
+                </span>
               </h3>
               <h3 className="my-profession text-lg lg:text-xl xl:text-2xl">
-                <span className="typing">Waikato Refugee Forum</span>
+                <span data-aos="fade-up" className="typing">
+                  Waikato Refugee Forum
+                </span>
               </h3>
-              <p className="mt-4 font-serif text-sm text-white lg:text-base xl:text-lg">
+              <p
+                data-aos="fade-up"
+                className="mt-4 font-serif text-sm text-white lg:text-base xl:text-lg"
+              >
                 Bring together the voice of all refugee communities settled in
                 the Waikato Region
               </p>
@@ -27,7 +40,10 @@ const Background: React.FC = () => {
                 Contact Us
               </Link>
             </div>
-            <div className="home-image flex flex-1 justify-center p-4 lg:justify-end">
+            <div
+              data-aos="fade-up"
+              className="home-image flex flex-1 justify-center p-4 lg:justify-end"
+            >
               <img
                 src={cover}
                 alt="background"

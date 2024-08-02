@@ -1,6 +1,6 @@
 import {
-  AcademicCapIcon,
-  BriefcaseIcon,
+  // AcademicCapIcon,
+  //BriefcaseIcon,
   GlobeAltIcon,
   HeartIcon,
 } from '@heroicons/react/24/outline'
@@ -12,49 +12,37 @@ function Paragraphs() {
         Lasting Solutions For Refugees
       </h2>
       <div className="-mx-3 flex flex-wrap">
-        {/* Economic Empowerment */}
-        <div className="mb-6 w-full px-3 md:w-1/2">
-          <div className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-md">
-            <BriefcaseIcon className="h-16 w-16 text-blue-500" />
-            <div>
-              <h3 className="text-lg font-semibold md:text-xl">
-                Economic Empowerment
-              </h3>
-              <p className="text-sm md:text-base">
-                We provide job training and placement services to help refugees
-                gain sustainable employment and achieve economic independence.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* Education Support */}
-        <div className="mb-6 w-full px-3 md:w-1/2">
-          <div className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-md">
-            <AcademicCapIcon className="h-20 w-20 text-blue-500" />
-            <div>
-              <h3 className="text-lg font-semibold md:text-xl">
-                Education Support
-              </h3>
-              <p className="text-sm md:text-base">
-                Our programs offer educational resources and support to help
-                refugees and their families access quality education and improve
-                their lives.
-              </p>
-            </div>
-          </div>
-        </div>
         {/* Community Integration */}
         <div className="mb-6 w-full px-3 md:w-1/2">
           <div className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-md">
-            <GlobeAltIcon className="h-20 w-20 text-blue-500" />
+            <GlobeAltIcon className="h-30 w-30 text-blue-500" />
             <div>
-              <h3 className="text-lg font-semibold md:text-xl">
-                Community Integration
+              <h3 className="m-4 text-lg font-semibold md:text-xl">
+                Self-reliance
               </h3>
               <p className="text-sm md:text-base">
-                We facilitate community integration by organizing social events
-                and cultural exchange programs to build strong, supportive
-                communities.
+                Imagine a future where refugees can reach safety, regardless of
+                where they’ve fled from or the color of their skin. A future
+                where people don’t have to risk their lives in search of a safe
+                place to call home. Where they are welcomed with open arms.
+                Waikato Refugee Forum is working to make this future a reality.
+                <br />
+                <br />
+                Instead of asking, “how can we feed and shelter more refugees
+                longer?” Waikato Refugee Forum asks, “what are the long-term
+                solutions that will enable refugees to lead healthy lives and
+                become contributing members of society again?” Those are the
+                solutions that Waikato Refugee Forum works to expand through our
+                three tactics: direct services, field building, and systems
+                change. We deal with the solutions side of refugee response
+                rather than the emergency assistance side.
+                <br />
+                <br />
+                We partner with refugees who are stuck in the Waikato to which
+                they’ve fled on their journey from vulnerability to
+                self-reliance. We work with people to determine how they can use
+                their skills and resources to reach their goals and we support
+                them along the way.
               </p>
             </div>
           </div>
@@ -62,14 +50,40 @@ function Paragraphs() {
         {/* Healthcare Services */}
         <div className="mb-6 w-full px-3 md:w-1/2">
           <div className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-md">
-            <HeartIcon className="h-20 w-20 text-blue-500" />
+            <HeartIcon className="h-30 w-30 text-blue-500" />
             <div>
-              <h3 className="text-lg font-semibold md:text-xl">
-                Healthcare Services
+              <h3 className="m-4 text-lg font-semibold md:text-xl">
+                Resettlement and safety
               </h3>
               <p className="text-sm md:text-base">
-                Our healthcare programs ensure that refugees have access to
-                essential medical services and mental health support.
+                Unfortunately, many refugees face life-threatening danger and
+                can’t become self-reliant where they are. We help these people
+                relocate to a safe, new country so that they can rebuild their
+                lives. To do this, our staff work across Waikato and around New
+                Zealand to identify refugees that need help and advocacy. We’ve
+                also developed unique programs that reunite refugee families,
+                and help people relocate for work and education opportunities.
+                <br />
+                <br />
+                Through our direct service work, we reach refugees who fall
+                through the cracks of the humanitarian aid system. We develop
+                innovative programs and demonstrate that they work. We then
+                collaborate with organizations, the migration and governments to
+                scale these solutions to reach refugees around the Waikato.
+                <br />
+                <br />
+                Waikato Refugee Forum has directly assisted over 100,000
+                refugees to access resettlement and other pathways to safety and
+                has worked in partnership with others to guarantee access for
+                thousands more.
+                <br />
+                <a
+                  href="https://www.scw.org.nz/"
+                  className="scw text-blue-500 hover:underline"
+                >
+                  Learn more about our impact
+                </a>
+                .
               </p>
             </div>
           </div>
