@@ -1,39 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import wrd from '../public/wrd.jpg'
-import volunteering from '../public/volunteering.jpg'
-import workshop from '../public/workshop.jpg'
+import { eventsData } from '../models'
 import '../main.scss'
 
 // Example event data (replace with actual data or fetch from API)
-const eventsData = [
-  {
-    id: 1,
-    title: 'UPCOMING EVENTS',
-    subtitle: "WORLD'S REFUGEE DAY",
-    image: wrd, // Use the imported image directly
-    description: 'Celebrating World Refugee Day with former refugee 2024.',
-    link: '#', // Example link for "Read More" button
-  },
-  {
-    id: 2,
-    title: 'UPCOMING EVENTS',
-    subtitle: 'VOLUNTEERING',
-    image: volunteering, // Use the imported image directly
-    description:
-      'Honoring our volunteers for their incredible work in our organization.',
-    link: '#', // Example link for "Read More" button
-  },
-  {
-    id: 3,
-    title: 'UPCOMING EVENTS',
-    subtitle: 'WORKSHOP',
-    image: workshop, // Use the imported image directly
-    description:
-      'Giving former refugees opportunity to showcase their traditional cultural treasures.',
-    link: '#', // Example link for "Read More" button
-  },
-]
 
 const Event = () => {
   const [currentEventIndex, setCurrentEventIndex] = useState(0)
@@ -79,10 +49,10 @@ const Event = () => {
             }`}
             style={{
               flex: '0 0 auto',
-              width: '250px', // Adjust width as needed
-              height: '250px', // Adjust height as needed
-              margin: '0 auto', // Center align thumbnails
-              maxWidth: '100%', // Ensure thumbnails don't exceed container width
+              width: '250px',
+              height: '250px',
+              margin: '0 auto',
+              maxWidth: '100%',
             }}
           >
             <img

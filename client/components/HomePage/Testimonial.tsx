@@ -1,25 +1,9 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { FaQuoteLeft } from 'react-icons/fa'
 import testimonial from '../public/testimonial.jpg'
+import { testimonialsData } from '../models'
 import '../main.scss'
-
-const testimonialsData = [
-  {
-    name: 'John Doe',
-    message:
-      'This organization has changed my life. Their support has been invaluable.',
-  },
-  {
-    name: 'Jane Smith',
-    message:
-      'I am so grateful for the assistance I received. They truly care about people.',
-  },
-  {
-    name: 'Samuel Green',
-    message:
-      'Thanks to their programs, I was able to start a new chapter in my life.',
-  },
-]
 
 const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
@@ -58,12 +42,11 @@ const TestimonialsSection = () => {
             <FaQuoteLeft className="absolute left-0 top-0 ml-2 mt-2 text-4xl text-gray-300" />
             <p className="mb-4 mt-8">{message}</p>
             <h3 className="text-lg font-medium">{name}</h3>
-            <button
-              className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
-              onClick={() => (window.location.href = '/fullStory')}
-            >
-              More Stories
-            </button>
+            <Link to="/about-us">
+              <button className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600">
+                More Stories
+              </button>
+            </Link>
           </div>
         </div>
       </div>
