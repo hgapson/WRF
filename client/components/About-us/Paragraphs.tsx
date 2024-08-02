@@ -1,9 +1,11 @@
-import {
-  // AcademicCapIcon,
-  //BriefcaseIcon,
-  GlobeAltIcon,
-  HeartIcon,
-} from '@heroicons/react/24/outline'
+import React from 'react'
+import {} from // AcademicCapIcon,
+//BriefcaseIcon,
+//GlobeAltIcon,
+//HeartIcon,
+'@heroicons/react/24/outline'
+import settled from '../public/settled.jpg'
+import reliance from '../public/reliance.jpg'
 
 function Paragraphs() {
   return (
@@ -15,8 +17,12 @@ function Paragraphs() {
         {/* Community Integration */}
         <div className="mb-6 w-full px-3 md:w-1/2">
           <div className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-md">
-            <GlobeAltIcon className="h-30 w-30 text-blue-500" />
             <div>
+              <img
+                src={settled}
+                alt="Program 1"
+                className="mb-4 w-full rounded-lg shadow-lg"
+              />
               <h3 className="m-4 text-lg font-semibold md:text-xl">
                 Self-reliance
               </h3>
@@ -50,8 +56,12 @@ function Paragraphs() {
         {/* Healthcare Services */}
         <div className="mb-6 w-full px-3 md:w-1/2">
           <div className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-md">
-            <HeartIcon className="h-30 w-30 text-blue-500" />
             <div>
+              <img
+                src={reliance}
+                alt="Program 1"
+                className="mb-4 w-full rounded-lg shadow-lg"
+              />
               <h3 className="m-4 text-lg font-semibold md:text-xl">
                 Resettlement and safety
               </h3>

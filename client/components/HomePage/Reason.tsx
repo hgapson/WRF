@@ -1,6 +1,8 @@
 //import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaTint, FaUsers } from 'react-icons/fa'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Reason = () => {
   return (
@@ -34,11 +36,14 @@ const Reason = () => {
                 className="text-9xl text-gray-900 opacity-50"
                 style={{ width: '200px', height: '200px' }}
               />
-              <h2 className="absolute text-6xl font-semibold text-white">
+              <h2
+                data-aos="fade-up"
+                className="absolute text-6xl font-semibold text-white"
+              >
                 80%
               </h2>
             </div>
-            <p className="w-2/5 text-white">
+            <p data-aos="fade-up" className="w-2/5 text-white">
               of them need orientation in new country and advocacy.
             </p>
           </div>
@@ -50,11 +55,14 @@ const Reason = () => {
                 className="text-9xl text-gray-900 opacity-50"
                 style={{ width: '200px', height: '200px' }}
               />
-              <h2 className="absolute text-6xl font-semibold text-white">
+              <h2
+                data-aos="fade-up"
+                className="absolute text-6xl font-semibold text-white"
+              >
                 92%
               </h2>
             </div>
-            <p className="w-2/5 text-white">
+            <p data-aos="fade-up" className="w-2/5 text-white">
               of refugees need good life and support.
             </p>
           </div>
