@@ -53,7 +53,7 @@ function Paragraphs() {
             </div>
           </div>
         </div>
-        {/* Healthcare Services */}
+
         <div className="mb-6 w-full px-3 md:w-1/2">
           <div className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-md">
             <div>
