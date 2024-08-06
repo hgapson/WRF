@@ -3,6 +3,7 @@ import BackgroundSection from './Image'
 import Paragraphs from './Paragraphs'
 import ValuesSection from './ValuesSection'
 import VisionMissionValues from './Vision'
+import TeamSection from './Team'
 
 const About = () => {
   return (
@@ -18,6 +19,9 @@ const About = () => {
       </div>
       <div className="values">
         <ValuesSection />
+      </div>
+      <div className="team">
+        <TeamSection />
       </div>
 
       {/* Your main content here */}

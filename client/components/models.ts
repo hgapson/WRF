@@ -138,3 +138,5 @@ export const eventsData = [
     link: '#',
   },
 ]
+
+// Team
