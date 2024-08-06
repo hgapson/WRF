@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="relative h-[98vh] w-full md:h-[90vh] lg:h-[75vh] xl:h-[78vh]">
       {/* Background Video */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0  overflow-hidden">
         <img className="h-full w-full object-cover" src={sea} alt="sea" />
       </div>
 
