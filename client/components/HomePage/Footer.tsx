@@ -1,5 +1,5 @@
 import React from 'react'
-import videoSource from '../public/171124_H1_006.mp4' // Update with the correct path
+import sea from '../public/sea.jpg' // Update with the correct path
 import { BsSend } from 'react-icons/bs'
 import {
   FaFacebookF,
@@ -13,13 +13,7 @@ const Footer = () => {
     <footer className="relative h-[98vh] w-full md:h-[90vh] lg:h-[75vh] xl:h-[78vh]">
       {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden">
-        <video
-          className="h-full w-full object-cover"
-          src={videoSource}
-          autoPlay
-          muted
-          loop
-        ></video>
+        <img className="h-full w-full object-cover" src={sea} alt="sea" />
       </div>
 
       {/* Overlay Content */}
