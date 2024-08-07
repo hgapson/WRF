@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="relative h-[98vh] w-full md:h-[90vh] lg:h-[75vh] xl:h-[78vh]">
+    <footer className="relative h-[98vh] w-full md:h-[90vh] lg:h-[75vh] xl:h-[70vh] ">
       {/* Background Video */}
       <div className="absolute inset-0  overflow-hidden">
         <img className="h-full w-full object-cover" src={sea} alt="sea" />
@@ -28,7 +28,7 @@ const Footer = () => {
             <input
               className="mb-2 w-full rounded-md border-none p-2 sm:mb-0 sm:w-2/3"
               type="text"
-              placeholder="Your Name"
+              placeholder="Your message"
             />
             <button className="flex w-full items-center rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 sm:w-1/3">
               <span>Send</span>

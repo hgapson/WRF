@@ -15,28 +15,28 @@ interface Value {
 const values: Value[] = [
   {
     id: 1,
-    title: 'Refugee Centered',
+    title: 'Credu Gapson',
     explanation:
       'We provide job training and placement services to help refugees gain sustainable employment and achieve economic independence.',
     image: centered,
   },
   {
     id: 2,
-    title: 'Personality',
+    title: 'Yvan Mwanga',
     explanation:
       'Our programs offer educational resources and support to help refugees and their families access quality education and improve their lives.',
     image: personality,
   },
   {
     id: 3,
-    title: 'Anti-Racism',
+    title: 'Rwema Heritier',
     explanation:
       'We facilitate community integration by organizing social events and cultural exchange programs to build strong, supportive communities.',
     image: racism,
   },
   {
     id: 4,
-    title: 'Collaborative',
+    title: 'Janas Prince',
     explanation:
       'Our healthcare programs ensure that refugees have access to essential medical services and mental health support.',
     image: collaborative,
@@ -94,7 +94,7 @@ function ValuesSection() {
   return (
     <section className=" bg-gray-100 py-8">
       <div className="container mx-auto text-center ">
-        <h2 className="mb-6 text-3xl font-semibold">Our Core Values</h2>
+        <h2 className="mb-6 text-3xl font-semibold">Testimonies</h2>
         <div className="flex items-center justify-between px-4">
           <ChevronLeftIcon
             onClick={handlePrev}
