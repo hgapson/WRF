@@ -1,7 +1,7 @@
 //import React from 'react'
 import BackgroundSection from './Image'
 import Paragraphs from './Paragraphs'
-import ValuesSection from './ValuesSection'
+import TestimonialsSection from './Testimonies'
 import VisionMissionValues from './Vision'
 import TeamSection from './Team'
 import Values from './Test'
@@ -32,7 +32,7 @@ const About = () => {
       </div>
 
       <div className="values">
-        <ValuesSection />
+        <TestimonialsSection />
       </div>
 
       <div className="getinvolved">

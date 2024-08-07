@@ -1,46 +1,8 @@
-import React from 'react'
+//import React from 'react'
+import { events } from './models'
 import backgroundImage from '../public/backgroundImage.jpg' // Update with the correct path
 
 const OurStorySection = () => {
-  const events = [
-    {
-      year: '2000',
-      title: 'Founded',
-      description:
-        'Our organization was founded with the mission to support refugees.',
-    },
-    {
-      year: '2005',
-      title: 'First Program Launched',
-      description:
-        'We launched our first integration program to help refugees settle into their new communities.',
-    },
-    {
-      year: '2010',
-      title: 'Expansion',
-      description:
-        'We expanded our services to include legal aid and job placement assistance.',
-    },
-    {
-      year: '2015',
-      title: 'Recognition',
-      description:
-        'Our organization received national recognition for our impactful work.',
-    },
-    {
-      year: '2020',
-      title: 'Global Outreach',
-      description:
-        'We expanded our operations to provide support to refugees worldwide.',
-    },
-    {
-      year: '2023',
-      title: 'Continued Growth',
-      description:
-        'Our team continues to grow and innovate in supporting refugee communities.',
-    },
-  ]
-
   return (
     <section className="relative bg-gray-100 py-16">
       <div
