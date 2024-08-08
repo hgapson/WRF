@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BackgroundSection from './Image'
 import Paragraphs from './Paragraphs'
 import Testimonies from './Testimonies'
@@ -67,12 +68,11 @@ const About = () => {
             volunteering, donations, or advocacy, your involvement makes a
             difference.
           </p>
-          <button
-            className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
-            onClick={() => (window.location.href = '/getInvolved')}
-          >
-            Get Involved
-          </button>
+          <Link to="/get-involved">
+            <button className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600">
+              Get Involved
+            </button>
+          </Link>
         </div>
       </div>
     </main>

@@ -26,7 +26,7 @@ const Vacancies: React.FC = () => {
     : null
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12">
+    <div className="mt-12 min-h-screen bg-gray-100 py-12">
       <div className="container mx-auto px-4 text-center">
         <h1 className="mb-8 text-4xl font-bold">Current Vacancies</h1>
         <p className="mb-8 text-lg">

@@ -48,8 +48,8 @@ const EventsPage: React.FC = () => {
   }
 
   return (
-    <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8">
-      <div className="container mx-auto pt-[64px]">
+    <section className="mt-10 bg-gray-100 px-4 py-16 sm:px-6 lg:px-8">
+      <div className="container mx-auto  pt-[64px]">
         {' '}
         {/* Add padding-top here */}
         <h2 className="mb-6 text-center text-3xl font-bold">Upcoming Events</h2>

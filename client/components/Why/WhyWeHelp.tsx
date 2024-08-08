@@ -2,7 +2,6 @@ import React from 'react'
 import cover from '../public/about-cover.jpg'
 import ambrella from '../public/umbrella.jpg'
 import smile1 from '../public/smilling 1.jpg'
-import smile2 from '../public/smilling 2.jpg'
 import artist from '../public/artist.jpg'
 import hard from '../public/hard.jpg'
 import how1 from '../public/working-hard.jpg'
@@ -13,7 +12,7 @@ import stat from '../public/statistic.jpg'
 
 const WhyWeHelp = () => {
   return (
-    <section className="px-4 py-12 text-gray-800 sm:px-6 lg:px-8">
+    <section className="mt-4 px-4 py-14 text-gray-800 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-5xl">
         {/* Transparent Cover Image with Title */}
         <div className="relative mb-12">

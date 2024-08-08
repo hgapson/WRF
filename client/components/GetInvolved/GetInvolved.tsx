@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaRegBookmark } from 'react-icons/fa'
 import { jobList } from '../models' // Import job data
+import helping from '../public/helping.jpg'
 
 const GetInvolved: React.FC = () => {
   const volunteeringJobIds = ['1', '2', '3']
@@ -10,10 +11,10 @@ const GetInvolved: React.FC = () => {
   )
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="mt-14 min-h-screen bg-gray-100">
       <section
         className="h-96 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/path-to-hero-image.jpg)' }}
+        style={{ backgroundImage: `url(${helping})` }}
       >
         <div className="flex h-full flex-col items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="mb-4 text-5xl font-bold">Get Involved</h1>

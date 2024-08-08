@@ -4,6 +4,7 @@ import AnnualReportModal from './AnnualReportModal' // Adjust the path as needed
 import hms from '../public/hms.png'
 import ministry from '../public/ministry of ed.jpg'
 import aa from '../public/AA.png'
+import ocean from '../public/ocean.jpg'
 
 const partners = [
   {
@@ -34,7 +35,7 @@ const Partners: React.FC = () => {
       {/* Hero Section */}
       <section
         className="h-96 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/path-to-hero-image.jpg)' }}
+        style={{ backgroundImage: `url(${ocean})` }}
       >
         <div className="flex h-full flex-col items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="mb-4 text-5xl font-bold">Our Partners</h1>
