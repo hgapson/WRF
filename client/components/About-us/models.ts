@@ -200,3 +200,31 @@ export const events = [
       'Our team continues to grow and innovate in supporting refugee communities.',
   },
 ]
+
+// values models
+export const values = [
+  {
+    title: 'Compassion',
+    description:
+      'We believe in acting with empathy and kindness in all our interactions and decisions.',
+    icon: '❤️',
+  },
+  {
+    title: 'Integrity',
+    description:
+      'Our commitment to honesty and transparency guides everything we do.',
+    icon: '🔒',
+  },
+  {
+    title: 'Collaboration',
+    description:
+      'We work together with partners and communities to achieve common goals.',
+    icon: '🤝',
+  },
+  {
+    title: 'Innovation',
+    description:
+      'We embrace new ideas and approaches to better serve our community.',
+    icon: '💡',
+  },
+]

@@ -1,13 +1,35 @@
-//import React from 'react'
+// src/components/About-us/About.tsx
+
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import BackgroundSection from './Image'
 import Paragraphs from './Paragraphs'
-import TestimonialsSection from './Testimonies'
+import Testimonies from './Testimonies'
 import VisionMissionValues from './Vision'
 import TeamSection from './Team'
-import Values from './Test'
+import Values from './Values'
 import OurStorySection from './History'
 
 const About = () => {
+  const location = useLocation()
+
+  useEffect(() => {
+    const handleHashScroll = () => {
+      if (location.hash === '#testimonies') {
+        // Use setTimeout to ensure the page has rendered
+        setTimeout(() => {
+          const element = document.getElementById('testimonies')
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 100) // Adjust delay as needed
+      }
+    }
+
+    handleHashScroll()
+    // Run this effect whenever location.hash changes
+  }, [location.hash])
+
   return (
     <main className="main-container bg-gray-100">
       <div className="about-image">
@@ -31,11 +53,11 @@ const About = () => {
         <TeamSection />
       </div>
 
-      <div className="values">
-        <TestimonialsSection />
+      <div id="testimonies">
+        <Testimonies />
       </div>
 
-      <div className="getinvolved">
+      <div className="getinvolved p-8">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-semibold text-gray-900">
             Get Involved
@@ -53,8 +75,6 @@ const About = () => {
           </button>
         </div>
       </div>
-
-      {/* Your main content here */}
     </main>
   )
 }

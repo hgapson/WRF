@@ -1,32 +1,6 @@
 import React from 'react'
+import { values } from './models'
 //import backgroundImage from '../public/ant-rasism.jpg'
-
-const values = [
-  {
-    title: 'Compassion',
-    description:
-      'We believe in acting with empathy and kindness in all our interactions and decisions.',
-    icon: '❤️',
-  },
-  {
-    title: 'Integrity',
-    description:
-      'Our commitment to honesty and transparency guides everything we do.',
-    icon: '🔒',
-  },
-  {
-    title: 'Collaboration',
-    description:
-      'We work together with partners and communities to achieve common goals.',
-    icon: '🤝',
-  },
-  {
-    title: 'Innovation',
-    description:
-      'We embrace new ideas and approaches to better serve our community.',
-    icon: '💡',
-  },
-]
 
 const Values: React.FC = () => {
   return (

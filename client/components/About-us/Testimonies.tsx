@@ -1,17 +1,20 @@
-//import React from 'react'
+// src/components/Testimonies.tsx
+
+import React from 'react'
 import { testimonials, settings } from './models'
 import Slider from 'react-slick'
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import testi from '../public/testi.jpg'
+import './about.scss'
 
-const TestimonialsSection = () => {
+const Testimonies = () => {
   return (
     <section
       className="relative bg-gray-100 px-4 py-12 md:px-8 lg:px-16"
       style={{
-        backgroundImage: testi,
+        backgroundImage: `url(${testi})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -35,7 +38,7 @@ const TestimonialsSection = () => {
                   {testimonial.name}
                 </h3>
                 <h4 className="mb-4 text-gray-600">{testimonial.position}</h4>
-                <p className="relative text-gray-700">
+                <p className="relative italic text-gray-700">
                   <FaQuoteLeft className="absolute -left-6 top-0 text-gray-400" />
                   {testimonial.text}
                   <FaQuoteRight className="absolute -right-4 bottom-0 text-gray-400" />
@@ -49,4 +52,4 @@ const TestimonialsSection = () => {
   )
 }
 
-export default TestimonialsSection
+export default Testimonies

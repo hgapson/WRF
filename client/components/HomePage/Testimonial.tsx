@@ -1,5 +1,7 @@
+// src/components/TestimonialsSection.tsx
+
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { FaQuoteLeft } from 'react-icons/fa'
 import testimonial from '../public/testimonial.jpg'
 import { testimonialsData } from '../models'
@@ -7,6 +9,7 @@ import '../main.scss'
 
 const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,6 +20,10 @@ const TestimonialsSection = () => {
   }, [])
 
   const { name, message } = testimonialsData[currentTestimonial]
+
+  const handleMoreStoriesClick = () => {
+    navigate('/about-us#testimonies')
+  }
 
   return (
     <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8">
@@ -40,13 +47,14 @@ const TestimonialsSection = () => {
         <div className="flex flex-col justify-center md:w-1/2">
           <div className="testimonial-message relative bg-white p-6 text-gray-700 shadow-lg">
             <FaQuoteLeft className="absolute left-0 top-0 ml-2 mt-2 text-4xl text-gray-300" />
-            <p className="mb-4 mt-8">{message}</p>
+            <p className="mb-4 mt-8 italic ">{message}</p>
             <h3 className="text-lg font-medium">{name}</h3>
-            <Link to="/about-us">
-              <button className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600">
-                More Stories
-              </button>
-            </Link>
+            <button
+              onClick={handleMoreStoriesClick}
+              className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
+            >
+              More Stories
+            </button>
           </div>
         </div>
       </div>

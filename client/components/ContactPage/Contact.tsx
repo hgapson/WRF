@@ -49,10 +49,10 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 pt-[80px]">
+    <div className="container mx-auto px-4 py-10 pt-[80px] ">
       {' '}
       {/* Add top padding */}
-      <h2 className="mb-4 text-3xl font-bold">Contact Us</h2>
+      <h2 className="mb-4 p-16 text-3xl font-bold">Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700">
