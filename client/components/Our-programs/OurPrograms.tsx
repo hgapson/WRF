@@ -2,6 +2,7 @@ import React from 'react'
 import youth from '../public/youth.jpg'
 import orientation from '../public/orientation.jpg'
 import support from '../public/support.jpg'
+import student from '../public/students.jpg'
 
 const programs = [
   {
@@ -23,11 +24,11 @@ const programs = [
 
 const OurPrograms = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="mt-16 min-h-screen bg-gray-100">
       {/* Hero Section */}
       <section
-        className="h-96 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/path-to-hero-image.jpg)' }}
+        className="mt-16 h-96 bg-cover bg-center"
+        style={{ backgroundImage: `url(${student})` }}
       >
         <div className="flex h-full flex-col items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="mb-4 text-5xl font-bold">Our Programs</h1>
