@@ -1,4 +1,6 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import sea from '../public/sea.jpg' // Update with the correct path
 import { BsSend } from 'react-icons/bs'
 import {
@@ -9,6 +11,19 @@ import {
 } from 'react-icons/fa'
 
 const Footer = () => {
+  const navigate = useNavigate()
+
+  const handleTeam = () => {
+    navigate('/about-us#team')
+  }
+
+  const handleMoreStoriesClick = () => {
+    navigate('/about-us#testimonies')
+  }
+
+  const handleVision = () => {
+    navigate('/about-us#vision')
+  }
   return (
     <footer className="relative h-[98vh] w-full md:h-[90vh] lg:h-[75vh] xl:h-[70vh] ">
       {/* Background Video */}
@@ -87,19 +102,19 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2 text-sm md:text-base lg:text-lg">
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <Link to="/events" className="hover:text-blue-500">
                     Events
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <Link to="/vacancies" className="hover:text-blue-500">
                     Opportunities
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <Link to="/contact" className="hover:text-blue-500">
                     Advocacy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -109,20 +124,23 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2 text-sm md:text-base lg:text-lg">
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <button
+                    onClick={handleVision}
+                    className="hover:text-blue-500"
+                  >
                     Mission & Vision
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <Link to="/contact" className="hover:text-blue-500">
                     Contact
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <button onClick={handleTeam} className="hover:text-blue-500">
                     Team
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -132,20 +150,23 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2 text-sm md:text-base lg:text-lg">
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <Link to="/why-we-help" className="hover:text-blue-500">
                     Who we serve
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <Link to="/our-partners" className="hover:text-blue-500">
                     Partners
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className="hover:text-blue-500">
+                  <button
+                    onClick={handleMoreStoriesClick}
+                    className="hover:text-blue-500"
+                  >
                     Stories
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

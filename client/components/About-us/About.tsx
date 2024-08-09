@@ -7,7 +7,7 @@ import BackgroundSection from './Image'
 import Paragraphs from './Paragraphs'
 import Testimonies from './Testimonies'
 import VisionMissionValues from './Vision'
-import TeamSection from './Team'
+import Team from './Team'
 import Values from './Values'
 import OurStorySection from './History'
 
@@ -17,7 +17,7 @@ const About = () => {
   useEffect(() => {
     const handleHashScroll = () => {
       if (location.hash === '#testimonies') {
-        // Use setTimeout to ensure the page has rendered
+        //  setTimeout to ensure the page has rendered
         setTimeout(() => {
           const element = document.getElementById('testimonies')
           if (element) {
@@ -25,10 +25,27 @@ const About = () => {
           }
         }, 100) // Adjust delay as needed
       }
+
+      if (location.hash === '#team') {
+        setTimeout(() => {
+          const element = document.getElementById('team')
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 100)
+      }
+
+      if (location.hash === '#vision') {
+        setTimeout(() => {
+          const element = document.getElementById('vision')
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 100)
+      }
     }
 
     handleHashScroll()
-    // Run this effect whenever location.hash changes
   }, [location.hash])
 
   return (
@@ -39,7 +56,7 @@ const About = () => {
       <div className="paragraph">
         <Paragraphs />
       </div>
-      <div className="vision">
+      <div id="vision">
         <VisionMissionValues />
       </div>
       <div className="test">
@@ -50,8 +67,8 @@ const About = () => {
         <OurStorySection />
       </div>
 
-      <div className="team">
-        <TeamSection />
+      <div id="team">
+        <Team />
       </div>
 
       <div id="testimonies">

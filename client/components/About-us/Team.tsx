@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa'
 import { teamData, TeamMember } from './models'
 
-const TeamSection: React.FC = () => {
+const Team: React.FC = () => {
   const [activeSection, setActiveSection] = useState<
     'boardMembers' | 'leadershipTeam'
   >('boardMembers')
@@ -118,4 +118,4 @@ const TeamSection: React.FC = () => {
   )
 }
 
-export default TeamSection
+export default Team
