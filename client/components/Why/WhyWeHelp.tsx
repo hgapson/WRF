@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import cover from '../public/about-cover.jpg'
 import ambrella from '../public/umbrella.jpg'
 import smile1 from '../public/smilling 1.jpg'
@@ -190,12 +191,11 @@ const WhyWeHelp = () => {
             volunteering, donations, or advocacy, your involvement makes a
             difference.
           </p>
-          <button
-            className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
-            onClick={() => (window.location.href = '/getInvolved')}
-          >
-            Get Involved
-          </button>
+          <Link to="/get-involved">
+            <button className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600">
+              Get Involved
+            </button>
+          </Link>
         </div>
 
         {/* Contact Information */}
