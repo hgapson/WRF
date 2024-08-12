@@ -39,10 +39,10 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="contact-form-container mx-auto max-w-md rounded-lg bg-black p-8 shadow-lg">
-      <p className="mb-6 text-center text-lg text-white underline">
+      <p className="mb-6 text-center text-sm text-white underline">
         GET IN TOUCH
       </p>
-      <h2 className="mb-4 text-center text-3xl font-semibold text-white">
+      <h2 className="mb-4 text-center text-2xl font-semibold text-white">
         Give Us Your Query
       </h2>
 

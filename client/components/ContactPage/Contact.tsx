@@ -7,8 +7,12 @@ import ContactSection from './Map'
 const Contact: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-10 pt-[80px] ">
-      <ContactSection />
-      <ContactForm />
+      <div>
+        <ContactSection />
+      </div>
+      <div>
+        <ContactForm />
+      </div>
     </div>
   )
 }
