@@ -2,19 +2,21 @@ import React from 'react'
 import mapImage from '../public/map-location.jpg' // Replace with your map image
 import contactImage from '../public/umbrella.jpg' // Replace with your contact image
 
-const ContactSection = () => {
+const MapSection = () => {
   return (
-    <section className="flex flex-col-reverse items-center justify-between bg-gray-100 p-8 md:flex-row">
+    <section className="mt-16 flex flex-col-reverse items-center justify-between bg-gray-100 p-8 md:flex-row">
       {/* Text Content */}
       <div className="text-center md:w-1/2 md:text-left">
-        <h1 className="mb-4 text-4xl font-bold">Contact Us</h1>
+        <h1 className="mb-4 px-20 text-4xl font-bold">Contact Us</h1>
         <p className="mb-6 text-gray-700">
           We had love to hear from you. Whether you have questions, feedback, or
           need assistance, feel free to reach out.
         </p>
         <div className="mb-8">
           <h3 className="text-xl font-semibold">Our Office</h3>
-          <p className="text-gray-600">1234 Street Name, City, Country</p>
+          <p className="text-gray-600">
+            46G Boundary Road Claudelands Hamilton 3214
+          </p>
         </div>
         <div className="mb-8">
           <h3 className="text-xl font-semibold">Working Hours</h3>
@@ -27,7 +29,7 @@ const ContactSection = () => {
           </p>
         </div>
         <a
-          href="https://maps.google.com/?q=11A+Beaumont+street,+Hamilton"
+          href="https://maps.google.com/?q=46G+Boundary road+Claudelands,+Hamilton"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block rounded-lg bg-blue-500 px-6 py-3 text-white transition-colors duration-300 hover:bg-blue-600"
@@ -48,4 +50,4 @@ const ContactSection = () => {
   )
 }
 
-export default ContactSection
+export default MapSection

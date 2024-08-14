@@ -25,7 +25,7 @@ const Footer = () => {
     navigate('/about-us#vision')
   }
   return (
-    <footer className="relative h-[98vh] w-full md:h-[90vh] lg:h-[75vh] xl:h-[70vh] ">
+    <footer className="relative h-[105vh] w-full md:h-[90vh] lg:h-[75vh] xl:h-[70vh] ">
       {/* Background Video */}
       <div className="absolute inset-0  overflow-hidden">
         <img className="h-full w-full object-cover" src={sea} alt="sea" />
@@ -66,30 +66,40 @@ const Footer = () => {
                 them.
               </p>
             </div>
-            <div className="mt-4 flex gap-4 text-white">
+            <div className="mt-4 flex flex-col gap-4 text-white lg:flex-row lg:gap-6">
+              <div className="flex gap-4 text-white">
+                <a
+                  href="https://www.facebook.com/yourprofile"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  <FaFacebookF size={24} />
+                </a>
+                <a
+                  href="https://twitter.com/yourprofile"
+                  className="text-blue-400 hover:text-blue-600"
+                >
+                  <FaTwitter size={24} />
+                </a>
+                <a
+                  href="https://www.instagram.com/yourprofile"
+                  className="text-pink-500 hover:text-pink-700"
+                >
+                  <FaInstagram size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/yourprofile"
+                  className="text-blue-700 hover:text-blue-900"
+                >
+                  <FaLinkedinIn size={24} />
+                </a>
+              </div>
               <a
-                href="https://www.facebook.com/yourprofile"
-                className="text-blue-600 hover:text-blue-800"
+                href="https://maps.google.com/?q=46G+Boundary road+Claudelands,+Hamilton"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-lg bg-blue-500 px-4 py-2 text-center text-white transition-colors duration-300 hover:bg-blue-600 md:px-6 md:py-3 lg:px-4 lg:py-2 lg:text-sm "
               >
-                <FaFacebookF size={24} />
-              </a>
-              <a
-                href="https://twitter.com/yourprofile"
-                className="text-blue-400 hover:text-blue-600"
-              >
-                <FaTwitter size={24} />
-              </a>
-              <a
-                href="https://www.instagram.com/yourprofile"
-                className="text-pink-500 hover:text-pink-700"
-              >
-                <FaInstagram size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/yourprofile"
-                className="text-blue-700 hover:text-blue-900"
-              >
-                <FaLinkedinIn size={24} />
+                View on Map
               </a>
             </div>
           </div>

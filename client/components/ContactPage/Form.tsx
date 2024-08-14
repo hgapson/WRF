@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <div className="contact-form-container mx-auto max-w-md rounded-lg bg-black p-8 shadow-lg">
+    <div className="contact-form-container mx-auto mt-16 max-w-md rounded-lg bg-black p-8 shadow-lg">
       <p className="mb-6 text-center text-sm text-white underline">
         GET IN TOUCH
       </p>
