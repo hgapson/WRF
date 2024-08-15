@@ -25,7 +25,7 @@ const Footer = () => {
     navigate('/about-us#vision')
   }
   return (
-    <footer className="relative h-[105vh] w-full md:h-[95vh] lg:h-[78vh] xl:h-[72vh] ">
+    <footer className="relative h-[105vh] w-full md:h-[95vh] lg:h-[78vh] xl:h-[74vh] ">
       {/* Background Video */}
       <div className="absolute inset-0  overflow-hidden">
         <img className="h-full w-full object-cover" src={sea} alt="sea" />
