@@ -26,8 +26,8 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8">
-      <h2 className="mb-8 text-center text-3xl font-bold md:w-full">
+    <section className="bg-blue-950 px-4 py-12 sm:px-6 lg:px-8">
+      <h2 className="mb-8 text-center text-3xl font-bold text-white md:w-full">
         Testimonials
       </h2>
 
@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
             <h3 className="text-lg font-medium">{name}</h3>
             <button
               onClick={handleMoreStoriesClick}
-              className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
+              className="btn mt-4 rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
             >
               More Stories
             </button>

@@ -86,7 +86,7 @@ const About = () => {
             difference.
           </p>
           <Link to="/get-involved">
-            <button className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600">
+            <button className="btn mt-4 rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600">
               Get Involved
             </button>
           </Link>

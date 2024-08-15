@@ -97,7 +97,7 @@ const Footer = () => {
                 href="https://maps.google.com/?q=46G+Boundary road+Claudelands,+Hamilton"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-lg bg-blue-500 px-4 py-2 text-center text-white transition-colors duration-300 hover:bg-blue-600 md:px-6 md:py-3 lg:px-4 lg:py-2 lg:text-sm "
+                className="btn inline-block rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
               >
                 View on Map
               </a>

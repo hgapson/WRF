@@ -1,86 +1,44 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { eventsData } from '../models'
-import '../main.scss'
+// src/components/Event.tsx
 
-// Example event data (replace with actual data or fetch from API)
+import { Link } from 'react-router-dom'
+import { settings } from '../About-us/models'
+import { eventsData } from '../models'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import '../About-us/about.scss'
 
 const Event = () => {
-  const [currentEventIndex, setCurrentEventIndex] = useState(0)
-
-  const navigateToPreviousEvent = () => {
-    setCurrentEventIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : eventsData.length - 1,
-    )
-  }
-
-  const navigateToNextEvent = () => {
-    setCurrentEventIndex((prevIndex) =>
-      prevIndex < eventsData.length - 1 ? prevIndex + 1 : 0,
-    )
-  }
-
   return (
-    <div className="container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
-      {/* Title and Subtitle */}
-      <h2 className="mb-6 text-center text-3xl font-bold text-black ">
-        {eventsData[currentEventIndex].title}
-      </h2>
-      <h3 className="mb-6 text-center text-lg font-medium text-black">
-        {eventsData[currentEventIndex].subtitle}
-      </h3>
-
-      {/* Event Content */}
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        {/* Previous Event Navigation */}
-        <button
-          className="prev-event-btn text-white-500 mr-4 cursor-pointer text-4xl transition-transform duration-300 hover:scale-125"
-          onClick={navigateToPreviousEvent}
-        >
-          &lt;
-        </button>
-
-        {/* Event Thumbnails */}
-        {eventsData.map((event, index) => (
-          <div
-            key={event.id}
-            className={`event-thumbnail overflow-hidden rounded-lg ${
-              index === currentEventIndex ? 'current-event' : 'opacity-50'
-            }`}
-            style={{
-              flex: '0 0 auto',
-              width: '250px',
-              height: '250px',
-              margin: '0 auto',
-              maxWidth: '100%',
-            }}
+    <section className="relative bg-blue-950 px-4 py-12 md:px-8 lg:px-16">
+      <div className="absolute inset-0  opacity-50"></div>
+      <div className="relative z-10 mx-auto max-w-7xl text-center">
+        <h2 className="mb-8 text-4xl font-bold text-white">UPCOMING EVENTS</h2>
+        <Slider {...settings}>
+          {eventsData.map((event, index) => (
+            <div key={index} className="p-4">
+              <div className="flex transform flex-col items-center overflow-hidden rounded-lg bg-white p-6 shadow-lg transition-transform hover:scale-105">
+                <img
+                  src={event.image}
+                  alt={event.subtitle}
+                  className="mb-4 h-48 w-full object-cover"
+                />
+                <h3 className="mb-2 text-xl font-semibold">{event.subtitle}</h3>
+              </div>
+            </div>
+          ))}
+        </Slider>
+        {/* Single Button for all events */}
+        <div className="mt-8 flex justify-center">
+          <Link
+            to="/Events"
+            className="btn rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
           >
-            <img
-              src={event.image}
-              alt=""
-              className="h-full w-full rounded-t-lg object-cover"
-            />
-          </div>
-        ))}
-
-        {/* Next Event Navigation */}
-        <button
-          className="next-event-btn text-white-500 ml-4 cursor-pointer text-4xl transition-transform duration-300 hover:scale-125"
-          onClick={navigateToNextEvent}
-        >
-          &gt;
-        </button>
-      </div>
-
-      {/* Read More Button */}
-      <Link to="/Events">
-        <div className="mb-6 mt-4 flex justify-center">
-          <a href={eventsData[currentEventIndex].link} className="btn ">
-            Read More
-          </a>
+            View All Events
+          </Link>
         </div>
-      </Link>
-    </div>
+      </div>
+    </section>
   )
 }
 

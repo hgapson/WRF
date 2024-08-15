@@ -112,7 +112,6 @@ export const testimonialsData = [
 // Add more events objects as needed
 export const eventsData = [
   {
-    id: 1,
     title: 'UPCOMING EVENTS',
     subtitle: "WORLD'S REFUGEE DAY",
     image: wrd,
@@ -120,7 +119,6 @@ export const eventsData = [
     link: '#',
   },
   {
-    id: 2,
     title: 'UPCOMING EVENTS',
     subtitle: 'VOLUNTEERING',
     image: volunteering,
@@ -129,7 +127,6 @@ export const eventsData = [
     link: '#',
   },
   {
-    id: 3,
     title: 'UPCOMING EVENTS',
     subtitle: 'WORKSHOP',
     image: workshop,

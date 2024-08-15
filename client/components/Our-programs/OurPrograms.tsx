@@ -82,7 +82,7 @@ const OurPrograms = () => {
                     onClick={() => handleLearnMoreClick(program)}
                     className="rounded-lg bg-blue-500 px-4 py-2 text-white transition duration-300 hover:bg-blue-600"
                   >
-                    Learn More
+                    Read More
                   </button>
                 </div>
               </div>

@@ -43,12 +43,6 @@ const Partners: React.FC = () => {
             We are proud to collaborate with our amazing partners.
           </p>
           <div className="flex gap-4">
-            <Link
-              to="/Contact"
-              className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
-            >
-              Become a Partner
-            </Link>
             <button
               onClick={() => setIsModalOpen(true)}
               className="rounded-lg bg-green-500 px-6 py-3 text-white transition duration-300 hover:bg-green-600"

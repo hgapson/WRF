@@ -66,7 +66,7 @@ const ImageCardSection = () => {
         <div className="mt-8 flex justify-center space-x-4">
           <Link to="/our-partners">
             <button
-              className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
+              className="btn rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
               //onClick={() => (window.location.href = '/readMore')}
             >
               Read More
