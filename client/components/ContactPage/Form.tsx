@@ -1,5 +1,6 @@
-import React from 'react'
-import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 type FormValues = {
@@ -11,29 +12,37 @@ type FormValues = {
 }
 
 const ContactForm: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null)
+  const [successMessage, setSuccessMessage] = useState<string | null>(null)
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
-    clearErrors,
-  } = useForm<FormValues>({
-    mode: 'onTouched',
-  })
+    reset,
+  } = useForm<FormValues>()
 
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    console.log(data)
-    // Perform additional form submission logic here
-  }
-
-  const handleRecaptchaChange = (value: string | null) => {
-    if (value) {
-      clearErrors('captcha')
-    } else {
-      setError('captcha', {
-        type: 'manual',
-        message: 'Captcha is required',
-      })
+  const sendEmail: SubmitHandler<FormValues> = (data) => {
+    if (form.current) {
+      emailjs
+        .sendForm(
+          'service_huukdph',
+          'template_emmyh0z',
+          form.current,
+          '_AfuqjrcWWBEbnsoh',
+        )
+        .then(
+          () => {
+            setSuccessMessage('Your message has been sent successfully!')
+            reset() // Reset the form
+          },
+          (error) => {
+            console.log('FAILED...', error.text)
+          },
+        )
+        .catch((error) => {
+          console.error('Error sending email:', error)
+        })
     }
   }
 
@@ -46,33 +55,37 @@ const ContactForm: React.FC = () => {
         Give Us Your Query
       </h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      {successMessage && (
+        <div className="mb-4 text-center text-green-500">{successMessage}</div>
+      )}
+
+      <form ref={form} onSubmit={handleSubmit(sendEmail)} className="space-y-4">
         <div className="mb-4">
           <input
-            type="text"
-            id="name"
-            placeholder="Your name"
             {...register('name', { required: 'Name is required' })}
+            type="text"
+            name="name"
+            placeholder="Your name"
             className="w-full rounded border border-gray-600 bg-gray-800 p-2 text-white placeholder-gray-400"
           />
           {errors.name && (
-            <p className="text-xm text-red-400">{errors.name.message}</p>
+            <p className="text-sm text-red-400">{errors.name.message}</p>
           )}
         </div>
 
         <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
           <div className="flex-1">
             <input
-              type="tel"
-              id="phoneNumber"
-              placeholder="Your number"
               {...register('phoneNumber', {
                 required: 'Phone number is required',
               })}
+              type="tel"
+              name="phoneNumber"
+              placeholder="Your number"
               className="w-full rounded border border-gray-600 bg-gray-800 p-2 text-white placeholder-gray-400"
             />
             {errors.phoneNumber && (
-              <p className="text-xm text-red-400">
+              <p className="text-sm text-red-400">
                 {errors.phoneNumber.message}
               </p>
             )}
@@ -80,23 +93,23 @@ const ContactForm: React.FC = () => {
 
           <div className="flex-1">
             <input
-              type="email"
-              id="email"
-              placeholder="Your email"
               {...register('email', { required: 'Email is required' })}
+              type="email"
+              name="email"
+              placeholder="Your email"
               className="w-full rounded border border-gray-600 bg-gray-800 p-2 text-white placeholder-gray-400"
             />
             {errors.email && (
-              <p className="text-xm text-red-400">{errors.email.message}</p>
+              <p className="text-sm text-red-400">{errors.email.message}</p>
             )}
           </div>
         </div>
 
         <div className="mb-4">
           <textarea
-            id="message"
-            placeholder="Your message"
             {...register('message', { required: 'Message is required' })}
+            name="message"
+            placeholder="Your message"
             className="w-full rounded border border-gray-600 bg-gray-800 p-2 text-white placeholder-gray-400"
           />
           {errors.message && (
@@ -104,18 +117,9 @@ const ContactForm: React.FC = () => {
           )}
         </div>
 
-        <div className="mb-4">
-          <ReCAPTCHA
-            sitekey="YOUR_RECAPTCHA_SITE_KEY"
-            onChange={handleRecaptchaChange}
-          />
-          {errors.captcha && (
-            <p className=" text-sm text-red-400">{errors.captcha.message}</p>
-          )}
-        </div>
-
         <button
           type="submit"
+          value="send"
           className="w-full rounded bg-blue-500 p-3 text-white hover:bg-blue-600"
         >
           Send

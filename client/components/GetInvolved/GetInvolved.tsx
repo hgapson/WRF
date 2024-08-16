@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaRegBookmark } from 'react-icons/fa'
 import { jobList } from '../models' // Import job data
 import helping from '../public/helping.jpg'
+import Contact from './Contact'
 
 const GetInvolved: React.FC = () => {
   const volunteeringJobIds = ['1', '2', '3']
@@ -106,6 +107,7 @@ const GetInvolved: React.FC = () => {
           </form>
         </div>
       </section>
+      <Contact />
     </div>
   )
 }
