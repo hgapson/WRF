@@ -35,6 +35,9 @@ const ContactForm: React.FC = () => {
           () => {
             setSuccessMessage('Your message has been sent successfully!')
             reset() // Reset the form
+            setTimeout(() => {
+              setSuccessMessage(null)
+            }, 3000)
           },
           (error) => {
             console.log('FAILED...', error.text)
