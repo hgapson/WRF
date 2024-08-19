@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import meeting from '../public/meeting.jpg'
 import flag from '../public/flags.jpg'
 

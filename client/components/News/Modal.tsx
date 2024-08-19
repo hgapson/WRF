@@ -1,15 +1,6 @@
 // ArticleModal.tsx
 import React from 'react'
-
-type Article = {
-  id: number
-  title: string
-  image: string
-  date: string
-  publisher: string
-  location: string
-  description: string
-}
+import { Article } from './Model'
 
 type ArticleModalProps = {
   isOpen: boolean
