@@ -12,6 +12,7 @@ export const newsArticles = [
     location: 'Hamilton, NZ',
     excerpt:
       'A brief description or excerpt of the news article goes here to entice readers to click and read more.',
+    description: 'Full description of Article 1.',
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const newsArticles = [
     location: 'Auckland, NZ',
     excerpt:
       'A brief description or excerpt of the news article goes here to entice readers to click and read more.',
+    description: 'Full description of Article 1.',
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ export const newsArticles = [
     location: 'Hamilton, NZ',
     excerpt:
       'A brief description or excerpt of the news article goes here to entice readers to click and read more.',
+    description: 'Full description of Article 1.',
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const newsArticles = [
     location: 'Auckland, NZ',
     excerpt:
       'A brief description or excerpt of the news article goes here to entice readers to click and read more.',
+    description: 'Full description of Article 1.',
   },
   {
     id: 5,
@@ -52,6 +56,7 @@ export const newsArticles = [
     location: 'Hamilton, NZ',
     excerpt:
       'A brief description or excerpt of the news article goes here to entice readers to click and read more.',
+    description: 'Full description of Article 1.',
   },
   {
     id: 6,
@@ -62,6 +67,7 @@ export const newsArticles = [
     location: 'Auckland, NZ',
     excerpt:
       'A brief description or excerpt of the news article goes here to entice readers to click and read more.',
+    description: 'Full description of Article 1.',
   },
   {
     id: 7,
@@ -72,6 +78,17 @@ export const newsArticles = [
     location: 'Hamilton, NZ',
     excerpt:
       'A brief description or excerpt of the news article goes here to entice readers to click and read more.',
+    description: 'Full description of Article 1.',
   },
   // Add more articles as needed
 ]
+export type Article = {
+  id: number
+  title: string
+  image: string
+  date: string
+  publisher: string
+  location: string
+  excerpt: string
+  description: string
+}

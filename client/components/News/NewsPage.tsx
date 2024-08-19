@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { newsArticles } from './Model'
+import { newsArticles, Article } from './Model'
+import ArticleModal from './Modal'
 
 const NewsPage = () => {
   // Define how many articles per page
@@ -11,6 +12,10 @@ const NewsPage = () => {
   // State to keep track of the current page
   const [currentPage, setCurrentPage] = useState(1)
 
+  // State to manage the modal
+  const [selectedArticle, setSelectedArticle] = useState<Article | null>(null)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+
   // Calculate the articles to display on the current page
   const startIndex = (currentPage - 1) * articlesPerPage
   const selectedArticles = newsArticles.slice(
@@ -21,6 +26,18 @@ const NewsPage = () => {
   // Handle page change
   const handlePageChange = (pageNumber: React.SetStateAction<number>) => {
     setCurrentPage(pageNumber)
+  }
+
+  // Open modal with selected article
+  const openModal = (article: Article) => {
+    setSelectedArticle(article)
+    setModalIsOpen(true)
+  }
+
+  // Close modal
+  const closeModal = () => {
+    setSelectedArticle(null)
+    setModalIsOpen(false)
   }
 
   return (
@@ -61,12 +78,12 @@ const NewsPage = () => {
                   Published by {article.publisher} - {article.location}
                 </p>
                 <p className="mt-4 text-gray-600">{article.excerpt}</p>
-                <a
-                  href={`/news/${article.id}`}
-                  className="mt-6 inline-block rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                <button
+                  onClick={() => openModal(article)}
+                  className="mt-6 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
                 >
                   Read More
-                </a>
+                </button>
               </div>
             </div>
           ))}
@@ -108,6 +125,13 @@ const NewsPage = () => {
           </nav>
         </div>
       </div>
+
+      {/* Article Modal */}
+      <ArticleModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        article={selectedArticle}
+      />
     </div>
   )
 }

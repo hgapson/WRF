@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { newsArticles } from '../News/Model'
 
 const News = () => {
-  // Get the latest two articles by sorting them by date and slicing the array
+  // Get the latest two articles by sorting them by date and slicing the array.
   const latestArticles = newsArticles
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
