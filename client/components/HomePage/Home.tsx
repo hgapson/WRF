@@ -5,6 +5,7 @@ import '../main.scss'
 import GetInvolved from './GetInvolved'
 import ImageCardSection from './Partners'
 import TestimonialsSection from './Testimonial'
+import News from './News'
 //import News from './News'
 
 const Home = () => {
@@ -28,7 +29,9 @@ const Home = () => {
       <div className="testimonial">
         <TestimonialsSection />
       </div>
-
+      <div className="news ">
+        <News />
+      </div>
       {/* Your main content here */}
     </main>
   )
