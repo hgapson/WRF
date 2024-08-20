@@ -74,7 +74,7 @@ Waikato Refugee Forum has directly assisted over 100,000 refugees to access rese
   },
   {
     id: 4,
-    title: 'Another Interesting News Article',
+    title: 'Another Interesting News ',
     image: meeting,
     date: 'Aug 18, 2024',
     publisher: 'ABC News',

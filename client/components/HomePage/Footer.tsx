@@ -2,7 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import sea from '../public/sea.jpg' // Update with the correct path
-import { BsSend } from 'react-icons/bs'
 import {
   FaFacebookF,
   FaTwitter,
@@ -36,18 +35,19 @@ const Footer = () => {
         {/* Contact Form */}
         <div className="mx-auto mb-6 flex max-w-lg flex-col items-center sm:mb-8">
           <div className="mb-4 text-center text-white">
-            <h2 className="text-xl font-bold md:text-2xl">Contact Us</h2>
+            <h2 className="font-times text-xl md:text-2xl">
+              Subscribe To Our News Letter
+            </h2>
           </div>
 
           <div className="flex w-full flex-col gap-2 sm:flex-row sm:gap-4">
             <input
               className="mb-2 w-full rounded-md border-none p-2 sm:mb-0 sm:w-2/3"
               type="text"
-              placeholder="Your message"
+              placeholder="Your email"
             />
             <button className="flex w-full items-center rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 sm:w-1/3">
-              <span>Send</span>
-              <BsSend className="ml-2" />
+              <span>Subscribe</span>
             </button>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Footer = () => {
           {/* Footer Intro */}
           <div className="mb-4 flex flex-1 flex-col rounded-lg bg-yellow-100 p-4 lg:mb-0 lg:p-6">
             <div className="flex-1">
-              <h1 className="mb-4 text-lg md:text-xl lg:text-2xl">
+              <h1 className="font-times mb-4 text-lg md:text-xl lg:text-2xl">
                 WAIKATO REFUGEE FORUM
               </h1>
               <p className="text-base md:text-lg">

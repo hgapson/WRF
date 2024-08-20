@@ -14,7 +14,7 @@ const News = () => {
       <div className="container mx-auto flex flex-col items-start md:flex-row md:space-x-8">
         {/* First Div: Title and Paragraph */}
         <div className="mb-8 flex-1 text-center md:mb-0 md:text-left">
-          <h2 className="text-3xl font-semibold text-gray-100">In The News</h2>
+          <h2 className="font-times text-3xl text-gray-100">In The News</h2>
           <p className="mt-4 text-lg text-gray-400">
             Stay updated with our latest news and articles.
           </p>
