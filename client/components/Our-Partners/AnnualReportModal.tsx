@@ -1,20 +1,6 @@
 import React, { useState } from 'react'
 import Modal from '../Modal' // Adjust the path as needed
-
-const reports = [
-  {
-    year: '2023',
-    file: 'path-to-report-2023.pdf',
-  },
-  {
-    year: '2022',
-    file: 'path-to-report-2022.pdf',
-  },
-  {
-    year: '2021',
-    file: 'path-to-report-2021.pdf',
-  },
-]
+import { reports } from './Model'
 
 interface AnnualReportModalProps {
   isOpen: boolean
@@ -31,13 +17,26 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
   const handleDownload = () => {
     const report = reports.find((report) => report.year === selectedYear)
     if (report) {
-      // Create a temporary anchor element to trigger the download
+      // Trigger the download
       const link = document.createElement('a')
       link.href = report.file
       link.download = `${report.year}-annual-report.pdf`
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
+      setMessage('')
+      // Clear the selected year after download
+      setSelectedYear('')
+    } else {
+      setMessage('No report available for the selected year.')
+    }
+  }
+
+  const handleView = () => {
+    const report = reports.find((report) => report.year === selectedYear)
+    if (report) {
+      // Open the report in a new tab
+      window.open(report.file, '_blank')
       setMessage('')
     } else {
       setMessage('No report available for the selected year.')
@@ -47,7 +46,7 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
   return (
     <Modal showModal={isOpen} handleClose={onRequestClose}>
       <h2 className="mb-4 text-2xl font-bold">
-        Select Year to Download Report
+        Select Year to Download or View Report
       </h2>
       <select
         value={selectedYear}
@@ -63,13 +62,22 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
           </option>
         ))}
       </select>
-      <button
-        onClick={handleDownload}
-        disabled={!selectedYear}
-        className={`rounded-lg px-4 py-2 text-white ${selectedYear ? 'bg-blue-500 hover:bg-blue-600' : 'cursor-not-allowed bg-gray-400'}`}
-      >
-        Download Report
-      </button>
+      <div className="flex justify-between">
+        <button
+          onClick={handleDownload}
+          disabled={!selectedYear}
+          className={`rounded-lg px-4 py-2 text-white ${selectedYear ? 'bg-blue-500 hover:bg-blue-600' : 'cursor-not-allowed bg-gray-400'}`}
+        >
+          Download Report
+        </button>
+        <button
+          onClick={handleView}
+          disabled={!selectedYear}
+          className={`rounded-lg px-4 py-2 text-white ${selectedYear ? 'bg-green-500 hover:bg-green-600' : 'cursor-not-allowed bg-gray-400'}`}
+        >
+          View Report
+        </button>
+      </div>
       {message && <p className="mt-4 text-red-500">{message}</p>}
     </Modal>
   )

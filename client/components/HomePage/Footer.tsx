@@ -12,10 +12,6 @@ import {
 const Footer = () => {
   const navigate = useNavigate()
 
-  const handleTeam = () => {
-    navigate('/about-us#team')
-  }
-
   const handleMoreStoriesClick = () => {
     navigate('/about-us#testimonies')
   }
@@ -148,9 +144,9 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <button onClick={handleTeam} className="hover:text-blue-500">
-                    Team
-                  </button>
+                  <Link to="/news" className="hover:text-blue-500">
+                    Newsletters
+                  </Link>
                 </li>
               </ul>
             </div>
