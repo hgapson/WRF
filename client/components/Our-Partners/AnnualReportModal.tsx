@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Modal from '../Modal' // Adjust the path as needed
 import { reports } from './Model'
+import { FaDownload } from 'react-icons/fa' // Import the download icon
 
 interface AnnualReportModalProps {
   isOpen: boolean
@@ -14,10 +15,17 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
   const [selectedYear, setSelectedYear] = useState<string>('')
   const [message, setMessage] = useState<string>('')
 
+  // Clear the message and selected year when the modal is closed
+  useEffect(() => {
+    if (!isOpen) {
+      setMessage('')
+      setSelectedYear('')
+    }
+  }, [isOpen])
+
   const handleDownload = () => {
     const report = reports.find((report) => report.year === selectedYear)
     if (report) {
-      // Trigger the download
       const link = document.createElement('a')
       link.href = report.file
       link.download = `${report.year}-annual-report.pdf`
@@ -25,8 +33,7 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
       link.click()
       document.body.removeChild(link)
       setMessage('')
-      // Clear the selected year after download
-      setSelectedYear('')
+      setSelectedYear('') // Clear selected year after download
     } else {
       setMessage('No report available for the selected year.')
     }
@@ -35,7 +42,6 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
   const handleView = () => {
     const report = reports.find((report) => report.year === selectedYear)
     if (report) {
-      // Open the report in a new tab
       window.open(report.file, '_blank')
       setMessage('')
     } else {
@@ -62,22 +68,27 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
           </option>
         ))}
       </select>
-      <div className="flex justify-between">
-        <button
+
+      <div className="flex items-center justify-between">
+        {selectedYear &&
+        reports.find((report) => report.year === selectedYear) ? (
+          <button
+            onClick={handleView}
+            className="cursor-pointer text-lg font-bold text-blue-500 hover:text-blue-600"
+            title={`View ${selectedYear} Report`}
+          >
+            {`${selectedYear} Annual Report`}
+          </button>
+        ) : (
+          <p className="text-lg font-bold text-gray-500"></p>
+        )}
+        <FaDownload
           onClick={handleDownload}
-          disabled={!selectedYear}
-          className={`rounded-lg px-4 py-2 text-white ${selectedYear ? 'bg-blue-500 hover:bg-blue-600' : 'cursor-not-allowed bg-gray-400'}`}
-        >
-          Download Report
-        </button>
-        <button
-          onClick={handleView}
-          disabled={!selectedYear}
-          className={`rounded-lg px-4 py-2 text-white ${selectedYear ? 'bg-green-500 hover:bg-green-600' : 'cursor-not-allowed bg-gray-400'}`}
-        >
-          View Report
-        </button>
+          className={`cursor-pointer text-3xl ${selectedYear ? 'text-blue-500 hover:text-blue-600' : 'cursor-not-allowed text-gray-400'}`}
+          title="Download Report"
+        />
       </div>
+
       {message && <p className="mt-4 text-red-500">{message}</p>}
     </Modal>
   )
