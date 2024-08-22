@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Modal from '../Modal' // Adjust the path as needed
+import Modal from '../Modal'
 import { reports } from './Model'
-import { FaDownload } from 'react-icons/fa' // Import the download icon
+import { FaDownload } from 'react-icons/fa'
 
 interface AnnualReportModalProps {
   isOpen: boolean
@@ -35,7 +35,7 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
       setMessage('')
       setSelectedYear('') // Clear selected year after download
     } else {
-      setMessage('No report available for the selected year.')
+      setMessage('Please select a year.')
     }
   }
 
@@ -45,7 +45,7 @@ const AnnualReportModal: React.FC<AnnualReportModalProps> = ({
       window.open(report.file, '_blank')
       setMessage('')
     } else {
-      setMessage('No report available for the selected year.')
+      setMessage('Please select a year.')
     }
   }
 
