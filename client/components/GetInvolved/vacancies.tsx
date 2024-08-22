@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { FaRegBookmark, FaBookmark } from 'react-icons/fa'
 import { Job, jobList } from '../models' // Import Job type and jobList
+import ApplicationModal from './ApplicationModal' // Import ApplicationModal
 
 const Vacancies: React.FC = () => {
   const [savedJobs, setSavedJobs] = useState<string[]>([])
-  const [selectedJob, setSelectedJob] = useState<string | null>(null)
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   // Function to toggle save status of a job
   const toggleSaveJob = (jobId: string) => {
@@ -16,38 +18,41 @@ const Vacancies: React.FC = () => {
   }
 
   // Function to handle apply button click
-  const handleApplyClick = (jobId: string) => {
-    setSelectedJob(jobId)
+  const handleApplyClick = (job: Job) => {
+    setSelectedJob(job)
   }
 
-  // Determine which job to display if a job is selected
-  const jobToDisplay = selectedJob
-    ? jobList.find((job) => job.id === selectedJob)
-    : null
+  // Function to open the modal when apply button is clicked in the details
+  const handleOpenModal = () => {
+    setIsModalOpen(true)
+  }
 
   return (
-    <div className="mt-12 min-h-screen bg-gray-100 py-12">
+    <div className="mt-12 min-h-screen bg-blue-950 py-12">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="mb-8 text-4xl font-bold">Current Vacancies</h1>
-        <p className="mb-8 text-lg">
+        <h1 className="mb-8 text-4xl font-bold text-white">
+          Current Vacancies
+        </h1>
+        <p className="mb-8 text-lg text-white">
           Join our team and help make a difference. Check out our current
           vacancies below.
         </p>
 
-        {jobToDisplay ? (
+        {selectedJob ? (
+          // Job Details View
           <div className="mb-8 rounded-lg bg-white p-6 text-left shadow-lg">
-            <h2 className="mb-4 text-2xl font-bold">{jobToDisplay.title}</h2>
+            <h2 className="mb-4 text-2xl font-bold">{selectedJob.title}</h2>
             <p className="mb-2 text-gray-600">
-              Location: {jobToDisplay.location}
+              Location: {selectedJob.location}
             </p>
-            <p className="mb-4 text-gray-700">{jobToDisplay.description}</p>
+            <p className="mb-4 text-gray-700">{selectedJob.description}</p>
             <div className="flex items-center justify-between">
-              <a
-                href="/apply"
+              <button
+                onClick={handleOpenModal}
                 className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
               >
                 Apply Now
-              </a>
+              </button>
               <button
                 onClick={() => setSelectedJob(null)}
                 className="mt-4 rounded-lg bg-gray-500 px-6 py-3 text-white transition duration-300 hover:bg-gray-600"
@@ -57,6 +62,7 @@ const Vacancies: React.FC = () => {
             </div>
           </div>
         ) : (
+          // Job List View
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {jobList.map((job: Job) => (
               <div
@@ -80,15 +86,24 @@ const Vacancies: React.FC = () => {
                   <p className="mb-2 text-gray-600">Location: {job.location}</p>
                   <p className="mb-4 text-gray-700">{job.description}</p>
                   <button
-                    onClick={() => handleApplyClick(job.id)}
+                    onClick={() => handleApplyClick(job)}
                     className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
                   >
-                    Apply
+                    View Details
                   </button>
                 </div>
               </div>
             ))}
           </div>
+        )}
+
+        {/* Render the Application Modal */}
+        {selectedJob && (
+          <ApplicationModal
+            jobTitle={selectedJob.title}
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
         )}
       </div>
     </div>

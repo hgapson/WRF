@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Modal from '../Modal'
+import Modal from './Modal'
 import { reports } from './Model'
 import { FaDownload } from 'react-icons/fa'
 

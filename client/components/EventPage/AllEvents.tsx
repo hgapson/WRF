@@ -1,7 +1,7 @@
 // src/components/EventPage/EventsPage.tsx
 
 import React, { useState } from 'react'
-import Modal from '../Modal'
+import Modal from '../Our-Partners/Modal'
 import RegisterForm from './RegisterForm'
 
 const eventsData = [

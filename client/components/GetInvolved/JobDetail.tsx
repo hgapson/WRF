@@ -1,10 +1,13 @@
-import React from 'react'
+// JobDetail.tsx
+import React, { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Job, jobList } from '../models' // Import job data and types
+import { Job, jobList } from '../models'
+import ApplicationModal from './ApplicationModal' // Import the Modal component
 
 const JobDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const job = jobList.find((job: Job) => job.id === id)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   if (!job) {
     return <p>Job not found</p>
@@ -18,12 +21,12 @@ const JobDetail: React.FC = () => {
           <p className="mb-2 text-gray-600">Location: {job.location}</p>
           <p className="mb-4 text-gray-700">{job.description}</p>
           <div className="flex items-center justify-between">
-            <a
-              href="/apply"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
             >
               Apply Now
-            </a>
+            </button>
             <Link
               to="/vacancies"
               className="rounded-lg bg-gray-500 px-6 py-3 text-white transition duration-300 hover:bg-gray-600"
@@ -33,6 +36,15 @@ const JobDetail: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Render the modal and pass necessary props */}
+      {isModalOpen && (
+        <ApplicationModal
+          jobTitle={job.title}
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   )
 }

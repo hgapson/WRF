@@ -1,14 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaRegBookmark } from 'react-icons/fa'
-import { jobList } from '../models' // Import job data
+import { jobList } from '../models'
 import helping from '../public/helping.jpg'
 
 const GetInvolved: React.FC = () => {
-  const volunteeringJobIds = ['1', '2', '3']
-  const volunteeringJobs = jobList.filter((job) =>
-    volunteeringJobIds.includes(job.id),
+  // Sort jobs by datePosted (most recent first)
+  const sortedJobs = jobList.sort(
+    (a, b) =>
+      new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime(),
   )
+
+  // Get the three most recent jobs
+  const latestJobs = sortedJobs.slice(0, 3)
 
   return (
     <div className="mt-14 min-h-screen bg-gray-100">
@@ -32,7 +36,7 @@ const GetInvolved: React.FC = () => {
             skills can make a huge impact.
           </p>
           <div className="mb-8 grid grid-cols-1 gap-4 text-left md:grid-cols-3">
-            {volunteeringJobs.map((job) => (
+            {latestJobs.map((job) => (
               <div key={job.id} className="rounded-lg bg-white p-6 shadow-lg">
                 <div className="mb-4 flex items-center justify-between">
                   <h3 className="text-xl font-bold">{job.title}</h3>
@@ -40,11 +44,14 @@ const GetInvolved: React.FC = () => {
                 </div>
                 <p className="mb-2 text-gray-600">Location: {job.location}</p>
                 <p className="mb-4 text-gray-700">{job.description}</p>
+                <p className="mb-4 text-sm text-gray-500">
+                  Posted on: {new Date(job.datePosted).toLocaleDateString()}
+                </p>
                 <Link
                   to={`/vacancies/${job.id}`}
                   className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
                 >
-                  Apply
+                  View Details
                 </Link>
               </div>
             ))}
@@ -66,9 +73,15 @@ const GetInvolved: React.FC = () => {
             Raise awareness about our cause and advocate for change in your
             community.
           </p>
-          <button className="rounded-lg bg-green-500 px-6 py-3 text-white transition duration-300 hover:bg-green-600">
-            Take Action
-          </button>
+          <p className="mb-8 text-sm">
+            Raise awareness about our cause and advocate for change in your
+            community.
+          </p>
+          <Link to="/contact">
+            <button className="rounded-lg bg-green-500 px-6 py-3 text-white transition duration-300 hover:bg-green-600">
+              Take Action
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -79,9 +92,15 @@ const GetInvolved: React.FC = () => {
             Partner with us and support our initiatives through corporate or
             community partnerships.
           </p>
-          <button className="rounded-lg bg-purple-500 px-6 py-3 text-white transition duration-300 hover:bg-purple-600">
-            Become a Partner
-          </button>
+          <p className="mb-8 text-sm">
+            Partner with us and support our initiatives through corporate or
+            community partnerships.
+          </p>
+          <Link to="/contact">
+            <button className="rounded-lg bg-purple-500 px-6 py-3 text-white transition duration-300 hover:bg-purple-600">
+              Become a Partner
+            </button>
+          </Link>
         </div>
       </section>
       <section className="py-12">
