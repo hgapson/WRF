@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaRegBookmark, FaBookmark } from 'react-icons/fa'
-import { Job, jobList } from '../models' // Import Job type and jobList
+import { Job, jobList } from './Model' // Import Job type and jobList
 import ApplicationModal from './ApplicationModal' // Import ApplicationModal
 
 const Vacancies: React.FC = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaRegBookmark } from 'react-icons/fa'
-import { jobList } from '../models'
+import { jobList } from './Model'
 import helping from '../public/helping.jpg'
 
 const GetInvolved: React.FC = () => {

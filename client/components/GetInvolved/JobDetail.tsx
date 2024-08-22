@@ -1,7 +1,7 @@
 // JobDetail.tsx
 import React, { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Job, jobList } from '../models'
+import { Job, jobList } from './Model'
 import ApplicationModal from './ApplicationModal' // Import the Modal component
 
 const JobDetail: React.FC = () => {

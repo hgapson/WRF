@@ -30,15 +30,6 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({
     }))
   }
 
-  const handleDownload = (file: File | null) => {
-    if (file) {
-      const link = document.createElement('a')
-      link.href = URL.createObjectURL(file)
-      link.download = file.name
-      link.click()
-    }
-  }
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log(formData)
@@ -47,17 +38,12 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({
 
   return (
     <Modal showModal={isOpen} handleClose={onClose}>
-      <h2 className="mb-4 text-2xl font-bold">
-        Apply for{' '}
-        <span className="italic text-gray-800 underline">{jobTitle}</span>
-      </h2>
+      <h2 className="mb-4 text-2xl font-bold">Apply for {jobTitle}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Name
-          </label>
           <input
             type="text"
+            placeholder="Your Name"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
@@ -66,32 +52,37 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Email
-          </label>
           <input
             type="email"
+            placeholder="Your Email"
             name="email"
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded border px-3 py-2 text-sm"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Phone Number
-          </label>
           <input
             type="tel"
+            placeholder="Phone Number"
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
             required
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded border px-3 py-2 text-gray-800"
           />
         </div>
-        <div></div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700"></label>
+          <input
+            type="text"
+            name="jobType"
+            value={formData.jobType}
+            readOnly
+            className="w-full rounded border bg-gray-100 px-3 py-2"
+          />
+        </div>
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Upload CV
@@ -101,17 +92,9 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({
             name="cv"
             accept=".pdf,.doc,.docx"
             onChange={handleInputChange}
+            required
             className="w-full rounded border px-3 py-2"
           />
-          {formData.cv && (
-            <button
-              type="button"
-              onClick={() => handleDownload(formData.cv)}
-              className="mt-2 text-blue-500 hover:underline"
-            >
-              Download CV
-            </button>
-          )}
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700">
@@ -122,17 +105,9 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({
             name="coverLetter"
             accept=".pdf,.doc,.docx"
             onChange={handleInputChange}
+            required
             className="w-full rounded border px-3 py-2"
           />
-          {formData.coverLetter && (
-            <button
-              type="button"
-              onClick={() => handleDownload(formData.coverLetter)}
-              className="mt-2 text-blue-500 hover:underline"
-            >
-              Download Cover Letter
-            </button>
-          )}
         </div>
         <button
           type="submit"
