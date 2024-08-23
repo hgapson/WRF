@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaMapMarkerAlt, FaBriefcase, FaClock } from 'react-icons/fa'
 import { Job, jobList } from './Model'
 
-const ITEMS_PER_PAGE = 8
+const ITEMS_PER_PAGE = 9
 
 const Vacancies: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -42,7 +42,7 @@ const Vacancies: React.FC = () => {
               <div
                 key={job.id}
                 className={`rounded-lg bg-white p-6 shadow-lg ${
-                  isExpired ? 'border-2 border-red-500' : ''
+                  isExpired ? 'border-2 ' : ''
                 }`}
               >
                 <h2 className="mb-2 text-2xl font-bold">{job.title}</h2>
@@ -78,7 +78,7 @@ const Vacancies: React.FC = () => {
                   } px-4 py-2 text-white transition duration-300 hover:bg-blue-600`}
                   aria-disabled={isExpired}
                 >
-                  {isExpired ? 'Expired' : 'View Details'}
+                  {isExpired ? 'View Details' : 'View Details'}
                 </Link>
               </div>
             )

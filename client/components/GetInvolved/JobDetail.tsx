@@ -18,7 +18,7 @@ const JobDetail: React.FC = () => {
   const isExpired = new Date() > new Date(job.expirationDate)
 
   return (
-    <div className="mt-4 min-h-screen bg-gray-100 py-12">
+    <div className="mt-4 min-h-screen bg-blue-950 py-12">
       <div className="container mx-auto px-4 text-left">
         <div className="rounded-lg bg-white p-6 text-left shadow-lg">
           <h1 className="mb-2 text-4xl font-bold">{job.title}</h1>
