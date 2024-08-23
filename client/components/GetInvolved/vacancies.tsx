@@ -1,110 +1,122 @@
 import React, { useState } from 'react'
-import { FaRegBookmark, FaBookmark } from 'react-icons/fa'
-import { Job, jobList } from './Model' // Import Job type and jobList
-import ApplicationModal from './ApplicationModal' // Import ApplicationModal
+import { Link } from 'react-router-dom'
+import { FaMapMarkerAlt, FaBriefcase, FaClock } from 'react-icons/fa'
+import { Job, jobList } from './Model'
+
+const ITEMS_PER_PAGE = 8
 
 const Vacancies: React.FC = () => {
-  const [savedJobs, setSavedJobs] = useState<string[]>([])
-  const [selectedJob, setSelectedJob] = useState<Job | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1)
 
-  // Function to toggle save status of a job
-  const toggleSaveJob = (jobId: string) => {
-    setSavedJobs((prev) =>
-      prev.includes(jobId)
-        ? prev.filter((id) => id !== jobId)
-        : [...prev, jobId],
-    )
+  const totalPages = Math.ceil(jobList.length / ITEMS_PER_PAGE)
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+  const currentJobs = jobList.slice(startIndex, startIndex + ITEMS_PER_PAGE)
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1)
+    }
   }
 
-  // Function to handle apply button click
-  const handleApplyClick = (job: Job) => {
-    setSelectedJob(job)
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1)
+    }
   }
 
-  // Function to open the modal when apply button is clicked in the details
-  const handleOpenModal = () => {
-    setIsModalOpen(true)
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber)
   }
 
   return (
-    <div className="mt-12 min-h-screen bg-blue-950 py-12">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="mb-8 text-4xl font-bold text-white">
-          Current Vacancies
+    <div className="mt-10 min-h-screen bg-blue-950 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="mb-8 text-center text-4xl font-bold text-white">
+          All Vacancies
         </h1>
-        <p className="mb-8 text-lg text-white">
-          Join our team and help make a difference. Check out our current
-          vacancies below.
-        </p>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {currentJobs.map((job: Job) => {
+            const isExpired = new Date() > new Date(job.expirationDate)
 
-        {selectedJob ? (
-          // Job Details View
-          <div className="mb-8 rounded-lg bg-white p-6 text-left shadow-lg">
-            <h2 className="mb-4 text-2xl font-bold">{selectedJob.title}</h2>
-            <p className="mb-2 text-gray-600">
-              Location: {selectedJob.location}
-            </p>
-            <p className="mb-4 text-gray-700">{selectedJob.description}</p>
-            <div className="flex items-center justify-between">
-              <button
-                onClick={handleOpenModal}
-                className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
-              >
-                Apply Now
-              </button>
-              <button
-                onClick={() => setSelectedJob(null)}
-                className="mt-4 rounded-lg bg-gray-500 px-6 py-3 text-white transition duration-300 hover:bg-gray-600"
-              >
-                Back to Vacancies
-              </button>
-            </div>
-          </div>
-        ) : (
-          // Job List View
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {jobList.map((job: Job) => (
+            return (
               <div
                 key={job.id}
-                className="overflow-hidden rounded-lg bg-white shadow-lg"
+                className={`rounded-lg bg-white p-6 shadow-lg ${
+                  isExpired ? 'border-2 border-red-500' : ''
+                }`}
               >
-                <div className="p-6">
-                  <div className="mb-4 flex items-center justify-between">
-                    <h2 className="text-xl font-bold">{job.title}</h2>
-                    <button
-                      onClick={() => toggleSaveJob(job.id)}
-                      className="text-gray-500 hover:text-gray-700"
-                    >
-                      {savedJobs.includes(job.id) ? (
-                        <FaBookmark />
-                      ) : (
-                        <FaRegBookmark />
-                      )}
-                    </button>
+                <h2 className="mb-2 text-2xl font-bold">{job.title}</h2>
+                <h3 className="mb-4 text-xl text-gray-700">{job.company}</h3>
+                <div className="mb-4 text-gray-600">
+                  <div className="flex items-center">
+                    <FaMapMarkerAlt className="mr-2" />
+                    <span>{job.location}</span>
                   </div>
-                  <p className="mb-2 text-gray-600">Location: {job.location}</p>
-                  <p className="mb-4 text-gray-700">{job.description}</p>
-                  <button
-                    onClick={() => handleApplyClick(job)}
-                    className="rounded-lg bg-blue-500 px-6 py-3 text-white transition duration-300 hover:bg-blue-600"
-                  >
-                    View Details
-                  </button>
+                  <div className="flex items-center">
+                    <FaBriefcase className="mr-2" />
+                    <span>{job.type}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <FaClock className="mr-2" />
+                    <span>
+                      {job.hoursPerWeek} hours per week ({job.workDays})
+                    </span>
+                  </div>
                 </div>
+                {!isExpired && (
+                  <p className="mb-4 text-sm text-gray-500">
+                    Posted on: {new Date(job.datePosted).toLocaleDateString()}
+                  </p>
+                )}
+                {isExpired && (
+                  <p className="mb-4 text-red-500">This job has expired.</p>
+                )}
+                <Link
+                  to={`/vacancies/${job.id}`}
+                  className={`mt-4 block rounded-lg text-center ${
+                    isExpired ? 'bg-gray-400' : 'bg-blue-500'
+                  } px-4 py-2 text-white transition duration-300 hover:bg-blue-600`}
+                  aria-disabled={isExpired}
+                >
+                  {isExpired ? 'Expired' : 'View Details'}
+                </Link>
               </div>
-            ))}
+            )
+          })}
+        </div>
+        <div className="mt-8 flex flex-col items-center">
+          <div className="mb-4 flex items-center">
+            <button
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+              className="rounded bg-blue-500 px-4 py-2 text-white disabled:opacity-50"
+            >
+              Previous
+            </button>
+            <div className="mx-4">
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index + 1}
+                  onClick={() => handlePageChange(index + 1)}
+                  className={`mx-1 rounded px-3 py-1 ${
+                    currentPage === index + 1
+                      ? 'bg-blue-500 text-white'
+                      : 'border border-blue-500 bg-white text-blue-500'
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+              className="rounded bg-blue-500 px-4 py-2 text-white disabled:opacity-50"
+            >
+              Next
+            </button>
           </div>
-        )}
-
-        {/* Render the Application Modal */}
-        {selectedJob && (
-          <ApplicationModal
-            jobTitle={selectedJob.title}
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-          />
-        )}
+        </div>
       </div>
     </div>
   )
