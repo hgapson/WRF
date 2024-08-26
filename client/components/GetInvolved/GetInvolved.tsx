@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaRegBookmark } from 'react-icons/fa'
 import { jobList } from './Model'
 import helping from '../public/helping.jpg'
 
@@ -40,7 +39,6 @@ const GetInvolved: React.FC = () => {
               <div key={job.id} className="rounded-lg bg-white p-6 shadow-lg">
                 <div className="mb-4 flex items-center justify-between">
                   <h3 className="text-xl font-bold">{job.title}</h3>
-                  <FaRegBookmark className="cursor-pointer text-gray-500 hover:text-gray-700" />
                 </div>
                 <p className="mb-2 text-gray-600">Location: {job.location}</p>
                 <p className="mb-4 text-gray-700">{job.description}</p>
