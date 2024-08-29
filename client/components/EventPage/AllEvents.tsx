@@ -1,58 +1,42 @@
-// src/components/EventPage/EventsPage.tsx
-
 import React, { useState } from 'react'
 import Modal from '../Our-Partners/Modal'
+import { eventsData } from './Model'
+import Gallery from './Gallery'
 import RegisterForm from './RegisterForm'
 
-const eventsData = [
-  {
-    title: 'Youth competition',
-    image: 'path_to_image_or_video_1',
-    date: '2023-08-01',
-    description: 'This is a brief description of Event 1.',
-    link: '/event1',
-    registerLink: '/register1',
-  },
-  {
-    title: 'World Refugee Day',
-    image: 'path_to_image_or_video_2',
-    date: '2023-09-15',
-    description: 'This is a brief description of Event 2.',
-    link: '/event2',
-    registerLink: '/register2',
-  },
-  {
-    title: 'WRF Workshop',
-    image: 'path_to_image_or_video_1',
-    date: '2023-08-01',
-    description: 'This is a brief description of Event 1.',
-    link: '/event1',
-    registerLink: '/register1',
-  },
-
-  // Add more events as needed
-]
-
 const EventsPage: React.FC = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showReadMoreModal, setShowReadMoreModal] = useState(false)
+  const [showRegisterModal, setShowRegisterModal] = useState(false)
   const [selectedEvent, setSelectedEvent] = useState<any>(null)
 
-  const handleOpenModal = (event: any) => {
+  const handleOpenReadMoreModal = (event: any) => {
     setSelectedEvent(event)
-    setShowModal(true)
+    setShowReadMoreModal(true)
   }
 
-  const handleCloseModal = () => {
-    setShowModal(false)
+  const handleCloseReadMoreModal = () => {
+    setShowReadMoreModal(false)
     setSelectedEvent(null)
   }
 
+  const handleOpenRegisterModal = () => {
+    setShowRegisterModal(true)
+  }
+
+  const handleCloseRegisterModal = () => {
+    setShowRegisterModal(false)
+  }
+
+  const isUpcomingEvent = (date: string) => {
+    return new Date(date) > new Date()
+  }
+
   return (
-    <section className="mt-10 bg-gray-100 px-4 py-16 sm:px-6 lg:px-8">
-      <div className="container mx-auto  pt-[64px]">
-        {' '}
-        {/* Add padding-top here */}
-        <h2 className="mb-6 text-center text-3xl font-bold">Upcoming Events</h2>
+    <section className="mt-10 bg-blue-950 px-4 py-16 sm:px-6 lg:px-8">
+      <div className="container mx-auto pt-[64px]">
+        <h2 className="mb-6 text-center text-3xl font-bold text-white">
+          Our Events
+        </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {eventsData.map((event, index) => (
             <div
@@ -78,17 +62,11 @@ const EventsPage: React.FC = () => {
                 </p>
                 <p className="mb-4 text-gray-700">{event.description}</p>
                 <div className="flex justify-center space-x-4">
-                  <a
-                    href={event.link}
+                  <button
+                    onClick={() => handleOpenReadMoreModal(event)}
                     className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
                   >
                     Read More
-                  </a>
-                  <button
-                    onClick={() => handleOpenModal(event)}
-                    className="rounded bg-green-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-green-600"
-                  >
-                    Register
                   </button>
                 </div>
               </div>
@@ -96,7 +74,40 @@ const EventsPage: React.FC = () => {
           ))}
         </div>
       </div>
-      <Modal showModal={showModal} handleClose={handleCloseModal}>
+
+      {/* Read More Modal */}
+      <Modal
+        showModal={showReadMoreModal}
+        handleClose={handleCloseReadMoreModal}
+      >
+        {selectedEvent && (
+          <div>
+            <h2 className="mb-4 text-2xl font-bold">{selectedEvent.title}</h2>
+            <p className="mb-4 text-gray-700">{selectedEvent.description}</p>
+
+            {!isUpcomingEvent(selectedEvent.date) && (
+              <Gallery event={selectedEvent} />
+            )}
+
+            {isUpcomingEvent(selectedEvent.date) && (
+              <div className="mt-4 flex justify-center">
+                <button
+                  onClick={handleOpenRegisterModal} // Open registration form modal
+                  className="rounded bg-green-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-green-600"
+                >
+                  Register
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </Modal>
+
+      {/* Registration Form Modal */}
+      <Modal
+        showModal={showRegisterModal}
+        handleClose={handleCloseRegisterModal}
+      >
         {selectedEvent && <RegisterForm event={selectedEvent} />}
       </Modal>
     </section>
