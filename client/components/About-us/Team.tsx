@@ -31,19 +31,19 @@ const Team: React.FC = () => {
   }
 
   return (
-    <section className="bg-gray-100 px-4 py-12 md:px-8 lg:px-16">
+    <section className="bg-blue-950 px-4 py-12 md:px-8 lg:px-16">
       <div className="mb-8 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-gray-800">Meet Our Team</h1>
+        <h1 className="mb-4 text-4xl font-bold text-gray-300">Meet Our Team</h1>
         <div className="mb-6 flex justify-center gap-6">
           <button
             onClick={() => handleClick('boardMembers')}
-            className={`text-lg font-semibold transition-all duration-300 ${activeSection === 'boardMembers' ? 'text-blue-600 underline' : 'text-gray-700'}`}
+            className={`text-lg font-semibold transition-all duration-300 ${activeSection === 'boardMembers' ? 'text-blue-600 underline' : 'text-gray-400'}`}
           >
             Board Members
           </button>
           <button
             onClick={() => handleClick('leadershipTeam')}
-            className={`text-lg font-semibold transition-all duration-300 ${activeSection === 'leadershipTeam' ? 'text-blue-600 underline' : 'text-gray-700'}`}
+            className={`text-lg font-semibold transition-all duration-300 ${activeSection === 'leadershipTeam' ? 'text-blue-600 underline' : 'text-gray-400'}`}
           >
             Leadership Team
           </button>

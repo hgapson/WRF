@@ -47,7 +47,7 @@ const OurPrograms = () => {
   }
 
   return (
-    <div className="mt-16 min-h-screen bg-gray-100">
+    <div className="mt-16 min-h-screen bg-blue-950">
       {/* Hero Section */}
       <section
         className="mt-16 h-96 bg-cover bg-center"

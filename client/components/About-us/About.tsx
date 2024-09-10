@@ -75,12 +75,12 @@ const About = () => {
         <Testimonies />
       </div>
 
-      <div className="getinvolved p-8">
+      <div className="getinvolved bg-blue-950 p-8">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-semibold text-gray-900">
+          <h2 className="mb-4 text-3xl font-semibold text-gray-300">
             Get Involved
           </h2>
-          <p>
+          <p className="text-white">
             There are many ways you can support our cause. Whether through
             volunteering, donations, or advocacy, your involvement makes a
             difference.

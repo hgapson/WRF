@@ -1,37 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import AnnualReportModal from './AnnualReportModal' // Adjust the path as needed
-import hms from '../public/hms.png'
-import ministry from '../public/ministry of ed.jpg'
-import aa from '../public/AA.png'
+import { partners } from './Model'
 import ocean from '../public/ocean.jpg'
-
-const partners = [
-  {
-    name: 'HMS Trust',
-    description: 'Description for Partner 1',
-    logo: hms,
-    website: 'https://www.hmstrust.org.nz/',
-  },
-  {
-    name: 'AA',
-    description: 'Description for Partner 2',
-    logo: aa,
-    website: 'https://www.aa.co.nz/',
-  },
-  {
-    name: 'Migration',
-    description: 'Description for Partner 3',
-    logo: ministry,
-    website: 'https://www.education.govt.nz/',
-  },
-]
 
 const Partners: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-blue-950">
       {/* Hero Section */}
       <section
         className="h-96 bg-cover bg-center"
