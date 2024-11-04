@@ -6,31 +6,7 @@ import orientation from '../public/orientation.jpg'
 import support from '../public/support.jpg'
 import student from '../public/students.jpg'
 import ProgramModal from './Modal'
-import { Program } from './Models'
-
-const programs: Program[] = [
-  {
-    title: 'Youth Trainings',
-    description: 'Description for Program 1',
-    image: youth,
-    details: 'Detailed explanation about Youth Trainings.',
-    additionalInfo: 'Additional info about Youth Trainings.',
-  },
-  {
-    title: 'Orientation',
-    description: 'Description for Program 2',
-    image: orientation,
-    details: 'Detailed explanation about Orientation.',
-    additionalInfo: 'Additional info about Orientation.',
-  },
-  {
-    title: 'Supporting',
-    description: 'Description for Program 3',
-    image: support,
-    details: 'Detailed explanation about Supporting.',
-    additionalInfo: 'Additional info about Supporting.',
-  },
-]
+import { Program, programs } from './Models'
 
 const OurPrograms = () => {
   const [selectedProgram, setSelectedProgram] = useState<Program | null>(null)

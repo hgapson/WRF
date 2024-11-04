@@ -10,7 +10,8 @@ export interface Program {
   details: string
   additionalInfo: string
 }
-export const programs = [
+
+export const programs: Program[] = [
   {
     title: 'COOKING PROJECT',
     description: 'Description for Program 1',
