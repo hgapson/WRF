@@ -12,21 +12,21 @@ export interface Program {
 }
 export const programs = [
   {
-    title: 'Youth Trainings',
+    title: 'COOKING PROJECT',
     description: 'Description for Program 1',
     image: youth,
     details: 'Detailed explanation about Youth Trainings.',
     additionalInfo: 'Additional info about Youth Trainings.',
   },
   {
-    title: 'Orientation',
+    title: 'WORLD REFUGEE DAY',
     description: 'Description for Program 2',
     image: orientation,
     details: 'Detailed explanation about Orientation.',
     additionalInfo: 'Additional info about Orientation.',
   },
   {
-    title: 'Supporting',
+    title: 'EDUCATION PROGRAM',
     description: 'Description for Program 3',
     image: support,
     details: 'Detailed explanation about Supporting.',

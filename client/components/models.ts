@@ -74,7 +74,7 @@ export const eventsData = [
   },
   {
     title: 'UPCOMING EVENTS',
-    subtitle: 'VOLUNTEERING',
+    subtitle: 'COMMUNITY EVENTS',
     image: volunteering,
     description:
       'Honoring our volunteers for their incredible work in our organization.',
