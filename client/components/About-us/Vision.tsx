@@ -12,8 +12,8 @@ const VisionMissionValues = () => {
               icon={faLightbulb}
               className="mx-auto h-12 w-12 text-blue-500"
             />
-            <h3 className="mt-4 text-xl font-semibold">Vision</h3>
-            <p className="mt-2 text-gray-300">
+            <h3 className="mt-4 text-2xl font-semibold text-white">Vision</h3>
+            <p className="mt-6 text-gray-300">
               A brief description of your long-term goals and aspirations.
             </p>
           </div>
@@ -24,8 +24,8 @@ const VisionMissionValues = () => {
               icon={faBullseye}
               className="mx-auto h-12 w-12 text-green-500"
             />
-            <h3 className="mt-4 text-xl font-semibold">Mission</h3>
-            <p className="mt-2 text-gray-300">
+            <h3 className="mt-4 text-2xl font-semibold text-white">Mission</h3>
+            <p className="mt-6 text-gray-300">
               A clear statement outlining your organizations purpose and
               objectives.
             </p>
