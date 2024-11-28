@@ -32,40 +32,40 @@ export const teamData: TeamData = {
     {
       image: gapson1,
       name: 'Credu Gapson',
-      position: 'Chairman',
+      position: 'IT Coordinator',
       description:
-        'John has over 20 years of experience in leadership and governance.',
+        'Gapson has over 5 years of experience in Information Technology, administration and customer support.',
       social: {
-        facebook: undefined,
-        twitter: undefined,
-        instagram: undefined,
-        linkedin: undefined,
+        facebook: 'https://facebook.com/jane.smith',
+        twitter: 'https://twitter.com/@gapson10',
+        instagram: 'https://instagram.com/@gapson10',
+        linkedin: 'https://facebook.com/jane.smith',
       },
     },
     {
       image: gapson2,
-      name: 'Jane Smith',
-      position: 'Treasurer',
+      name: 'August Cameron',
+      position: 'Projects Coordinator',
       description:
-        'Jane is an expert in financial management with a background in nonprofit organizations.',
+        'August is an expert in project management with a background in nonprofit organizations.',
       social: {
-        facebook: undefined,
-        twitter: undefined,
-        instagram: undefined,
-        linkedin: undefined,
+        facebook: 'https://facebook.com/jane.smith',
+        twitter: 'https://facebook.com/jane.smith',
+        instagram: 'https://facebook.com/jane.smith',
+        linkedin: 'https://facebook.com/jane.smith',
       },
     },
     {
       image: rock,
-      name: 'Jane Smith',
-      position: 'Treasurer',
+      name: 'Jo de Lisle',
+      position: 'Community connector',
       description:
-        'Jane is an expert in financial management with a background in nonprofit organizations.',
+        'Jo is an expert in financial management with a background in nonprofit organizations.',
       social: {
-        facebook: undefined,
-        twitter: undefined,
-        instagram: undefined,
-        linkedin: undefined,
+        facebook: 'https://facebook.com/jane.smith',
+        twitter: 'https://facebook.com/jane.smith',
+        instagram: 'https://facebook.com/jane.smith',
+        linkedin: 'https://facebook.com/jane.smith',
       },
     },
   ],
@@ -77,10 +77,10 @@ export const teamData: TeamData = {
       description:
         'Alice leads the team with a vision for impactful change and strategic planning.',
       social: {
-        facebook: undefined,
-        twitter: undefined,
-        instagram: undefined,
-        linkedin: undefined,
+        facebook: 'https://facebook.com/jane.smith',
+        twitter: 'https://facebook.com/jane.smith',
+        instagram: 'https://facebook.com/jane.smith',
+        linkedin: 'https://facebook.com/jane.smith',
       },
     },
     {
@@ -90,10 +90,10 @@ export const teamData: TeamData = {
       description:
         'Bob manages various programs and ensures their successful execution.',
       social: {
-        facebook: undefined,
-        twitter: undefined,
-        instagram: undefined,
-        linkedin: undefined,
+        facebook: 'https://facebook.com/jane.smith',
+        twitter: 'https://facebook.com/jane.smith',
+        instagram: 'https://facebook.com/jane.smith',
+        linkedin: 'https://facebook.com/jane.smith',
       },
     },
     {
@@ -103,10 +103,10 @@ export const teamData: TeamData = {
       description:
         'Jane is an expert in financial management with a background in nonprofit organizations.',
       social: {
-        facebook: undefined,
-        twitter: undefined,
-        instagram: undefined,
-        linkedin: undefined,
+        facebook: 'https://facebook.com/jane.smith',
+        twitter: 'https://facebook.com/jane.smith',
+        instagram: 'https://facebook.com/jane.smith',
+        linkedin: 'https://facebook.com/jane.smith',
       },
     },
   ],

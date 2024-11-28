@@ -16,7 +16,7 @@ const Team: React.FC = () => {
     setActiveSection(section)
   }
 
-  const generateUsername = (name: string) => {
+  /*const generateUsername = (name: string) => {
     return name.toLowerCase().replace(/ /g, '-')
   }
 
@@ -28,7 +28,7 @@ const Team: React.FC = () => {
       instagram: `https://instagram.com/${username}`,
       linkedin: `https://linkedin.com/in/${username}`,
     }
-  }
+  }*/
 
   return (
     <section className="bg-blue-950 px-4 py-12 md:px-8 lg:px-16">
@@ -52,7 +52,7 @@ const Team: React.FC = () => {
 
       <div className="flex flex-wrap justify-center gap-6">
         {teamData[activeSection].map((member: TeamMember, index: number) => {
-          const socialUrls = getSocialMediaUrls(member.name)
+          // const socialUrls = getSocialMediaUrls(member.name)
           return (
             <div
               key={index}
@@ -77,7 +77,7 @@ const Team: React.FC = () => {
                 </p>
                 <div className="flex justify-center gap-4">
                   <a
-                    href={socialUrls.facebook}
+                    href="https://www.facebook.com/credu.gapson"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800"
@@ -85,7 +85,7 @@ const Team: React.FC = () => {
                     <FaFacebookF />
                   </a>
                   <a
-                    href={socialUrls.twitter}
+                    href="https://twitter.com/@gapson10"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-600"
@@ -93,7 +93,7 @@ const Team: React.FC = () => {
                     <FaTwitter />
                   </a>
                   <a
-                    href={socialUrls.instagram}
+                    href="https://www.instagram.com/gapson10"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-pink-600 hover:text-pink-800"
@@ -101,7 +101,7 @@ const Team: React.FC = () => {
                     <FaInstagram />
                   </a>
                   <a
-                    href={socialUrls.linkedin}
+                    href="https://www.linkedin.com/in/credu.gapson"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-700 hover:text-blue-900"

@@ -63,37 +63,45 @@ const Footer = () => {
               </p>
             </div>
             <div className="mt-4 flex flex-col gap-4 text-white lg:flex-row lg:gap-6">
-              <div className="flex gap-4 text-white">
+              <div className="flex gap-4">
                 <a
-                  href="https://www.facebook.com/yourprofile"
+                  href="https://www.facebook.com/WaikatoRefugeeForum"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800"
                 >
                   <FaFacebookF size={24} />
                 </a>
                 <a
-                  href="https://twitter.com/yourprofile"
+                  href="https://twitter.com/wrefugeeforum"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-600"
                 >
                   <FaTwitter size={24} />
                 </a>
                 <a
-                  href="https://www.instagram.com/yourprofile"
+                  href="https://www.instagram.com/wrefugeeforum"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-pink-500 hover:text-pink-700"
                 >
                   <FaInstagram size={24} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-700 hover:text-blue-900"
                 >
                   <FaLinkedinIn size={24} />
                 </a>
               </div>
               <a
-                href="https://maps.google.com/?q=46G+Boundary road+Claudelands,+Hamilton"
+                href="https://maps.google.com/?q=46G+Boundary+road+Claudelands,+Hamilton"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" inline-block rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
+                className="inline-block rounded-lg bg-blue-500 p-3 text-center text-white shadow-lg hover:bg-blue-600"
               >
                 View on Map
               </a>
