@@ -20,7 +20,7 @@ const Footer = () => {
     navigate('/about-us#vision')
   }
   return (
-    <footer className="relative h-[105vh] w-full md:h-[95vh] lg:h-[78vh] xl:h-[74vh] ">
+    <footer className="relative h-[50vh] w-full md:h-[50vh] lg:h-[40vh] xl:h-[40vh] ">
       {/* Background Video */}
       <div className="absolute inset-0  overflow-hidden">
         <img className="h-full w-full object-cover" src={sea} alt="sea" />
@@ -29,24 +29,6 @@ const Footer = () => {
       {/* Overlay Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center overflow-auto bg-black bg-opacity-40 p-4">
         {/* Contact Form */}
-        <div className="mx-auto mb-6 flex max-w-lg flex-col items-center sm:mb-8">
-          <div className="mb-4 text-center text-white">
-            <h2 className="font-times text-xl md:text-2xl">
-              Subscribe To Our News Letter
-            </h2>
-          </div>
-
-          <div className="flex w-full flex-col gap-2 sm:flex-row sm:gap-4">
-            <input
-              className="mb-2 w-full rounded-md border-none p-2 sm:mb-0 sm:w-2/3"
-              type="text"
-              placeholder="Your email"
-            />
-            <button className="flex w-full items-center rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 sm:w-1/3">
-              <span>Subscribe</span>
-            </button>
-          </div>
-        </div>
 
         {/* Footer Cards */}
         <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-2 rounded-lg bg-gray-100 bg-opacity-80 p-4 md:p-6 lg:flex-row lg:p-8">
@@ -117,7 +99,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm md:text-base lg:text-lg">
                 <li>
                   <Link to="/events" className="hover:text-blue-500">
-                    Events
+                    Services
                   </Link>
                 </li>
                 <li>
