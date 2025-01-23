@@ -50,7 +50,7 @@ const ImageCardSection = () => {
               <img
                 src={card.image}
                 alt={`Card ${index + 1}`}
-                className="h-48 w-full object-cover"
+                className="h-24 w-full object-cover"
               />
               <div className="p-4">
                 <h3 className="mb-2 text-center text-xl font-medium">

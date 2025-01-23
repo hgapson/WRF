@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import AnnualReportModal from './AnnualReportModal' // Adjust the path as needed
 import { partners } from './Model'
 import ocean from '../public/ocean.jpg'
+import { FaHandshake } from 'react-icons/fa'
 
 const Partners: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
@@ -31,27 +32,32 @@ const Partners: React.FC = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="py-12">
+      <section className="bg-cyan-700 py-16 text-center">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="mb-8 text-3xl font-extrabold">Our Partners</h2>
+          <div className="mb-8 flex justify-center">
+            <FaHandshake className="text-6xl text-yellow-600" />
+          </div>
+          <div className="mx-auto mb-8 max-w-3xl">
+            <p className="text-lg">
+              We work with a range of partners to enhance our services and
+              support for migrants. Join us in making a difference.
+            </p>
+          </div>
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-10">
             {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-lg bg-white shadow-lg"
-              >
+              <div key={index}>
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-56 w-full object-cover"
+                  className="h-24 object-contain"
                 />
                 <div className="p-6">
-                  <h2 className="mb-2 text-2xl font-bold">{partner.name}</h2>
-                  <p className="mb-4 text-gray-700">{partner.description}</p>
                   <a
                     href={partner.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg bg-blue-500 px-4 py-2 text-white transition duration-300 hover:bg-blue-600"
+                    className="rounded-lg bg-blue-800 px-4 py-2 text-white transition duration-300 hover:bg-blue-600"
                   >
                     Visit Website
                   </a>
