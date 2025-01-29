@@ -13,7 +13,7 @@ const Event = () => {
     <section className="relative bg-blue-950 px-4 py-12 md:px-8 lg:px-16">
       <div className="absolute inset-0  opacity-50"></div>
       <div className="relative z-10 mx-auto max-w-7xl text-center">
-        <h2 className="mb-8 text-4xl font-bold text-white">UPCOMING EVENTS</h2>
+        <h2 className="mb-8 text-4xl font-bold text-white">OUR SERVICES</h2>
         <Slider {...settings}>
           {eventsData.map((event, index) => (
             <div key={index} className="p-4">
@@ -34,7 +34,7 @@ const Event = () => {
             to="/Events"
             className="btn rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
           >
-            View All Events
+            Read More
           </Link>
         </div>
       </div>

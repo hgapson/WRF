@@ -66,23 +66,23 @@ export const testimonialsData = [
 // Add more events objects as needed
 export const eventsData = [
   {
-    title: 'UPCOMING EVENTS',
-    subtitle: "WORLD'S REFUGEE DAY",
+    title: 'OUR SERVICES',
+    subtitle: 'IMMIGRATION ISSUES',
     image: wrd,
     description: 'Celebrating World Refugee Day with former refugee 2024.',
     link: '#',
   },
   {
-    title: 'UPCOMING EVENTS',
-    subtitle: 'COMMUNITY EVENTS',
+    title: 'OUR SERVICES',
+    subtitle: 'CULTURAL IDENTITY',
     image: volunteering,
     description:
       'Honoring our volunteers for their incredible work in our organization.',
     link: '#',
   },
   {
-    title: 'UPCOMING EVENTS',
-    subtitle: 'WORKSHOP',
+    title: 'OUR SERVICES',
+    subtitle: 'ADVOCACY',
     image: workshop,
     description:
       'Giving former refugees opportunity to showcase their traditional cultural treasures.',

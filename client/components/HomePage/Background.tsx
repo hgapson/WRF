@@ -23,15 +23,15 @@ const Background: React.FC = () => {
               </h3>
               <h3 className="my-profession text-lg lg:text-xl xl:text-2xl">
                 <span data-aos="fade-up" className="typing">
-                  Waikato Refugee Forum
+                  Waikato Refugee Forum Inc.
                 </span>
               </h3>
               <p
                 data-aos="fade-up"
                 className="mt-4 font-serif text-sm text-white lg:text-base xl:text-lg"
               >
-                Bring together the voice of all refugee communities settled in
-                the Waikato Region
+                Bringing together the voice of all former refugee communities
+                settled in the Waikato Region
               </p>
               <Link
                 to="/contact"

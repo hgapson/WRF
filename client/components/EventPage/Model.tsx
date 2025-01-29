@@ -3,54 +3,67 @@ import students from '../public/students.jpg'
 import laughing from '../public/laughing.jpg'
 import support from '../public/support.jpg'
 
-export const jobSolutions = {
+export const services = {
   whyChoose: [
     {
-      title: 'Tailored Job Search',
+      title: 'Advocacy',
       description:
-        'We customize job searches based on your qualifications and skill set.',
+        'We standing up for what’s right, influencing decisions, and empowering individuals or communities to address issues that matter most to them..',
     },
     {
       title: 'Professional Development',
       description:
-        'Offering workshops, courses, and one-on-one sessions to boost your employability.',
+        'Offering workshops, courses, and one-on-one sessions to boost your adaptability.',
     },
     {
-      title: 'Network of Employers',
+      title: 'Network of Agencies',
       description:
-        'Our vast employer network allows us to match you with the right job openings.',
+        'Our vast agencies network allows us to match you with the right services to issue.',
     },
   ],
   solutions: [
     {
       title: 'Skill Training & Development',
       description:
-        'Specialized training to improve your skill set and align with the local job market.',
+        'Specialized training to improve your skill set and align with the local level and adaptability .',
       image: sport,
     },
     {
-      title: 'Job Matching & Placement',
+      title: 'Imigration Issues',
       description:
-        'Connecting you with job opportunities that fit your qualifications.',
+        'Helping with imigration aplications and folow up the outputs.',
       image: students,
     },
     {
-      title: 'Tailored Support',
+      title: 'Work and Income matters',
       description:
-        'We personalize our job solutions based on your individual needs.',
+        'We do advocacy and help with assistance to benefit and other issues related to Work and Income.',
       image: support,
     },
     {
-      title: 'Cultural Integration',
+      title: 'Cultural Identity',
       description:
-        'Helping migrants integrate into the local culture for a smoother transition.',
+        'Helping migrants mainten their mother tangue languages to value their cultures.',
+      image: laughing,
+    },
+    {
+      title: 'Local Integration',
+      description:
+        'Local knowledge and links to settlement services like driver licence, employement, interpretating and more to integrate into the local culture for a smoother transition.',
+      image: laughing,
+    },
+    {
+      title: 'JP Services',
+      description:
+        'Help with justice of the peace services for certification of documents, statutory declarations, name change and others.',
       image: laughing,
     },
   ],
   additionalServices: [
-    'Migration issues',
-    'Work and Income Assistant',
-    'language support',
-    'Advices',
+    'Filling Forms',
+    'Justice of the Peace  Services',
+    'printing, scanning and copying assistance',
+    'Communities Support',
+    'language Support',
   ],
 }

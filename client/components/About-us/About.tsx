@@ -10,7 +10,7 @@ import VisionMissionValues from './Vision'
 import Team from './Team'
 import Values from './Values'
 import OurStorySection from './History'
-import OurServicesSection from './Services'
+import OurAproaches from './Aproaches'
 
 const About = () => {
   const location = useLocation()
@@ -57,12 +57,13 @@ const About = () => {
       <div className="paragraph">
         <Paragraphs />
       </div>
-      <div className="services">
-        <OurServicesSection />
-      </div>
       <div id="vision">
         <VisionMissionValues />
       </div>
+      <div className="services">
+        <OurAproaches />
+      </div>
+
       <div className="test">
         <Values />
       </div>

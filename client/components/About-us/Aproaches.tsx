@@ -6,39 +6,39 @@ import {
   FaPeopleArrows,
 } from 'react-icons/fa'
 
-const OurServicesSection: React.FC = () => {
+const OurAproaches: React.FC = () => {
   const services = [
     {
       icon: <FaLaptopCode />,
-      title: 'Web Development',
+      title: 'Holistic ',
       description:
-        'Crafting responsive, modern websites that deliver an exceptional user experience.',
+        'Addresses multiple aspects of  well-being and Focus on providing comprehensive support rather than addressing isolated issues.',
     },
     {
       icon: <FaBriefcase />,
-      title: 'Business Solutions',
+      title: 'Advocacy Driven',
       description:
-        'Tailored strategies to help your business thrive in a competitive market.',
+        'Focuses on raising awareness, influencing policies, and advocating for better support and protection for former refugees. ',
     },
     {
       icon: <FaChalkboardTeacher />,
-      title: 'Mentorship Programs',
+      title: 'Person Centered',
       description:
-        'Guiding individuals towards personal and professional growth with expert mentors.',
+        'Tailors programs to meet the unique needs of each former refugee, considering their individual circumstances, preferences, and goals.',
     },
     {
       icon: <FaPeopleArrows />,
-      title: 'Networking Opportunities',
+      title: 'Rights Based',
       description:
-        'Connecting professionals to build meaningful relationships and opportunities.',
+        'Centers on empowering refugees to know and claim their rights and Advocates for systemic changes to uphold the rights of former refugees at the local, national.',
     },
   ]
 
   return (
     <section className="from-bg-blue-950 to-bg-blue-950 bg-gradient-to-br py-16 text-center text-white">
-      <h2 className="mb-8 text-4xl font-bold text-black">Our Services</h2>
+      <h2 className="mb-8 text-4xl font-bold text-black">Our Aproaches</h2>
       <p className="mb-12 text-lg font-light text-black">
-        Explore the services we offer to help you achieve your goals.
+        Explore the aproaches we use to serve for,er refugees to achieve goals.
       </p>
       <div className="container mx-auto grid gap-8 px-6 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (
@@ -65,4 +65,4 @@ const OurServicesSection: React.FC = () => {
   )
 }
 
-export default OurServicesSection
+export default OurAproaches

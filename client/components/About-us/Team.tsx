@@ -8,27 +8,13 @@ import {
 import { teamData, TeamMember } from './models'
 
 const Team: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<
-    'boardMembers' | 'leadershipTeam'
-  >('boardMembers')
+  const [activeSection, setActiveSection] = useState<'boardMembers' | 'staf'>(
+    'boardMembers',
+  )
 
-  const handleClick = (section: 'boardMembers' | 'leadershipTeam') => {
+  const handleClick = (section: 'boardMembers' | 'staf') => {
     setActiveSection(section)
   }
-
-  /*const generateUsername = (name: string) => {
-    return name.toLowerCase().replace(/ /g, '-')
-  }
-
-  const getSocialMediaUrls = (name: string) => {
-    const username = generateUsername(name)
-    return {
-      facebook: `https://facebook.com/${username}`,
-      twitter: `https://twitter.com/${username}`,
-      instagram: `https://instagram.com/${username}`,
-      linkedin: `https://linkedin.com/in/${username}`,
-    }
-  }*/
 
   return (
     <section className="bg-blue-950 px-4 py-12 md:px-8 lg:px-16">
@@ -42,10 +28,10 @@ const Team: React.FC = () => {
             Board Members
           </button>
           <button
-            onClick={() => handleClick('leadershipTeam')}
-            className={`text-lg font-semibold transition-all duration-300 ${activeSection === 'leadershipTeam' ? 'text-blue-600 underline' : 'text-gray-400'}`}
+            onClick={() => handleClick('staf')}
+            className={`text-lg font-semibold transition-all duration-300 ${activeSection === 'staf' ? 'text-blue-600 underline' : 'text-gray-400'}`}
           >
-            Leadership Team
+            Staf Team
           </button>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { jobSolutions } from './Model'
+import { services } from './Model'
 import { FaCheckCircle } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
@@ -8,10 +8,10 @@ const EventsPage: React.FC = () => {
     <section className="mt-10 bg-cyan-600 px-6 py-16">
       {/*  why chosing our Services */}
       <h2 className="mb-8 text-center text-4xl font-extrabold">
-        Why Choose Our Solutions
+        Why Choose Our Services
       </h2>
       <div className="grid gap-8 lg:grid-cols-3">
-        {jobSolutions.whyChoose.map((item, index) => (
+        {services.whyChoose.map((item, index) => (
           <div
             key={index}
             className="rounded-lg bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
@@ -26,10 +26,10 @@ const EventsPage: React.FC = () => {
 
       {/* Services List */}
       <h2 className="my-12 text-center text-4xl font-extrabold">
-        Our Solutions
+        Our Services
       </h2>
       <div className="grid gap-10 sm:grid-cols-1 lg:grid-cols-2">
-        {jobSolutions.solutions.map((solution, index) => (
+        {services.solutions.map((solution, index) => (
           <div
             key={index}
             className="flex flex-col items-center rounded-lg bg-white p-6 shadow-lg transition-transform duration-500 hover:scale-105 lg:flex-row lg:items-start"
@@ -56,7 +56,7 @@ const EventsPage: React.FC = () => {
         Additional Services We Offer
       </h2>
       <ul className="flex flex-col items-center text-center">
-        {jobSolutions.additionalServices.map((service, index) => (
+        {services.additionalServices.map((service, index) => (
           <li
             key={index}
             className="mb-4 flex items-center text-lg text-gray-200"

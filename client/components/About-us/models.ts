@@ -25,7 +25,7 @@ export interface TeamMember {
 // Team model
 export interface TeamData {
   boardMembers: TeamMember[]
-  leadershipTeam: TeamMember[]
+  staf: TeamMember[]
 }
 export const teamData: TeamData = {
   boardMembers: [
@@ -69,7 +69,7 @@ export const teamData: TeamData = {
       },
     },
   ],
-  leadershipTeam: [
+  staf: [
     {
       image: member3,
       name: 'Alice Johnson',

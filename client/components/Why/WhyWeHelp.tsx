@@ -9,7 +9,6 @@ import how1 from '../public/working-hard.jpg'
 import classes from '../public/classes.jpg'
 import legal from '../public/legal.jpg'
 import sport from '../public/sport.jpg'
-import stat from '../public/statistic.jpg'
 
 const WhyWeHelp = () => {
   return (
@@ -24,7 +23,7 @@ const WhyWeHelp = () => {
           />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
             <h1 className="text-4xl font-semibold text-white">
-              Why We Help Refugees
+              Why We Do What We Do
             </h1>
           </div>
         </div>
@@ -93,9 +92,10 @@ const WhyWeHelp = () => {
               className="mb-4 w-full rounded-lg shadow-lg md:mb-0 md:mr-4 md:w-1/2"
             />
             <p className="text-gray-100">
-              Refugees face numerous challenges, including cultural adaptation,
-              language barriers, and finding employment. We aim to address these
-              challenges through our comprehensive support programs.
+              Former refugees face numerous challenges, including cultural
+              adaptation, language barriers, and finding employment. WRF aim to
+              address collectively these settlement issues facing the former
+              refugees communities in Waikato region.
             </p>
           </div>
         </div>
@@ -113,8 +113,8 @@ const WhyWeHelp = () => {
                 className="mb-4 w-full rounded-lg shadow-lg"
               />
               <p className="text-lg text-gray-100">
-                Orientation and integration programs help refugees adapt to
-                their new environment.
+                Help in office by volunteers which give them opportunity to grow
+                and gain experience.
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
@@ -124,8 +124,8 @@ const WhyWeHelp = () => {
                 className="mb-4 w-full rounded-lg shadow-lg"
               />
               <p className="text-lg text-gray-100">
-                Language and vocational training provide essential skills for
-                employment.
+                Filling forms which help former refugees to get services from
+                govermancy in smoothy way
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
@@ -135,8 +135,8 @@ const WhyWeHelp = () => {
                 className="mb-4 w-full rounded-lg shadow-lg"
               />
               <p className="text-lg text-gray-100">
-                Legal assistance ensures that refugees have the support they
-                need to navigate complex legal systems.
+                Legal assistance ensures that former refugees have the support
+                they need to navigate complex legal systems.
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
@@ -146,39 +146,31 @@ const WhyWeHelp = () => {
                 className="mb-4 w-full rounded-lg shadow-lg"
               />
               <p className="text-lg text-gray-100">
-                Health and wellness programs promote physical and mental
-                well-being.
+                Basic Food Hygien Training that help in gaining skills on how to
+                take care of their life.
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Impact Statistics */}
-        <div className="mb-12">
-          <h2 className="mb-4 text-3xl font-semibold text-gray-200">
-            Our Impact
-          </h2>
-          <div className="flex flex-col items-center md:flex-row">
-            <img
-              src={stat}
-              alt="Impact Statistics"
-              className="mb-4 w-full rounded-lg shadow-lg md:mb-0 md:mr-4 md:w-1/2"
-            />
-            <div>
-              <div className="mb-4">
-                <h3 className="text-2xl font-semibold text-blue-300">500+</h3>
-                <p className="text-gray-100">
-                  refugees integrated into new communities
-                </p>
-              </div>
-              <div className="mb-4">
-                <h3 className="text-2xl font-semibold text-blue-300">300+</h3>
-                <p className="text-gray-100">job placements secured</p>
-              </div>
-              <div className="mb-4">
-                <h3 className="text-2xl font-semibold text-blue-300">200+</h3>
-                <p className="text-gray-100">legal cases resolved</p>
-              </div>
+            <div className="flex flex-col items-center text-center">
+              <img
+                src={artist}
+                alt="Program 4"
+                className="mb-4 w-full rounded-lg shadow-lg"
+              />
+              <p className="text-lg text-gray-100">
+                First Aid Training that help former refugee to have basic
+                knowlwdge in saving life.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <img
+                src={sport}
+                alt="Program 4"
+                className="mb-4 w-full rounded-lg shadow-lg"
+              />
+              <p className="text-lg text-gray-100">
+                Heritage language Classes that help in keeping and mentain
+                culture and values.
+              </p>
             </div>
           </div>
         </div>
@@ -190,8 +182,7 @@ const WhyWeHelp = () => {
           </h2>
           <p className="text-gray-100">
             There are many ways you can support our cause. Whether through
-            volunteering, donations, or advocacy, your involvement makes a
-            difference.
+            volunteering, or advocacy, your involvement makes a difference.
           </p>
           <Link to="/get-involved">
             <button className="mt-4 rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600">

@@ -39,9 +39,9 @@ const Footer = () => {
                 WAIKATO REFUGEE FORUM
               </h1>
               <p className="text-base md:text-lg">
-                Waikato Refugee Forum partners with refugees to access
-                life-changing solutions and transforms how the world supports
-                them.
+                Waikato Refugee Forum partners with former refugees to access
+                life-changing solutions to their settlement jurney in New
+                Zealand.
               </p>
             </div>
             <div className="mt-4 flex flex-col gap-4 text-white lg:flex-row lg:gap-6">
