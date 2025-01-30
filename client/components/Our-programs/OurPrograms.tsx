@@ -1,78 +1,11 @@
 // src/components/OurPrograms.tsx
 
 import React, { useState } from 'react'
-import youth from '../public/youth.jpg'
-import orientation from '../public/orientation.jpg'
-import support from '../public/support.jpg'
 import student from '../public/students.jpg'
-//import ProgramModal from './Modal'
 import { motion } from 'framer-motion'
-//import { Program, programs } from './Models'
+//import ProgramModal from './Modal'
+import { Program, programs, upcomingPrograms } from './Models'
 
-type Program = {
-  id: number
-  title: string
-  description: string
-  duration: string
-  format: string
-  image: string // URL for the program image
-}
-
-// Sample data for programs
-const programs: Program[] = [
-  {
-    id: 1,
-    title: 'World Refugee Day',
-    description:
-      'Learn or improve your English language skills through beginner, intermediate, and advanced classes.',
-    duration: 'Flexible',
-    format: 'In-Person & Online',
-    image: youth, // Replace with actual image URL
-  },
-  {
-    id: 2,
-    title: 'Meaning Refugee Participation',
-    description:
-      'Gain practical skills in areas like hospitality, construction, healthcare, and IT.',
-    duration: '3–6 months',
-    format: 'In-Person',
-    image: orientation, // Replace with actual image URL
-  },
-  {
-    id: 3,
-    title: 'PCVE',
-    description: 'Access free mental health support from licensed therapists.',
-    duration: 'Ongoing',
-    format: 'In-Person & Virtual Sessions',
-    image: support, // Replace with actual image URL
-  },
-  {
-    id: 4,
-    title: 'Food Safety Program',
-    description:
-      'Learn or improve your English language skills through beginner, intermediate, and advanced classes.',
-    duration: 'Flexible',
-    format: 'In-Person & Online',
-    image: youth, // Replace with actual image URL
-  },
-  {
-    id: 5,
-    title: 'First Aid Program',
-    description:
-      'Gain practical skills in areas like hospitality, construction, healthcare, and IT.',
-    duration: '3–6 months',
-    format: 'In-Person',
-    image: orientation, // Replace with actual image URL
-  },
-  {
-    id: 6,
-    title: 'Our Women',
-    description: 'Access free mental health support from licensed therapists.',
-    duration: 'Ongoing',
-    format: 'In-Person & Virtual Sessions',
-    image: support, // Replace with actual image URL
-  },
-]
 // Animation variants for Framer Motion
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -88,25 +21,6 @@ const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 }
-
-// Upcoming program dates
-const upcomingPrograms = [
-  {
-    id: 1,
-    title: 'English Language Classes',
-    startDate: 'January 15, 2024',
-  },
-  {
-    id: 2,
-    title: 'Career Skills Training',
-    startDate: 'February 1, 2024',
-  },
-  {
-    id: 3,
-    title: 'Cultural Orientation Workshops',
-    startDate: 'March 10, 2024',
-  },
-]
 
 const OurPrograms = () => {
   return (
@@ -221,7 +135,7 @@ const OurPrograms = () => {
                 Ready to join a program? Contact us to get started!
               </p>
               <motion.a
-                href="projects@wrf.org.nz"
+                href="/contact"
                 className="inline-block rounded-lg bg-blue-900 px-6 py-3 text-white transition-colors duration-300 hover:bg-blue-800"
                 whileHover={{ scale: 1.05 }}
               >
@@ -262,13 +176,16 @@ const OurPrograms = () => {
           <p className="text-lg">
             Email:{' '}
             <a
-              href="projects@wrf.org.nz"
+              href="mailto:projects@wrf.org.nz" // Fixed email link
               className="underline hover:text-green-600"
             >
               projects@wrf.org.nz
             </a>{' '}
             | Phone:{' '}
-            <a href="+64273948990" className="underline hover:text-green-600">
+            <a
+              href="tel:+64273948990" // Fixed phone link
+              className="underline hover:text-green-600"
+            >
               +64273948990
             </a>{' '}
           </p>
