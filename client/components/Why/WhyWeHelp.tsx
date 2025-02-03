@@ -1,9 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import cover from '../public/about-cover.jpg'
-import ambrella from '../public/umbrella.jpg'
-import smile1 from '../public/smilling 1.jpg'
-import artist from '../public/artist.jpg'
 import hard from '../public/hard.jpg'
 import how1 from '../public/working-hard.jpg'
 import classes from '../public/classes.jpg'
@@ -29,74 +26,143 @@ const WhyWeHelp = () => {
         </div>
 
         {/* Introduction Section */}
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-semibold text-gray-100">
-            Our Mission and Vision
+            Empowering Refugees in Waikato
           </h2>
-          <div className="flex flex-col items-center md:flex-row">
-            <img
-              src={ambrella}
-              alt="Mission and Vision"
-              className="mb-4 w-full rounded-lg shadow-lg md:mb-0 md:mr-4 md:w-1/2"
-            />
-            <p className="text-gray-100">
-              Our mission is to provide lasting solutions for at-risk refugees,
-              empowering them to use their talents and skills to contribute to
-              their host countries and the world. Our vision is a world where
-              every refugee has the opportunity to thrive and reach their full
-              potential.
-            </p>
-          </div>
+          <p className="mx-auto max-w-2xl text-gray-100">
+            At Waikato Refugee Forum, we are dedicated to supporting former
+            refugees as they rebuild their lives and thrive in their new
+            communities. Our programs are designed to address the unique
+            challenges they face and provide them with the tools they need to
+            succeed.
+          </p>
         </div>
 
-        {/* Success Stories */}
+        {/* Impact Statistics */}
         <div className="mb-12">
           <h2 className="mb-4 text-3xl font-semibold text-gray-100">
-            Success Stories
+            Our Impact
           </h2>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="flex flex-col items-center text-center">
-              <img
-                src={smile1}
-                alt="Success Story 1"
-                className="mb-4 w-full rounded-lg shadow-lg"
-              />
-              <p className="text-lg text-gray-100">
-                Sarah, a talented engineer, found a new home and a promising
-                career through our programs.
-              </p>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
+              <h3 className="text-4xl font-bold">500+</h3>
+              <p className="text-lg">Refugees Supported</p>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <img
-                src={artist}
-                alt="Success Story 2"
-                className="mb-4 w-full rounded-lg shadow-lg"
-              />
-              <p className="text-lg text-gray-100">
-                Rwema, a gifted artist, now shares her art with the world,
-                thanks to the support she received.
-              </p>
+            <div className="rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
+              <h3 className="text-4xl font-bold">200+</h3>
+              <p className="text-lg">Jobs Secured</p>
+            </div>
+            <div className="rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
+              <h3 className="text-4xl font-bold">95%</h3>
+              <p className="text-lg">Satisfaction Rate</p>
             </div>
           </div>
         </div>
 
-        {/* Challenges Faced by Refugees */}
+        {/* Expanded Challenges Faced by Refugees */}
         <div className="mb-12">
           <h2 className="mb-4 text-3xl font-semibold text-gray-100">
             Challenges Faced by Refugees
           </h2>
-          <div className="flex flex-col items-center md:flex-row">
-            <img
-              src={hard}
-              alt={'Challenges Faced by Refugees'}
-              className="mb-4 w-full rounded-lg shadow-lg md:mb-0 md:mr-4 md:w-1/2"
-            />
-            <p className="text-gray-100">
-              Former refugees face numerous challenges, including cultural
-              adaptation, language barriers, and finding employment. WRF aim to
-              address collectively these settlement issues facing the former
-              refugees communities in Waikato region.
-            </p>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Challenge 1: Lack of Collective Representation */}
+            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
+              <img
+                src={legal}
+                alt="Program 1"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
+              />
+              <h3 className="mb-4 text-2xl font-semibold">
+                Lack of Collective Representation
+              </h3>
+              <p className="text-lg">
+                Former refugee communities often lack a unified platform to
+                voice their concerns and address settlement issues collectively.
+              </p>
+            </div>
+
+            {/* Challenge 2: Limited Participation in Resettlement Discussions */}
+            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
+              <img
+                src={classes}
+                alt="Program 1"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
+              />
+              <h3 className="mb-4 text-2xl font-semibold">
+                Limited Participation in Resettlement Discussions
+              </h3>
+              <p className="text-lg ">
+                Refugee communities are often excluded from local and national
+                discussions about resettlement policies and programs.
+              </p>
+            </div>
+
+            {/* Challenge 3: Isolation from Key Stakeholders */}
+            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
+              <img
+                src={sport}
+                alt="Program 4"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
+              />
+              <h3 className="mb-4 text-2xl font-semibold">
+                Isolation from Key Stakeholders
+              </h3>
+              <p className="text-lg">
+                Refugee communities may feel isolated and disconnected from key
+                stakeholders, limiting their access to resources and support.
+              </p>
+            </div>
+
+            {/* Challenge 4: Fragmented Collaboration */}
+            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
+              <img
+                src={classes}
+                alt="Program 4"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
+              />
+              <h3 className="mb-4 text-2xl font-semibold">
+                Fragmented Collaboration
+              </h3>
+              <p className="text-lg">
+                There is often a lack of coordinated efforts among stakeholders
+                to address refugee resettlement issues effectively.
+              </p>
+            </div>
+
+            {/* Challenge 5: Lack of Empowerment */}
+            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
+              <img
+                src={how1}
+                alt="Program 1"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
+              />
+              <h3 className="mb-4 text-2xl font-semibold">
+                Lack of Empowerment
+              </h3>
+              <p className="text-lg">
+                Many refugees struggle with feelings of disempowerment, which
+                can hinder their ability to integrate and thrive in their new
+                communities.
+              </p>
+            </div>
+
+            {/* Challenge 6: Cultural and Treaty Awareness */}
+            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
+              <img
+                src={sport}
+                alt="Program 4"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
+              />
+              <h3 className="mb-4 text-2xl font-semibold">
+                Cultural and Treaty Awareness
+              </h3>
+              <p className="text-lg">
+                Refugees may face challenges understanding and integrating into
+                New Zealand’s cultural and legal frameworks, including the
+                principles of the Treaty of Waitangi.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -105,72 +171,107 @@ const WhyWeHelp = () => {
           <h2 className="mb-4 text-3xl font-semibold text-gray-100">
             How We Help
           </h2>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="flex flex-col items-center text-center">
+          <div className="2lg:grid-cols-3 grid gap-8 md:grid-cols-2">
+            <div className="flex flex-col items-center rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
               <img
                 src={how1}
                 alt="Program 1"
-                className="mb-4 w-full rounded-lg shadow-lg"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
               />
-              <p className="text-lg text-gray-100">
-                Help in office by volunteers which give them opportunity to grow
-                and gain experience.
+              <p className="text-lg">
+                We provide regular forum meetings for the represenatives of the
+                former refugee communities to address collectively key
+                settlement issues in the Waikato region.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
               <img
                 src={classes}
                 alt="Program 2"
-                className="mb-4 w-full rounded-lg shadow-lg"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
               />
-              <p className="text-lg text-gray-100">
-                Filling forms which help former refugees to get services from
-                govermancy in smoothy way
+              <p className="text-lg">
+                WRF provides a voice for the refugee communities by
+                participating in the local and national resettlement discussions
+                and forums.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
               <img
                 src={legal}
                 alt="Program 3"
-                className="mb-4 w-full rounded-lg shadow-lg"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
               />
-              <p className="text-lg text-gray-100">
-                Legal assistance ensures that former refugees have the support
-                they need to navigate complex legal systems.
+              <p className="text-lg">
+                We share ideas, exchange information and network with key
+                stakeholders on refugee resettlement issues.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
               <img
                 src={sport}
                 alt="Program 4"
-                className="mb-4 w-full rounded-lg shadow-lg"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
               />
-              <p className="text-lg text-gray-100">
-                Basic Food Hygien Training that help in gaining skills on how to
-                take care of their life.
+              <p className="text-lg">
+                We collaborate with key stakeholders in programmes aimed at
+                enhancing positive resettlement outcomes for the refugee
+                communities.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
               <img
-                src={artist}
-                alt="Program 4"
-                className="mb-4 w-full rounded-lg shadow-lg"
+                src={how1}
+                alt="Program 5"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
               />
-              <p className="text-lg text-gray-100">
-                First Aid Training that help former refugee to have basic
-                knowlwdge in saving life.
+              <p className="text-lg">
+                WRF supports the empowerement of refugee communities.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
               <img
                 src={sport}
-                alt="Program 4"
-                className="mb-4 w-full rounded-lg shadow-lg"
+                alt="Program 6"
+                className="h-34 mb-4 w-full rounded-lg object-cover"
               />
-              <p className="text-lg text-gray-100">
-                Heritage language Classes that help in keeping and mentain
-                culture and values.
+              <p className="text-lg">
+                We build the capacity to make ideas happen, aknowlwdge and
+                uphold the principles of the Treaty of Waitangi.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Call-to-Action Cards */}
+        <div className="mb-12">
+          <h2 className="mb-4 text-3xl font-semibold text-gray-100">
+            Make a Difference
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
+              <h3 className="mb-4 text-2xl font-semibold">Volunteer</h3>
+              <p className="mb-4">
+                Join our team and help make a difference in the lives of former
+                refugees.
+              </p>
+              <Link to="/volunteer">
+                <button className="rounded bg-white px-4 py-2 text-blue-900 transition-colors duration-300 hover:bg-gray-200">
+                  Learn More
+                </button>
+              </Link>
+            </div>
+            <div className="rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
+              <h3 className="mb-4 text-2xl font-semibold">Donate</h3>
+              <p className="mb-4">
+                Your donation can help us provide essential services to former
+                refugees.
+              </p>
+              <Link to="/donate">
+                <button className="rounded bg-white px-4 py-2 text-blue-900 transition-colors duration-300 hover:bg-gray-200">
+                  Donate Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -189,16 +290,6 @@ const WhyWeHelp = () => {
               Get Involved
             </button>
           </Link>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="mb-12">
-          <h2 className="mb-4 text-3xl font-semibold text-gray-200">FAQ</h2>
-          <p className="text-gray-100">
-            Have questions? Check out our FAQ section for answers to common
-            questions about our organization and how we help refugees.
-          </p>
-          {/* Add FAQ content here */}
         </div>
       </div>
     </section>
