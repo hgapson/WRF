@@ -1,7 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import sea from '../public/sea.jpg' // Update with the correct path
 import {
   FaFacebookF,
   FaTwitter,
@@ -10,163 +8,168 @@ import {
 } from 'react-icons/fa'
 
 const Footer = () => {
-  const navigate = useNavigate()
-
-  const handleMoreStoriesClick = () => {
-    navigate('/about-us#testimonies')
-  }
-
-  const handleVision = () => {
-    navigate('/about-us#vision')
-  }
   return (
-    <footer className="relative h-[50vh] w-full md:h-[50vh] lg:h-[40vh] xl:h-[40vh] ">
-      {/* Background Video */}
-      <div className="absolute inset-0  overflow-hidden">
-        <img className="h-full w-full object-cover" src={sea} alt="sea" />
-      </div>
-
-      {/* Overlay Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center overflow-auto bg-black bg-opacity-40 p-4">
-        {/* Contact Form */}
-
-        {/* Footer Cards */}
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-2 rounded-lg bg-gray-100 bg-opacity-80 p-4 md:p-6 lg:flex-row lg:p-8">
-          {/* Footer Intro */}
-          <div className="mb-4 flex flex-1 flex-col rounded-lg bg-yellow-100 p-4 lg:mb-0 lg:p-6">
-            <div className="flex-1">
-              <h1 className="font-times mb-4 text-lg md:text-xl lg:text-2xl">
-                WAIKATO REFUGEE FORUM
-              </h1>
-              <p className="text-base md:text-lg">
-                Waikato Refugee Forum partners with former refugees to access
-                life-changing solutions to their settlement jurney in New
-                Zealand.
-              </p>
-            </div>
-            <div className="mt-4 flex flex-col gap-4 text-white lg:flex-row lg:gap-6">
-              <div className="flex gap-4">
-                <a
-                  href="https://www.facebook.com/WaikatoRefugeeForum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  <FaFacebookF size={24} />
-                </a>
-                <a
-                  href="https://twitter.com/wrefugeeforum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-600"
-                >
-                  <FaTwitter size={24} />
-                </a>
-                <a
-                  href="https://www.instagram.com/wrefugeeforum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-pink-500 hover:text-pink-700"
-                >
-                  <FaInstagram size={24} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/yourprofile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-700 hover:text-blue-900"
-                >
-                  <FaLinkedinIn size={24} />
-                </a>
-              </div>
+    <footer className="bg-blue-950 py-12 text-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Footer Content */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {/* Column 1: About Us */}
+          <div>
+            <h3 className="mb-4 text-3xl font-semibold">About Us</h3>
+            <p className="mb-4 text-lg font-semibold italic text-gray-300">
+              Waikato Refugee Forum partners with former refugees to access
+              life-changing solutions for their settlement journey in New
+              Zealand.
+            </p>
+            <div className="flex space-x-6">
               <a
-                href="https://maps.google.com/?q=46G+Boundary+road+Claudelands,+Hamilton"
+                href="https://www.facebook.com/WaikatoRefugeeForum"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-lg bg-blue-500 p-3 text-center text-white shadow-lg hover:bg-blue-600"
+                className="text-blue-600 hover:text-blue-800"
               >
-                View on Map
+                <FaFacebookF size={22} />
+              </a>
+              <a
+                href="https://twitter.com/wrefugeeforum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400  hover:text-blue-600"
+              >
+                <FaTwitter size={22} />
+              </a>
+              <a
+                href="https://www.instagram.com/wrefugeeforum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-600 hover:text-pink-800"
+              >
+                <FaInstagram size={22} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-700 hover:text-blue-900"
+              >
+                <FaLinkedinIn size={22} />
               </a>
             </div>
           </div>
 
-          {/* Footer Links */}
-          <div className="flex flex-1 gap-4 lg:flex-row lg:gap-8">
-            <div className="flex-1">
-              <h3 className="mb-2 text-base font-semibold md:text-lg lg:text-xl">
-                Our Work
-              </h3>
-              <ul className="space-y-2 text-sm md:text-base lg:text-lg">
-                <li>
-                  <Link to="/events" className="hover:text-blue-500">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/vacancies" className="hover:text-blue-500">
-                    Opportunities
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="hover:text-blue-500">
-                    Advocacy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="flex-1">
-              <h3 className="mb-2 text-base font-semibold md:text-lg lg:text-xl">
-                About Us
-              </h3>
-              <ul className="space-y-2 text-sm md:text-base lg:text-lg">
-                <li>
-                  <button
-                    onClick={handleVision}
-                    className="hover:text-blue-500"
-                  >
-                    Mission & Vision
-                  </button>
-                </li>
-                <li>
-                  <Link to="/contact" className="hover:text-blue-500">
-                    Contact
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to="/news" className="hover:text-blue-500">
-                    Newsletters
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="flex-1">
-              <h3 className="mb-2 text-base font-semibold md:text-lg lg:text-xl">
-                Resources
-              </h3>
-              <ul className="space-y-2 text-sm md:text-base lg:text-lg">
-                <li>
-                  <Link to="/why-we-help" className="hover:text-blue-500">
-                    Who we serve
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/our-partners" className="hover:text-blue-500">
-                    Partners
-                  </Link>
-                </li>
-
-                <li>
-                  <button
-                    onClick={handleMoreStoriesClick}
-                    className="hover:text-blue-500"
-                  >
-                    Stories
-                  </button>
-                </li>
-              </ul>
-            </div>
+          {/* Column 2: Quick Links */}
+          <div className="px-16">
+            <h3 className="mb-4 text-xl font-semibold">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/events"
+                  className="text-gray-300 hover:text-blue-500"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/vacancies"
+                  className="text-gray-300 hover:text-blue-500"
+                >
+                  Opportunities
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-gray-300 hover:text-blue-500"
+                >
+                  Advocacy
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" className="text-gray-300 hover:text-blue-500">
+                  Newsletters
+                </Link>
+              </li>
+            </ul>
           </div>
+
+          {/* Column 3: Resources */}
+          <div className="px-12">
+            <h3 className="mb-4 text-xl font-semibold">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/about-us#vision"
+                  className="text-gray-300 hover:text-blue-500"
+                >
+                  Mission & Vision
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/why-we-help"
+                  className="text-gray-300 hover:text-blue-500"
+                >
+                  Who We Serve
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/our-partners"
+                  className="text-gray-300 hover:text-blue-500"
+                >
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about-us#testimonies"
+                  className="text-gray-300 hover:text-blue-500"
+                >
+                  Stories
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact */}
+          <div>
+            <h3 className="mb-4 text-xl font-semibold">Contact</h3>
+            <p className="mb-2 text-gray-300">
+              46G Boundary Road, Claudelands, Hamilton
+            </p>
+            <p className="mb-2 text-gray-300">
+              Email:{' '}
+              <a
+                href="mailto:projects@wrf.org.nz"
+                className="hover:text-blue-500"
+              >
+                projects@wrf.org.nz
+              </a>
+            </p>
+            <p className="mb-2 text-gray-300">
+              Phone:{' '}
+              <a href="tel:+64273948990" className="hover:text-blue-500">
+                +64 27 394 8990
+              </a>
+            </p>
+            <a
+              href="https://maps.google.com/?q=46G+Boundary+road+Claudelands,+Hamilton"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+            >
+              View on Map
+            </a>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="mt-8 border-t border-gray-700 pt-8 text-center">
+          <p className="text-gray-300">
+            &copy; {new Date().getFullYear()} Waikato Refugee Forum. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

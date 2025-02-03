@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import cover from '../public/about-cover.jpg'
-import hard from '../public/hard.jpg'
 import how1 from '../public/working-hard.jpg'
 import classes from '../public/classes.jpg'
 import legal from '../public/legal.jpg'
@@ -40,6 +39,7 @@ const WhyWeHelp = () => {
         </div>
 
         {/* Impact Statistics */}
+        {/* Impact Statistics */}
         <div className="mb-12">
           <h2 className="mb-4 text-3xl font-semibold text-gray-100">
             Our Impact
@@ -60,107 +60,167 @@ const WhyWeHelp = () => {
           </div>
         </div>
 
-        {/* Expanded Challenges Faced by Refugees */}
+        {/* challenges faced by refugee */}
         <div className="mb-12">
           <h2 className="mb-4 text-3xl font-semibold text-gray-100">
-            Challenges Faced by Refugees
+            Our Impact
           </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Challenge 1: Lack of Collective Representation */}
-            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
-              <img
-                src={legal}
-                alt="Program 1"
-                className="h-34 mb-4 w-full rounded-lg object-cover"
-              />
-              <h3 className="mb-4 text-2xl font-semibold">
-                Lack of Collective Representation
+          <div className="2lg:grid-cols-3 grid gap-8 md:grid-cols-2">
+            {/* Program 1 */}
+            <div className="flex flex-col items-center rounded-lg bg-white p-8 text-center shadow-xl transition-all hover:shadow-2xl">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <svg
+                  className="h-8 w-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-blue-900">
+                Community Forums
               </h3>
-              <p className="text-lg">
+              <p className="text-gray-600">
                 Former refugee communities often lack a unified platform to
                 voice their concerns and address settlement issues collectively.
               </p>
             </div>
 
-            {/* Challenge 2: Limited Participation in Resettlement Discussions */}
-            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
-              <img
-                src={classes}
-                alt="Program 1"
-                className="h-34 mb-4 w-full rounded-lg object-cover"
-              />
-              <h3 className="mb-4 text-2xl font-semibold">
-                Limited Participation in Resettlement Discussions
+            {/* Program 2 */}
+            <div className="flex flex-col items-center rounded-lg bg-white p-8 text-center shadow-xl transition-all hover:shadow-2xl">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <svg
+                  className="h-8 w-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-blue-900">
+                Policy Advocacy
               </h3>
-              <p className="text-lg ">
+              <p className="text-gray-600">
                 Refugee communities are often excluded from local and national
                 discussions about resettlement policies and programs.
               </p>
             </div>
 
-            {/* Challenge 3: Isolation from Key Stakeholders */}
-            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
-              <img
-                src={sport}
-                alt="Program 4"
-                className="h-34 mb-4 w-full rounded-lg object-cover"
-              />
-              <h3 className="mb-4 text-2xl font-semibold">
-                Isolation from Key Stakeholders
+            {/* Program 3 */}
+            <div className="flex flex-col items-center rounded-lg bg-white p-8 text-center shadow-xl transition-all hover:shadow-2xl">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <svg
+                  className="h-8 w-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-blue-900">
+                Stakeholder Connections
               </h3>
-              <p className="text-lg">
+              <p className="text-gray-600">
                 Refugee communities may feel isolated and disconnected from key
                 stakeholders, limiting their access to resources and support.
               </p>
             </div>
 
-            {/* Challenge 4: Fragmented Collaboration */}
-            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
-              <img
-                src={classes}
-                alt="Program 4"
-                className="h-34 mb-4 w-full rounded-lg object-cover"
-              />
-              <h3 className="mb-4 text-2xl font-semibold">
-                Fragmented Collaboration
+            {/* Program 4 */}
+            <div className="flex flex-col items-center rounded-lg bg-white p-8 text-center shadow-xl transition-all hover:shadow-2xl">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <svg
+                  className="h-8 w-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-blue-900">
+                Community Empowerment
               </h3>
-              <p className="text-lg">
-                There is often a lack of coordinated efforts among stakeholders
-                to address refugee resettlement issues effectively.
-              </p>
-            </div>
-
-            {/* Challenge 5: Lack of Empowerment */}
-            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
-              <img
-                src={how1}
-                alt="Program 1"
-                className="h-34 mb-4 w-full rounded-lg object-cover"
-              />
-              <h3 className="mb-4 text-2xl font-semibold">
-                Lack of Empowerment
-              </h3>
-              <p className="text-lg">
+              <p className="text-gray-600">
                 Many refugees struggle with feelings of disempowerment, which
                 can hinder their ability to integrate and thrive in their new
                 communities.
               </p>
             </div>
 
-            {/* Challenge 6: Cultural and Treaty Awareness */}
-            <div className="rounded-lg bg-blue-900 p-6 text-white shadow-lg">
-              <img
-                src={sport}
-                alt="Program 4"
-                className="h-34 mb-4 w-full rounded-lg object-cover"
-              />
-              <h3 className="mb-4 text-2xl font-semibold">
-                Cultural and Treaty Awareness
+            {/* Program 5 */}
+            <div className="flex flex-col items-center rounded-lg bg-white p-8 text-center shadow-xl transition-all hover:shadow-2xl">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <svg
+                  className="h-8 w-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-blue-900">
+                Cultural Integration
               </h3>
-              <p className="text-lg">
+              <p className="text-gray-600">
                 Refugees may face challenges understanding and integrating into
-                New Zealand’s cultural and legal frameworks, including the
-                principles of the Treaty of Waitangi.
+                New Zealand cultural and legal frameworks, including Treaty of
+                Waitangi principles.
+              </p>
+            </div>
+
+            {/* Program 6 */}
+            <div className="flex flex-col items-center rounded-lg bg-white p-8 text-center shadow-xl transition-all hover:shadow-2xl">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <svg
+                  className="h-8 w-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-blue-900">
+                Coordinated Solutions
+              </h3>
+              <p className="text-gray-600">
+                Addressing the lack of coordinated efforts among stakeholders to
+                effectively resolve refugee resettlement issues.
               </p>
             </div>
           </div>
@@ -244,6 +304,7 @@ const WhyWeHelp = () => {
         </div>
 
         {/* Call-to-Action Cards */}
+        {/* Call-to-Action Cards */}
         <div className="mb-12">
           <h2 className="mb-4 text-3xl font-semibold text-gray-100">
             Make a Difference
@@ -255,21 +316,21 @@ const WhyWeHelp = () => {
                 Join our team and help make a difference in the lives of former
                 refugees.
               </p>
-              <Link to="/volunteer">
+              <Link to="/vacancies">
                 <button className="rounded bg-white px-4 py-2 text-blue-900 transition-colors duration-300 hover:bg-gray-200">
                   Learn More
                 </button>
               </Link>
             </div>
             <div className="rounded-lg bg-blue-900 p-6 text-center text-white shadow-lg">
-              <h3 className="mb-4 text-2xl font-semibold">Donate</h3>
+              <h3 className="mb-4 text-2xl font-semibold">Partners</h3>
               <p className="mb-4">
-                Your donation can help us provide essential services to former
-                refugees.
+                Your partnership can help us provide essential services to
+                former refugees.
               </p>
-              <Link to="/donate">
+              <Link to="/contact">
                 <button className="rounded bg-white px-4 py-2 text-blue-900 transition-colors duration-300 hover:bg-gray-200">
-                  Donate Now
+                  Contact Us
                 </button>
               </Link>
             </div>
