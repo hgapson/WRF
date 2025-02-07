@@ -1,6 +1,6 @@
-import wrd from './public/wrd.jpg'
-import volunteering from './public/volunteering.jpg'
-import workshop from './public/workshop.jpg'
+import culture from './public/culture.jpg'
+import advocacy from './public/advocacy.jpg'
+import localIntegration from './public/local integration.jpg'
 
 export interface Fruit {
   id: number
@@ -67,23 +67,23 @@ export const testimonialsData = [
 export const eventsData = [
   {
     title: 'OUR SERVICES',
-    subtitle: 'IMMIGRATION ISSUES',
-    image: wrd,
+    subtitle: 'LOCAL INTEGRATION',
+    image: localIntegration,
     description: 'Celebrating World Refugee Day with former refugee 2024.',
     link: '#',
   },
   {
     title: 'OUR SERVICES',
     subtitle: 'CULTURAL IDENTITY',
-    image: volunteering,
+    image: culture,
     description:
       'Honoring our volunteers for their incredible work in our organization.',
     link: '#',
   },
   {
     title: 'OUR SERVICES',
-    subtitle: 'ADVOCACY',
-    image: workshop,
+    subtitle: 'COMMUNITY SUPPORT',
+    image: advocacy,
     description:
       'Giving former refugees opportunity to showcase their traditional cultural treasures.',
     link: '#',

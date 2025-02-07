@@ -44,7 +44,7 @@ export const teamData: TeamData = {
     },
     {
       image: gapson2,
-      name: 'August Cameron',
+      name: 'Augusta Cameron',
       position: 'Projects Coordinator',
       description:
         'August is an expert in project management with a background in nonprofit organizations.',
@@ -71,24 +71,24 @@ export const teamData: TeamData = {
   ],
   staf: [
     {
-      image: member3,
-      name: 'Alice Johnson',
-      position: 'Executive Director',
+      image: gapson1,
+      name: 'Credu Gapson',
+      position: 'IT Coordinator',
       description:
-        'Alice leads the team with a vision for impactful change and strategic planning.',
+        'Gapson has years of experience in Information Technology, administration and customer support.',
       social: {
         facebook: 'https://facebook.com/jane.smith',
-        twitter: 'https://facebook.com/jane.smith',
-        instagram: 'https://facebook.com/jane.smith',
+        twitter: 'https://twitter.com/@gapson10',
+        instagram: 'https://instagram.com/@gapson10',
         linkedin: 'https://facebook.com/jane.smith',
       },
     },
     {
-      image: member4,
-      name: 'Bob Brown',
-      position: 'Program Manager',
+      image: gapson2,
+      name: 'Augusta Cameron',
+      position: 'Projects Coordinator',
       description:
-        'Bob manages various programs and ensures their successful execution.',
+        'August is an expert in project management with a background in nonprofit organizations.',
       social: {
         facebook: 'https://facebook.com/jane.smith',
         twitter: 'https://facebook.com/jane.smith',
@@ -98,10 +98,10 @@ export const teamData: TeamData = {
     },
     {
       image: member5,
-      name: 'Jane Smith',
+      name: 'Jo de Lesli',
       position: 'Treasurer',
       description:
-        'Jane is an expert in financial management with a background in nonprofit organizations.',
+        'Jane is an expert in community support with a background in nonprofit organizations.',
       social: {
         facebook: 'https://facebook.com/jane.smith',
         twitter: 'https://facebook.com/jane.smith',

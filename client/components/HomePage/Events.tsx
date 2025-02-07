@@ -21,7 +21,7 @@ const Event = () => {
                 <img
                   src={event.image}
                   alt={event.subtitle}
-                  className="mb-4 h-48 w-full object-cover"
+                  className="h-49 mb-4 w-full object-cover"
                 />
                 <h3 className="mb-2 text-xl font-semibold">{event.subtitle}</h3>
               </div>

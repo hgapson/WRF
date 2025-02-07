@@ -1,5 +1,5 @@
-import sport from '../public/sport.jpg'
-import students from '../public/students.jpg'
+import food from '../public/food safety.jpg'
+import imigrationIssues from '../public/migra-issues.jpg'
 import laughing from '../public/laughing.jpg'
 import support from '../public/support.jpg'
 
@@ -26,13 +26,13 @@ export const services = {
       title: 'Skill Training & Development',
       description:
         'Specialized training to improve your skill set and align with the local level and adaptability .',
-      image: sport,
+      image: food,
     },
     {
       title: 'Imigration Issues',
       description:
         'Helping with imigration aplications and folow up the outputs.',
-      image: students,
+      image: imigrationIssues,
     },
     {
       title: 'Work and Income matters',
